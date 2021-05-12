@@ -1,0 +1,75 @@
+.home {
+  min-height: calc(100vh - 75px);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.home__projectInfoCard {
+  width: 300px;
+  height: 150px;
+  box-shadow: 0 0 5px #111;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 165, 0, 1),
+    rgba(0, 102, 153, 1)
+  );
+  position: relative;
+}
+.home__badge {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(128, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  font-weight: bold;
+}
+
+.home__projectTitle {
+  width: 90%;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 2.5px;
+  box-shadow: 0px 1px 5px #111, -2px -2px 5px rgba(0, 0, 0, 0.3);
+  padding: 0.8rem 1.1rem;
+  border-radius: 5px;
+  background: rgb(36, 141, 109);
+  color: #fff;
+}
+.home__projectInfoBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ddd;
+  background: #069;
+  letter-spacing: 2px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 0.7rem;
+  box-shadow: 0 0 5px #111;
+  text-transform: uppercase;
+  transition: 0.3s all ease-in;
+}
+.home__projectInfoBtn:hover {
+  color: #fff;
+  background: #059;
+  box-shadow: 0 0 5px #fff;
+}

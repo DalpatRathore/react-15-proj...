@@ -1,0 +1,251 @@
+.navbarApp {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  min-height: calc(100vh - 75px);
+  /*  global classes */
+  /* section */
+  /*
+  =============== 
+  Navbar
+  ===============
+  */
+}
+
+.navbarApp ul {
+  list-style-type: none;
+}
+
+.navbarApp a {
+  text-decoration: none;
+}
+
+.navbarApp h1,
+.navbarApp h2,
+.navbarApp h3,
+.navbarApp h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.navbarApp h1 {
+  font-size: 3rem;
+}
+
+.navbarApp h2 {
+  font-size: 2rem;
+}
+
+.navbarApp h3 {
+  font-size: 1.25rem;
+}
+
+.navbarApp h4 {
+  font-size: 0.875rem;
+}
+
+.navbarApp p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+
+@media screen and (min-width: 800px) {
+  .navbarApp h1 {
+    font-size: 4rem;
+  }
+  .navbarApp h2 {
+    font-size: 2.5rem;
+  }
+  .navbarApp h3 {
+    font-size: 1.75rem;
+  }
+  .navbarApp h4 {
+    font-size: 1rem;
+  }
+  .navbarApp body {
+    font-size: 1rem;
+  }
+  .navbarApp h1,
+  .navbarApp h2,
+  .navbarApp h3,
+  .navbarApp h4 {
+    line-height: 1;
+  }
+}
+
+.navbarApp .section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+  .navbarApp .section {
+    width: 95vw;
+  }
+}
+
+.navbarApp nav {
+  background: var(--clr-white);
+  -webkit-box-shadow: var(--light-shadow);
+          box-shadow: var(--light-shadow);
+}
+
+.navbarApp .nav-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+}
+
+.navbarApp .nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-primary-5);
+  background: transparent;
+  border-color: transparent;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.navbarApp .nav-toggle:hover {
+  color: var(--clr-primary-1);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.navbarApp .logo {
+  height: 40px;
+}
+
+.navbarApp .links a {
+  color: var(--clr-grey-3);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.navbarApp .links a:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding-left: 1.5rem;
+}
+
+.navbarApp .social-icons {
+  display: none;
+}
+
+.navbarApp .links-container {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.navbarApp .show-container {
+  height: 10rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .navbarApp .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem;
+  }
+  .navbarApp .nav-header {
+    padding: 0;
+  }
+  .navbarApp .nav-toggle {
+    display: none;
+  }
+  .navbarApp .links-container {
+    height: auto !important;
+  }
+  .navbarApp .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbarApp .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .navbarApp .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .navbarApp .social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbarApp .social-icons a {
+    margin: 0 0.5rem;
+    color: var(--clr-primary-5);
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+  }
+  .navbarApp .social-icons a:hover {
+    color: var(--clr-primary-7);
+  }
+}
+/*# sourceMappingURL=NavbarApp.css.map */

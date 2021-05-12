@@ -1,0 +1,480 @@
+.cocktailsApp {
+  --primaryLightColor: #d4e6a5;
+  --primaryColor: #476a2e;
+  --primaryDarkColor: #c02c03;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBackground: #f1f5f8;
+  --mainOverlay: rgba(35, 10, 36, 0.4);
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainRed: #bd0303;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.3rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainBorderRadius: 0.25rem;
+  --smallWidth: 85vw;
+  --maxWidth: 40rem;
+  --fullWidth: 1170px;
+  color: var(--mainBlack);
+  background: var(--mainBackground);
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 300;
+  min-height: 100vh;
+  /* 
+====== 
+Buttons 
+======
+*/
+  /* 
+====== 
+Navbar
+======
+*/
+  /* 
+====== 
+About
+======
+*/
+  /* 
+====== 
+Error
+======
+*/
+  /* 
+====== 
+Cocktails List 
+======
+*/
+  /* 
+====== 
+Cocktail 
+======
+*/
+  /* 
+====== 
+Form
+======
+*/
+  /* 
+====== 
+Cocktail
+======
+*/
+}
+
+.cocktailsApp h1,
+.cocktailsApp h2,
+.cocktailsApp h3,
+.cocktailsApp h4,
+.cocktailsApp h5,
+.cocktailsApp h6 {
+  font-family: var(--slantedFont);
+  margin-bottom: 1.25rem;
+  letter-spacing: var(--mainSpacing);
+}
+
+.cocktailsApp p {
+  margin-bottom: 1.25rem;
+}
+
+.cocktailsApp ul {
+  list-style-type: none;
+}
+
+.cocktailsApp a {
+  text-decoration: none;
+  color: var(--mainBlack);
+}
+
+.cocktailsApp img {
+  width: 100%;
+  display: block;
+}
+
+.cocktailsApp .btn,
+.cocktailsApp .btn-white,
+.cocktailsApp .btn-primary {
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: transparent;
+  border-radius: var(--mainBorderRadius);
+  display: inline-block;
+}
+
+.cocktailsApp .btn:hover {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
+.cocktailsApp .btn-white {
+  background: transparent;
+  color: var(--mainWhite);
+  border-color: var(--mainWhite);
+}
+
+.cocktailsApp .btn-white:hover {
+  background: var(--mainWhite);
+  color: var(--primaryColor);
+}
+
+.cocktailsApp .btn-primary {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  border-color: transparent;
+}
+
+.cocktailsApp .btn-primary:hover {
+  background: var(--primaryLightColor);
+  color: var(--primaryColor);
+}
+
+.cocktailsApp .btn-block {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  -webkit-box-shadow: var(--lightShadow);
+          box-shadow: var(--lightShadow);
+  text-align: center;
+}
+
+.cocktailsApp .btn-details {
+  padding: 0.25rem 0.4rem;
+}
+
+.cocktailsApp .btn-details:hover {
+  background: var(--primaryLightColor);
+  border-color: var(--primaryLightColor);
+}
+
+.cocktailsApp .navbar {
+  background: var(--mainWhite);
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid var(--primaryColor);
+  -webkit-box-shadow: var(--lightShadow);
+          box-shadow: var(--lightShadow);
+}
+
+.cocktailsApp .nav-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: var(--smallWidth);
+  margin: 0 auto;
+  max-width: var(--fullWidth);
+}
+
+.cocktailsApp .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cocktailsApp .nav-links a {
+  text-transform: capitalize;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+}
+
+.cocktailsApp .nav-links a:hover {
+  color: var(--primaryColor);
+}
+
+.cocktailsApp .logo {
+  width: 12rem;
+}
+
+.cocktailsApp .about-section {
+  width: var(--smallWidth);
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+}
+
+.cocktailsApp .about-section p {
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.cocktailsApp .error-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cocktailsApp .error-container {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.cocktailsApp .section {
+  padding: 5rem 0;
+}
+
+.cocktailsApp .section-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 1rem;
+}
+
+.cocktailsApp .cocktails-center {
+  width: var(--smallWidth);
+  margin: 0 auto;
+  max-width: var(--fullWidth);
+  display: -ms-grid;
+  display: grid;
+  row-gap: 2rem;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  /* align-items: start; */
+}
+
+@media screen and (min-width: 576px) {
+  .cocktailsApp .cocktails-center {
+    -ms-grid-columns: (minmax(338.8px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+  }
+}
+
+.cocktailsApp .cocktail {
+  background: var(--mainWhite);
+  margin-bottom: 2rem;
+  -webkit-box-shadow: var(--lightShadow);
+          box-shadow: var(--lightShadow);
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+  border-radius: var(--mainBorderRadius);
+}
+
+.cocktailsApp .cocktail:hover {
+  -webkit-box-shadow: var(--darkShadow);
+          box-shadow: var(--darkShadow);
+}
+
+.cocktailsApp .cocktail img {
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: var(--mainBorderRadius);
+  border-top-right-radius: var(--mainBorderRadius);
+}
+
+.cocktailsApp .cocktail-footer {
+  padding: 1.5rem;
+}
+
+.cocktailsApp .cocktail-footer h3,
+.cocktailsApp .cocktail-footer h4,
+.cocktailsApp .cocktail-footer p {
+  margin-bottom: 0.3rem;
+}
+
+.cocktailsApp .cocktail-footer h3 {
+  font-size: 2rem;
+}
+
+.cocktailsApp .cocktail-footer p {
+  color: var(--darkGrey);
+  margin-bottom: 0.5rem;
+}
+
+.cocktailsApp .search {
+  margin-top: 1rem;
+  padding-bottom: 0;
+}
+
+.cocktailsApp .search-form {
+  width: var(--smallWidth);
+  margin: 0 auto;
+  max-width: var(--maxWidth);
+  background: var(--mainWhite);
+  padding: 2rem 2.5rem;
+  text-transform: capitalize;
+  border-radius: var(--mainBorderRadius);
+  -webkit-box-shadow: var(--lightShadow);
+          box-shadow: var(--lightShadow);
+}
+
+.cocktailsApp .form-control label {
+  display: block;
+  margin-bottom: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  color: var(--primaryColor);
+}
+
+.cocktailsApp .form-control input {
+  width: 100%;
+  border: none;
+  border-color: transparent;
+  background: var(--mainBackground);
+  border-radius: var(--mainBorderRadius);
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.cocktailsApp .cocktail-section {
+  text-align: center;
+}
+
+.cocktailsApp .drink {
+  width: var(--smallWidth);
+  max-width: var(--fullWidth);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.cocktailsApp .drink img {
+  border-radius: var(--mainBorderRadius);
+}
+
+.cocktailsApp .drink p {
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 1.8;
+}
+
+.cocktailsApp .drink span {
+  margin-right: 0.5rem;
+}
+
+.cocktailsApp .drink-data {
+  background: var(--primaryLightColor);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--mainBorderRadius);
+  color: var(--primaryColor);
+}
+
+.cocktailsApp .drink-info {
+  padding-top: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .cocktailsApp .drink {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 3fr;
+        grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cocktailsApp .drink-info {
+    padding-top: 0;
+  }
+}
+
+.cocktailsApp .loader,
+.cocktailsApp .loader:before,
+.cocktailsApp .loader:after {
+  background: transparent;
+  -webkit-animation: load1 1s infinite ease-in-out;
+          animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+.cocktailsApp .loader {
+  color: var(--primaryColor);
+  text-indent: -9999em;
+  margin: 88px auto;
+  margin-top: 10rem;
+  position: relative;
+  font-size: 3rem;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+          animation-delay: -0.16s;
+}
+
+.cocktailsApp .loader:before,
+.cocktailsApp .loader:after {
+  position: absolute;
+  top: 0;
+  content: "";
+}
+
+.cocktailsApp .loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.cocktailsApp .loader:after {
+  left: 1.5em;
+}
+
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    -webkit-box-shadow: 0 0;
+            box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    -webkit-box-shadow: 0 -2em;
+            box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    -webkit-box-shadow: 0 0;
+            box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    -webkit-box-shadow: 0 -2em;
+            box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+/*# sourceMappingURL=CocktailsApp.css.map */

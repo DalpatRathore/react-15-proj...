@@ -1,0 +1,383 @@
+.modalSidebarApp {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  min-height: 100vh;
+  padding: 2rem;
+  /*  global classes */
+  /* section */
+  /*
+  =============== 
+  Home
+  ===============
+  */
+  /*
+  =============== 
+  Modal
+  ===============
+  */
+  /* OPEN/CLOSE MODAL */
+  /*
+  =============== 
+  Sidebar
+  ===============
+  */
+}
+
+.modalSidebarApp ul {
+  list-style-type: none;
+}
+
+.modalSidebarApp a {
+  text-decoration: none;
+}
+
+.modalSidebarApp h1,
+.modalSidebarApp h2,
+.modalSidebarApp h3,
+.modalSidebarApp h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.modalSidebarApp h1 {
+  font-size: 3rem;
+}
+
+.modalSidebarApp h2 {
+  font-size: 2rem;
+}
+
+.modalSidebarApp h3 {
+  font-size: 1.25rem;
+}
+
+.modalSidebarApp h4 {
+  font-size: 0.875rem;
+}
+
+.modalSidebarApp p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+
+@media screen and (min-width: 800px) {
+  .modalSidebarApp h1 {
+    font-size: 4rem;
+  }
+  .modalSidebarApp h2 {
+    font-size: 2.5rem;
+  }
+  .modalSidebarApp h3 {
+    font-size: 1.75rem;
+  }
+  .modalSidebarApp h4 {
+    font-size: 1rem;
+  }
+  .modalSidebarApp body {
+    font-size: 1rem;
+  }
+  .modalSidebarApp h1,
+  .modalSidebarApp h2,
+  .modalSidebarApp h3,
+  .modalSidebarApp h4 {
+    line-height: 1;
+  }
+}
+
+.modalSidebarApp .section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+  .modalSidebarApp .section {
+    width: 95vw;
+  }
+}
+
+.modalSidebarApp main {
+  min-height: calc(100vh - 75px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalSidebarApp .sidebar-toggle {
+  position: fixed;
+  top: 6rem;
+  left: 3rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
+  -webkit-animation: bounce 2s ease-in-out infinite;
+          animation: bounce 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.modalSidebarApp .btn {
+  text-transform: uppercase;
+  background: var(--clr-black);
+  color: var(--clr-white);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--clr-black);
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  margin: 0.5rem;
+}
+
+.modalSidebarApp .btn:hover {
+  color: var(--clr-black);
+  background: transparent;
+}
+
+.modalSidebarApp .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: -1;
+}
+
+.modalSidebarApp .show-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modalSidebarApp .modal-container {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  width: 90vw;
+  height: 30vh;
+  max-width: var(--fixed-width);
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.modalSidebarApp .close-modal-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-red-dark);
+  cursor: pointer;
+}
+
+.modalSidebarApp .sidebar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.modalSidebarApp .close-btn {
+  font-size: 1.75rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
+  color: var(--clr-red-dark);
+  margin-top: 0.2rem;
+}
+
+.modalSidebarApp .close-btn:hover {
+  color: var(--clr-red-light);
+}
+
+.modalSidebarApp .logo {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  height: 40px;
+}
+
+.modalSidebarApp .links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  padding: 1rem 1.5rem;
+  color: var(--clr-grey-3);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  letter-spacing: var(--spacing);
+}
+
+.modalSidebarApp .links a:hover {
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-2);
+}
+
+.modalSidebarApp .links a svg {
+  font-size: 1.5rem;
+  color: var(--clr-grey-5);
+  margin-right: 1rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.modalSidebarApp .links a:hover svg {
+  color: var(--clr-grey-4);
+}
+
+.modalSidebarApp .social-icons {
+  justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+.modalSidebarApp .social-icons a {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  color: var(--clr-primary-5);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.modalSidebarApp .social-icons a:hover {
+  color: var(--clr-primary-1);
+}
+
+.modalSidebarApp .sidebar {
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--clr-white);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  -webkit-box-shadow: var(--clr-red-dark);
+          box-shadow: var(--clr-red-dark);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+}
+
+.modalSidebarApp .show-sidebar {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+@media screen and (min-width: 676px) {
+  .modalSidebarApp .sidebar {
+    width: 400px;
+  }
+}
+/*# sourceMappingURL=ModalSidebarApp.css.map */
