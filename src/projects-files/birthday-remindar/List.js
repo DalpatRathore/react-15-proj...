@@ -1,4 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
+const articleVariants = {
+  hidden: {
+    opacity: 0,
+    scaleY: 0,
+    x: "-10%",
+  },
+  visible: {
+    opacity: 1,
+    scaleY: 1,
+    x: 0,
+    transition: { delay: 0.5, duration: 0.5 },
+  },
+};
 
 const List = props => {
   const { people } = props;
@@ -7,13 +21,19 @@ const List = props => {
       {people.map(person => {
         const { id, name, age, image } = person;
         return (
-          <arcticle key={id} className="person">
-            <img src={image} alt="" />
+          <motion.article
+            key={id}
+            className="list"
+            variants={articleVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <img src={image} alt={name} />
             <div>
               <h4>{name}</h4>
               <p>{age}</p>
             </div>
-          </arcticle>
+          </motion.article>
         );
       })}
     </>

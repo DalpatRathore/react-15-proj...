@@ -1,7 +1,7 @@
 .header {
   background: rgba(255, 255, 255, 0.3);
   height: 75px;
-  box-shadow: 0 2px 5px #111;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,6 +14,7 @@
   border-radius: 10px 0px 10px 0;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
   background: orange;
+  outline: none;
 }
 
 .header__logo {
