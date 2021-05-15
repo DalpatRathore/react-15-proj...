@@ -1,9 +1,22 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+
+const toursVariants = {
+  exit: {
+    scale: 0,
+    opacity: 0,
+    x: "100vw",
+  },
+};
 
 const Tour = ({ id, image, info, name, price, removeTour }) => {
   const [readMore, setReadMore] = useState(false);
   return (
-    <article className="single-tour">
+    <motion.article
+      className="single-tour"
+      variants={toursVariants}
+      exit="exit"
+    >
       <img src={image} alt={name} />
       <footer>
         <div className="tour-info">
@@ -16,11 +29,15 @@ const Tour = ({ id, image, info, name, price, removeTour }) => {
             {readMore ? "show less" : "  read more"}
           </button>
         </p>
-        <button className="delete-btn" onClick={() => removeTour(id)}>
+        <motion.button
+          className="delete-btn"
+          onClick={() => removeTour(id)}
+          whileHover={{ scale: 1.05 }}
+        >
           not interested
-        </button>
+        </motion.button>
       </footer>
-    </article>
+    </motion.article>
   );
 };
 

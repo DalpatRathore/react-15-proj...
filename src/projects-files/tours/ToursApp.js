@@ -2,6 +2,19 @@ import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
 import Tours from "./Tours";
 import "./ToursApp.css";
+import { motion } from "framer-motion";
+
+const mainVariants = {
+  hidden: {
+    opacity: 0,
+    x: "-100vw",
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 1 },
+  },
+};
 
 const url = "https://course-api.com/react-tours-project";
 
@@ -54,9 +67,9 @@ const ToursApp = () => {
   }
   return (
     <div className="toursApp">
-      <main>
+      <motion.main variants={mainVariants} initial="hidden" animate="visible">
         <Tours tours={tours} removeTour={removeTour} />
-      </main>
+      </motion.main>
     </div>
   );
 };

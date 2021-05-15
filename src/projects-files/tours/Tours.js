@@ -1,5 +1,7 @@
 import React from "react";
 import Tour from "./Tour";
+import { AnimatePresence } from "framer-motion";
+
 const Tours = ({ tours, removeTour }) => {
   return (
     <section>
@@ -8,9 +10,13 @@ const Tours = ({ tours, removeTour }) => {
         <div className="underline"></div>
       </div>
       <div>
-        {tours.map(tour => {
-          return <Tour key={tour.id} {...tour} removeTour={removeTour} />;
-        })}
+        <AnimatePresence>
+          {tours.map(tour => {
+            return (
+              <Tour key={tour.id} {...tour} removeTour={removeTour}></Tour>
+            );
+          })}
+        </AnimatePresence>
       </div>
     </section>
   );

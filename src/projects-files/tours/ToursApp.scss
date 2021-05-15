@@ -1,105 +1,26 @@
 .toursApp {
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
-  /* primary/main color */
-  --clr-primary-5: hsl(205, 78%, 60%);
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
-  --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
+  background: hsl(210, 36%, 96%);
+  background: linear-gradient(
+    90deg,
+    rgba(68, 100, 105, 0.8),
+    rgba(228, 184, 102, 0.8),
+    rgba(49, 88, 95, 0.8)
+  );
+  color: hsl(209, 61%, 16%);
   padding: 5rem 0;
   min-height: 100vh;
-  ul {
-    list-style-type: none;
-  }
-  a {
-    text-decoration: none;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    letter-spacing: var(--spacing);
-    text-transform: capitalize;
-    line-height: 1.25;
-    margin-bottom: 0.75rem;
-  }
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
-  h4 {
-    font-size: 0.875rem;
-  }
+  overflow-x: hidden;
+
   p {
     margin-bottom: 1.25rem;
-    color: var(--clr-grey-5);
+    color: hsl(210, 22%, 49%);
   }
-  @media screen and (min-width: 800px) {
-    h1 {
-      font-size: 4rem;
-    }
-    h2 {
-      font-size: 2.5rem;
-    }
-    h3 {
-      font-size: 1.75rem;
-    }
-    h4 {
-      font-size: 1rem;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
-      line-height: 1;
-    }
-  }
-  /*  global classes */
 
   /* section */
   .section {
     width: 90vw;
     margin: 0 auto;
-    max-width: var(--max-width);
+    max-width: 1170px;
   }
 
   @media screen and (min-width: 992px) {
@@ -108,13 +29,13 @@
     }
   }
   .btn {
-    background: var(--clr-primary-5);
+    background: hsl(205, 78%, 60%);
     display: inline-block;
     padding: 0.25rem 0.5rem;
-    border-radius: var(--radius);
+    border-radius: 0.25rem;
     text-transform: capitalize;
-    color: var(--clr-white);
-    letter-spacing: var(--spacing);
+    color: #fff;
+    letter-spacing: 0.1rem;
     border-color: transparent;
     cursor: pointer;
     margin-top: 2rem;
@@ -127,40 +48,76 @@
   */
   main {
     width: 90vw;
-    max-width: var(--fixed-width);
+    max-width: 620px;
     margin: 0rem auto;
   }
   .loading {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+  .loader {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #069;
+    border-bottom-color: #069;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotate 2s linear infinite;
+    & span {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin: 0.5rem;
+      border-radius: 50%;
+      background: rgb(6, 44, 63);
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
   .title {
     text-align: center;
     margin-bottom: 4rem;
   }
   .underline {
-    width: 6rem;
+    width: 8rem;
     height: 0.25rem;
-    background: var(--clr-primary-5);
+    background: hsl(205, 78%, 60%);
     margin-left: auto;
     margin-right: auto;
   }
 
   .single-tour {
-    background: var(--clr-white);
-    border-radius: var(--radius);
+    background: #fff;
+
+    border-radius: 0.25rem;
     margin: 2rem 0;
-    box-shadow: var(--light-shadow);
-    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s linear;
   }
   .single-tour:hover {
-    box-shadow: var(--dark-shadow);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
   .single-tour img {
     width: 100%;
     height: 20rem;
     object-fit: cover;
-    border-top-right-radius: var(--radius);
-    border-top-left-radius: var(--radius);
+    border-top-right-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
   }
   .tour-info {
     display: flex;
@@ -175,16 +132,18 @@
     background: transparent;
     border-color: transparent;
     text-transform: capitalize;
-    color: var(--clr-primary-5);
+    color: hsl(205, 78%, 60%);
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
+    letter-spacing: 0.1rem;
     padding-left: 0.25rem;
   }
   .tour-price {
-    color: var(--clr-primary-5);
-    background: var(--clr-primary-10);
+    color: hsl(327, 75%, 30%);
+    background: hsl(205, 100%, 96%);
     padding: 0.25rem 0.5rem;
-    border-radius: var(--radius);
+    border-radius: 0.25rem;
   }
   .single-tour footer {
     padding: 1.5rem 2rem;
@@ -193,11 +152,11 @@
     display: block;
     width: 200px;
     margin: 1rem auto 0 auto;
-    color: var(--clr-red-dark);
-    letter-spacing: var(--spacing);
+    color: hsl(360, 67%, 44%);
+    letter-spacing: 0.1rem;
     background: transparent;
-    border: 1px solid var(--clr-red-dark);
+    border: 1px solid hsl(360, 67%, 44%);
     padding: 0.25rem 0.5rem;
-    border-radius: var(--radius);
+    border-radius: 0.25rem;
   }
 }
