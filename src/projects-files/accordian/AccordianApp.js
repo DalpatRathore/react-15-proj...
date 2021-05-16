@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
+
+import pushpin from "./pushpin.png";
 import data from "./data";
 import "./AccordianApp.css";
-import SingleQuestion from "./Question";
+import Question from "./Question";
+
 const AccordianApp = () => {
-  const [questions, setQuestions] = useState(data);
   return (
     <div className="accordianApp">
       <main>
         <div className="container">
-          <h3>questions and answers about login</h3>
+          <img src={pushpin} alt="" className="pushpin-icon" />
+          <div>
+            <h3>FAQs about login</h3>
+          </div>
           <section className="info">
-            {questions.map(question => {
-              return (
-                <SingleQuestion
-                  key={question.id}
-                  {...question}
-                ></SingleQuestion>
-              );
+            {data.map(question => {
+              return <Question key={question.id} {...question}></Question>;
             })}
           </section>
         </div>

@@ -1,48 +1,6 @@
 .accordianApp {
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
-  /* primary/main color */
-  --clr-primary-5: hsl(205, 78%, 60%);
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
-  --clr-purple: #4b145b;
-  --clr-red-special: #b4345c;
-  --clr-grey-special: #eae6eb;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
-  --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 920px;
-  background: var(--clr-purple);
-  color: var(--clr-grey-1);
-  /*  global classes */
+  background: #ddd;
+  color: #102a42;
   /* section */
   /*
   =============== 
@@ -51,73 +9,15 @@
   */
 }
 
-.accordianApp ul {
-  list-style-type: none;
-}
-
-.accordianApp a {
-  text-decoration: none;
-}
-
-.accordianApp h1,
-.accordianApp h2,
-.accordianApp h3,
-.accordianApp h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
-}
-
-.accordianApp h1 {
-  font-size: 3rem;
-}
-
-.accordianApp h2 {
-  font-size: 2rem;
-}
-
-.accordianApp h3 {
-  font-size: 1.25rem;
-}
-
-.accordianApp h4 {
-  font-size: 0.875rem;
-}
-
 .accordianApp p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
-}
-
-@media screen and (min-width: 800px) {
-  .accordianApp h1 {
-    font-size: 4rem;
-  }
-  .accordianApp h2 {
-    font-size: 2.5rem;
-  }
-  .accordianApp h3 {
-    font-size: 1.75rem;
-  }
-  .accordianApp h4 {
-    font-size: 1rem;
-  }
-  .accordianApp body {
-    font-size: 1rem;
-  }
-  .accordianApp h1,
-  .accordianApp h2,
-  .accordianApp h3,
-  .accordianApp h4 {
-    line-height: 1;
-  }
+  color: #617d98;
 }
 
 .accordianApp .section {
   width: 90vw;
   margin: 0 auto;
-  max-width: var(--max-width);
+  max-width: 1170px;
 }
 
 @media screen and (min-width: 992px) {
@@ -143,13 +43,26 @@
 .accordianApp .container {
   width: 90vw;
   margin: 5rem auto;
-  background: var(--clr-white);
-  border-radius: var(--radius);
+  background: #fff;
+  background: linear-gradient(45deg, #069, #ccc, maroon);
+  border-radius: 0.25rem;
   padding: 2.5rem 2rem;
-  max-width: var(--fixed-width);
+  max-width: 920px;
   display: -ms-grid;
   display: grid;
   gap: 1rem 2rem;
+  -webkit-box-shadow: 0 0 3px black;
+          box-shadow: 0 0 3px black;
+  position: relative;
+  overflow: hidden;
+}
+
+.accordianApp .pushpin-icon {
+  position: absolute;
+  top: 0;
+  left: -1%;
+  width: 3rem;
+  height: 3rem;
 }
 
 .accordianApp .container h3 {
@@ -168,11 +81,26 @@
 
 .accordianApp .question {
   padding: 1rem 1.5rem;
-  border: 2px solid var(--clr-grey-special);
+  border: 2px solid #eae6eb;
   margin-bottom: 1rem;
-  border-radius: var(--radius);
-  -webkit-box-shadow: var(--light-shadow);
-          box-shadow: var(--light-shadow);
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0 2px black;
+          box-shadow: 0 0 2px black;
+  -webkit-transition: boxShadow 0.3s ease-in-out;
+  transition: boxShadow 0.3s ease-in-out;
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
+  height: 65px;
+}
+
+.accordianApp .question:hover {
+  -webkit-box-shadow: 0 0 5px white;
+          box-shadow: 0 0 5px white;
+}
+
+.accordianApp .question.open {
+  height: 150px;
 }
 
 .accordianApp .question h4 {
@@ -181,7 +109,7 @@
 }
 
 .accordianApp .question p {
-  color: var(--clr-grey-3);
+  color: #042d53;
   margin-bottom: 0;
   margin-top: 0.5rem;
 }
@@ -207,7 +135,7 @@
   border-color: transparent;
   width: 2rem;
   height: 2rem;
-  background: var(--clr-grey-special);
+  background: #eae6eb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,11 +146,25 @@
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 50%;
-  color: var(--clr-red-special);
+  color: #e40a4f;
   cursor: pointer;
   margin-left: 1rem;
   -ms-flex-item-align: center;
       align-self: center;
   min-width: 2rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  -webkit-transition: -webkit-transform ease 0.5s;
+  transition: -webkit-transform ease 0.5s;
+  transition: transform ease 0.5s;
+  transition: transform ease 0.5s, -webkit-transform ease 0.5s;
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+  outline: none;
+}
+
+.accordianApp .btn:hover {
+  -webkit-transform: scale(1.1) rotate(180deg);
+          transform: scale(1.1) rotate(180deg);
 }
 /*# sourceMappingURL=AccordianApp.css.map */
