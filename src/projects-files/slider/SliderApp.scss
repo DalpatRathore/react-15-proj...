@@ -1,105 +1,45 @@
 .sliderApp {
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(21, 91%, 17%);
-  --clr-primary-2: hsl(21, 84%, 25%);
-  --clr-primary-3: hsl(21, 81%, 29%);
-  --clr-primary-4: hsl(21, 77%, 34%);
-  --clr-primary-5: hsl(21, 62%, 45%);
-  --clr-primary-6: hsl(21, 57%, 50%);
-  --clr-primary-7: hsl(21, 65%, 59%);
-  --clr-primary-8: hsl(21, 80%, 74%);
-  --clr-primary-9: hsl(21, 94%, 87%);
-  --clr-primary-10: hsl(21, 100%, 94%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
-  --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
-  padding: 5rem 0;
-  min-height: 100vh;
-  ul {
-    list-style-type: none;
-  }
-  a {
-    text-decoration: none;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    letter-spacing: var(--spacing);
-    text-transform: capitalize;
-    line-height: 1.25;
-    margin-bottom: 0.75rem;
-  }
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
-  h4 {
-    font-size: 0.875rem;
-  }
+  background: hsl(210, 36%, 96%);
+  background: linear-gradient(
+    0deg,
+    transparent,
+    rgba(255, 165, 0, 1),
+    rgb(14, 69, 121)
+  );
+  color: hsl(209, 61%, 16%);
+  padding: 3rem 0;
+  min-height: calc(100vh - 75px);
   p {
     margin-bottom: 1.25rem;
-    color: var(--clr-grey-5);
+    color: hsl(210, 22%, 49%);
   }
-  @media screen and (min-width: 800px) {
-    h1 {
-      font-size: 4rem;
-    }
-    h2 {
-      font-size: 2.5rem;
-    }
-    h3 {
-      font-size: 1.75rem;
-    }
-    h4 {
-      font-size: 1rem;
-    }
-    body {
-      font-size: 1rem;
-    }
-    h1,
-    h2,
-    h3,
-    h4 {
-      line-height: 1;
-    }
-  }
-  /*  global classes */
 
   /* section */
   .section {
+    padding: 2rem;
     width: 90vw;
     margin: 0rem auto;
-    max-width: var(--max-width);
+    max-width: 1170px;
+    background: hsl(210, 36%, 96%);
+    background: linear-gradient(
+      180deg,
+      transparent,
+      rgba(255, 165, 0, 1),
+      rgb(14, 69, 121)
+    );
+    position: relative;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5%;
+      right: 5%;
+      width: 300px;
+      height: 200px;
+      border-radius: 32% 68% 30% 70% / 74% 7% 93% 26%;
+      background: rgba(107, 6, 68, 0.5);
+      z-index: -5;
+    }
   }
 
   @media screen and (min-width: 992px) {
@@ -121,75 +61,109 @@
     align-items: center;
     justify-content: center;
     font-weight: 500;
+    color: hsl(209, 58%, 29%);
   }
   .title span {
     font-size: 0.85em;
-    color: var(--clr-primary-5);
+    color: hsl(209, 79%, 22%);
     margin-right: 1rem;
     font-weight: 700;
   }
   .section-center {
     margin: 0 auto;
-    margin-top: 4rem;
+    margin-top: 2rem;
     width: 80vw;
     height: 450px;
     max-width: 800px;
-    text-align: center;
     position: relative;
     display: flex;
+    text-align: center;
+    background: rgb(97, 88, 88);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(14, 69, 121),
+      transparent
+    );
     overflow: hidden;
+
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0%;
+      right: 0%;
+      width: 150px;
+      height: 100px;
+      border-radius: 32% 68% 30% 70% / 74% 7% 93% 26%;
+      background: linear-gradient(0deg, rgba(255, 165, 0, 0.5), transparent);
+
+      z-index: -5;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 8%;
+      left: 0%;
+      width: 400px;
+      height: 300px;
+      border-radius: 88% 12% 25% 75% / 48% 48% 52% 52%;
+      background: rgba(16, 6, 107, 0.2);
+      z-index: -5;
+    }
   }
   .person-img {
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 4px solid var(--clr-grey-8);
-    box-shadow: var(--dark-shadow);
+    border: 4px solid hsl(210, 31%, 80%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   article h4 {
     text-transform: uppercase;
-    color: var(--clr-primary-5);
+    color: hsl(209, 44%, 86%);
     margin-bottom: 0.25rem;
   }
   .title {
     text-transform: capitalize;
     margin-bottom: 0.75rem;
-    color: var(--clr-grey-3);
+    color: hsl(210, 39%, 61%);
   }
   .text {
-    max-width: 35em;
+    max-width: 35rem;
     margin: 0 auto;
     margin-top: 2rem;
     line-height: 2;
-    color: var(--clr-grey-5);
+    color: hsl(212, 17%, 78%);
   }
   .icon {
     font-size: 3rem;
     margin-top: 1rem;
-    color: var(--clr-primary-5);
+    color: orange;
   }
   .prev,
   .next {
     position: absolute;
     top: 200px;
     transform: translateY(-50%);
-    background: var(--clr-grey-5);
-    color: var(--clr-white);
+    background: hsl(209, 51%, 37%);
+    color: #fff;
     width: 1.25rem;
     height: 1.25rem;
     display: grid;
     place-items: center;
     border-color: transparent;
     font-size: 1rem;
-    border-radius: var(--radius);
+    border-radius: 0.25rem;
     cursor: pointer;
-    transition: var(--transition);
+    transition: background 0.3s linear;
+    outline: none;
   }
   .prev:hover,
   .next:hover {
-    background: var(--clr-primary-5);
+    background: hsl(209, 67%, 26%);
   }
   .prev {
     left: 0;
@@ -215,7 +189,7 @@
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: var(--transition);
+    transition: background 0.3s linear;
   }
   article.activeSlide {
     opacity: 1;
