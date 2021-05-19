@@ -2,6 +2,23 @@ import React, { useEffect, useState } from "react";
 import Alert from "./Alert";
 import "./GroceryBudApp.css";
 import List from "./List";
+import { motion } from "framer-motion";
+import { v1 as uuidv1 } from "uuid";
+
+const formVariants = {
+  enter: {
+    x: "-100%",
+    opacity: 0,
+  },
+  center: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      x: { type: "spring", stiffness: 500, duration: 0.5 },
+      opacity: { duration: 0.5 },
+    },
+  },
+};
 
 const getLocalStorage = () => {
   let list = localStorage.getItem("GroceryBud");
@@ -34,25 +51,27 @@ const GroceryBudApp = () => {
       //     msg: "Please enter value",
       //     type: "danger",
       //   });
-      showAlert(true, "danger", "Please Enter Value");
+      showAlert(true, "danger", "please add item!");
     } else if (name && isEditing) {
       //    edit
       setList(
         list.map(item => {
           if (item.id === editID) {
-            return { ...item, title: name };
+            return { ...item, title: name, id: uuidv1() };
           }
           return item;
         })
       );
+
       setName("");
       setEditID(null);
       setIsEditing(false);
-      showAlert(true, "success", "Value changed");
+      showAlert(true, "success", "item saved!");
     } else {
-      showAlert(true, "success", "Item added to the list");
+      showAlert(true, "success", "item added!");
       const newItem = {
-        id: new Date().getTime().toString(),
+        // id: new Date().getTime().toString(),
+        id: uuidv1(),
         title: name,
       };
       setList([...list, newItem]);
@@ -64,12 +83,12 @@ const GroceryBudApp = () => {
     setAlert({ show, type, msg });
   };
   const clearList = () => {
-    showAlert(true, "danger", "Empty list");
+    showAlert(true, "danger", "list cleared!");
     setList([]);
   };
 
   const removeItem = id => {
-    showAlert(true, "danger", "Item removed");
+    showAlert(true, "danger", "item removed!");
     setList(list.filter(item => item.id !== id));
   };
   const editItem = id => {
@@ -82,11 +101,13 @@ const GroceryBudApp = () => {
     <div className="groceryBudApp">
       <section className="section-center">
         <form onSubmit={handleSubmit} className="grocery-form">
-          {alert.show && (
-            <Alert {...alert} removeAlert={showAlert} list={list}></Alert>
-          )}
           <h3>Grocery Bud</h3>
-          <div className="form-control">
+          <motion.div
+            className="form-control"
+            variants={formVariants}
+            initial="enter"
+            animate="center"
+          >
             <input
               className="grocery"
               placeholder="e.g. milk"
@@ -95,19 +116,25 @@ const GroceryBudApp = () => {
               onChange={e => setName(e.target.value)}
             />
             <button className="submit-btn" type="submit">
-              {isEditing ? "Edit" : "Submit"}
+              {isEditing ? "Save" : "Add Item"}
             </button>
-          </div>
+            {alert.show && (
+              <Alert {...alert} removeAlert={showAlert} list={list}></Alert>
+            )}
+          </motion.div>
         </form>
         {list.length > 0 && (
           <div className="grocery-container">
+            <div
+              className={`${isEditing ? "overlay" : "overlay-hidden"}`}
+            ></div>
             <List
               items={list}
               removeItem={removeItem}
               editItem={editItem}
             ></List>
             <button className="clear-btn" onClick={clearList}>
-              Clear Items
+              Clear List
             </button>
           </div>
         )}
