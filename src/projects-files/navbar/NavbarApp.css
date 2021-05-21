@@ -1,46 +1,7 @@
 .navbarApp {
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
-  /* primary/main color */
-  --clr-primary-5: hsl(205, 78%, 60%);
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
-  --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
+  background: rgba(255, 165, 0, 0.5);
+  color: #102a42;
   min-height: calc(100vh - 75px);
-  /*  global classes */
   /* section */
   /*
   =============== 
@@ -49,73 +10,10 @@
   */
 }
 
-.navbarApp ul {
-  list-style-type: none;
-}
-
-.navbarApp a {
-  text-decoration: none;
-}
-
-.navbarApp h1,
-.navbarApp h2,
-.navbarApp h3,
-.navbarApp h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
-}
-
-.navbarApp h1 {
-  font-size: 3rem;
-}
-
-.navbarApp h2 {
-  font-size: 2rem;
-}
-
-.navbarApp h3 {
-  font-size: 1.25rem;
-}
-
-.navbarApp h4 {
-  font-size: 0.875rem;
-}
-
-.navbarApp p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
-}
-
-@media screen and (min-width: 800px) {
-  .navbarApp h1 {
-    font-size: 4rem;
-  }
-  .navbarApp h2 {
-    font-size: 2.5rem;
-  }
-  .navbarApp h3 {
-    font-size: 1.75rem;
-  }
-  .navbarApp h4 {
-    font-size: 1rem;
-  }
-  .navbarApp body {
-    font-size: 1rem;
-  }
-  .navbarApp h1,
-  .navbarApp h2,
-  .navbarApp h3,
-  .navbarApp h4 {
-    line-height: 1;
-  }
-}
-
 .navbarApp .section {
   width: 90vw;
   margin: 0 auto;
-  max-width: var(--max-width);
+  max-width: 1170px;
 }
 
 @media screen and (min-width: 992px) {
@@ -125,9 +23,10 @@
 }
 
 .navbarApp nav {
-  background: var(--clr-white);
-  -webkit-box-shadow: var(--light-shadow);
-          box-shadow: var(--light-shadow);
+  background: #fff;
+  height: 80px;
+  padding: 0 2rem;
+  position: relative;
 }
 
 .navbarApp .nav-header {
@@ -141,65 +40,310 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem;
+  z-index: 100;
 }
 
 .navbarApp .nav-toggle {
-  font-size: 1.5rem;
-  color: var(--clr-primary-5);
-  background: transparent;
-  border-color: transparent;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  outline: none;
+  padding: 0.2rem;
+  background: rgba(17, 17, 17, 0.1);
+  border: none;
   cursor: pointer;
+  -webkit-box-shadow: 0px 0px 1px #111;
+          box-shadow: 0px 0px 1px #111;
+  -webkit-transition: -webkit-box-shadow 0.5s linear;
+  transition: -webkit-box-shadow 0.5s linear;
+  transition: box-shadow 0.5s linear;
+  transition: box-shadow 0.5s linear, -webkit-box-shadow 0.5s linear;
+}
+
+.navbarApp .nav-toggle .open {
+  color: #072d4b;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+.navbarApp .nav-toggle .close {
+  color: maroon;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
 }
 
 .navbarApp .nav-toggle:hover {
-  color: var(--clr-primary-1);
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-box-shadow: 0px 0px 3px #111;
+          box-shadow: 0px 0px 3px #111;
+}
+
+.navbarApp .nav-toggle:hover .open,
+.navbarApp .nav-toggle:hover .close {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .navbarApp .logo {
-  height: 40px;
-}
-
-.navbarApp .links a {
-  color: var(--clr-grey-3);
-  font-size: 1rem;
-  text-transform: capitalize;
-  letter-spacing: var(--spacing);
-  display: block;
-  padding: 0.5rem 1rem;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
-
-.navbarApp .links a:hover {
-  background: var(--clr-primary-8);
-  color: var(--clr-primary-5);
-  padding-left: 1.5rem;
-}
-
-.navbarApp .social-icons {
-  display: none;
+  height: 50px;
 }
 
 .navbarApp .links-container {
-  height: 0;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  min-height: calc(100vh - 230px);
+  width: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
   overflow: hidden;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
 }
 
-.navbarApp .show-container {
-  height: 10rem;
-  padding-bottom: 1rem;
+.navbarApp .show-links-container {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.navbarApp .links {
+  padding: 0.1rem 0;
+}
+
+.navbarApp .links li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 0.1rem 0;
+  background: #ddd;
+  color: #0e3261;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  -webkit-transition: color 0.5s linear, background 0.5s, border 0.5s;
+  transition: color 0.5s linear, background 0.5s, border 0.5s;
+}
+
+.navbarApp .links li a:hover {
+  color: #fff;
+  background: #0e3261;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.navbarApp .home {
+  min-height: calc(100vh - 230px);
+  background: #791a3e;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#791a3e));
+  background: linear-gradient(0deg, transparent, #791a3e);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.navbarApp .content-container {
+  width: 90vw;
+  max-width: 500px;
+  height: 300px;
+  border-radius: 0.25rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#fff));
+  background: linear-gradient(0deg, transparent, #fff);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  z-index: 1;
+}
+
+.navbarApp .content-container h1,
+.navbarApp .content-container h3 {
+  color: #ddd;
+  text-shadow: 0 0 3px #111;
+}
+
+.navbarApp .content-container .links-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbarApp .content-container a {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 102, 153, 0.6);
+  color: #ddd;
+  letter-spacing: 0.1rem;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  -webkit-transition: color 0.5s, background 0.5s;
+  transition: color 0.5s, background 0.5s;
+}
+
+.navbarApp .content-container a:hover {
+  background: rgba(13, 54, 75, 0.9);
+  color: #fff;
+}
+
+.navbarApp .content-container::before {
+  position: absolute;
+  content: "";
+  top: 10%;
+  right: 10%;
+  width: 200px;
+  height: 150px;
+  border-radius: 32% 68% 30% 70% / 74% 7% 93% 26%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(98, 0, 255, 0.5)), to(transparent));
+  background: linear-gradient(0deg, rgba(98, 0, 255, 0.5), transparent);
+  z-index: -1;
+}
+
+.navbarApp .content-container::after {
+  position: absolute;
+  content: "";
+  top: 2rem;
+  left: 10%;
+  width: 300px;
+  height: 250px;
+  border-radius: 40% 60% 6% 94% / 51% 42% 58% 49%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 227, 51, 0.2)), color-stop(rgba(185, 24, 78, 0.5)), to(transparent));
+  background: linear-gradient(180deg, rgba(240, 227, 51, 0.2), rgba(185, 24, 78, 0.5), transparent);
+  z-index: -1;
+}
+
+.navbarApp .videos {
+  min-height: calc(100vh - 230px);
+  background: #311369;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#791a3e));
+  background: linear-gradient(0deg, transparent, #791a3e);
+  overflow: hidden;
+}
+
+.navbarApp .projects {
+  min-height: calc(100vh - 230px);
+  background: #791a3e;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#791a3e));
+  background: linear-gradient(0deg, transparent, #791a3e);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.navbarApp .footer {
+  background: #cecece;
+  background: linear-gradient(45deg, #111111, #cecece, #111111);
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbarApp .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbarApp .social-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  margin: 0.5rem;
+  background: #184f77;
+  -webkit-box-shadow: 0 0 3px #111;
+          box-shadow: 0 0 3px #111;
+  -webkit-transition: background 0.3s, -webkit-box-shadow 0.3s linear;
+  transition: background 0.3s, -webkit-box-shadow 0.3s linear;
+  transition: background 0.3s, box-shadow 0.3s linear;
+  transition: background 0.3s, box-shadow 0.3s linear, -webkit-box-shadow 0.3s linear;
+}
+
+.navbarApp .social-icon a {
+  font-size: 1.2rem;
+  color: #ddd;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+.navbarApp .social-icon:hover {
+  background: maroon;
+  -webkit-box-shadow: 1px 1px 5px #111;
+          box-shadow: 1px 1px 5px #111;
+}
+
+.navbarApp .social-icon:hover a {
+  color: #fff;
 }
 
 @media screen and (min-width: 800px) {
   .navbarApp .nav-center {
     max-width: 1170px;
-    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -218,34 +362,64 @@
     display: none;
   }
   .navbarApp .links-container {
-    height: auto !important;
-  }
-  .navbarApp .links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .navbarApp .links a {
-    padding: 0;
-    margin: 0 0.5rem;
-  }
-  .navbarApp .links a:hover {
-    padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: initial;
+    min-height: 0;
+    height: 45px;
+    width: 400px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
     background: transparent;
   }
-  .navbarApp .social-icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .navbarApp .links {
+    padding: 0.5rem;
   }
-  .navbarApp .social-icons a {
-    margin: 0 0.5rem;
-    color: var(--clr-primary-5);
-    -webkit-transition: var(--transition);
-    transition: var(--transition);
+  .navbarApp .links li {
+    margin-left: 0.8rem;
+    display: inline-block;
+    -webkit-box-shadow: 0 0 0px #111;
+            box-shadow: 0 0 0px #111;
+    background: transparent;
+    border-radius: 0.25rem;
+    padding: 0;
+    -webkit-transition: -webkit-box-shadow 0.3s ease-out;
+    transition: -webkit-box-shadow 0.3s ease-out;
+    transition: box-shadow 0.3s ease-out;
+    transition: box-shadow 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
   }
-  .navbarApp .social-icons a:hover {
-    color: var(--clr-primary-7);
+  .navbarApp .links li a {
+    margin: 0;
+    display: inline-block;
+    background: transparent;
+    padding: 0.3rem 1rem;
+    color: #324d67;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    -webkit-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+    border: 1px solid #0e3261;
+    border-radius: 0.25rem;
+    -webkit-transition: color 0.4s ease-in-out, background 0.5s linear;
+    transition: color 0.4s ease-in-out, background 0.5s linear;
+  }
+  .navbarApp .links li a:hover {
+    color: #fff;
+    border: 1px solid #0e3261;
+    background: #0e3261;
+  }
+  .navbarApp .links li:hover {
+    -webkit-box-shadow: 0 0 4px #111;
+            box-shadow: 0 0 4px #111;
+    border-radius: 0.25rem;
   }
 }
 /*# sourceMappingURL=NavbarApp.css.map */

@@ -1,52 +1,42 @@
 import React from "react";
-import { FaBehance, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 export const links = [
   {
     id: 1,
-    url: "/",
+    url: "/navbar",
     text: "home",
   },
   {
     id: 2,
-    url: "/about",
-    text: "about",
+    url: "/navbar/videos",
+    text: "videos",
   },
   {
     id: 3,
-    url: "/projects",
+    url: "/navbar/projects",
     text: "projects",
-  },
-  {
-    id: 4,
-    url: "/contact",
-    text: "contact",
-  },
-  {
-    id: 5,
-    url: "/profile",
-    text: "profile",
   },
 ];
 
 export const social = [
   {
     id: 1,
-    url: "https://www.facebook.com",
-    icon: <FaFacebook />,
+    url: "https://www.youtube.com/channel/UCMZFwxv5l-XtKi693qMJptA",
+    icon: <FaYoutube />,
   },
   {
     id: 2,
-    url: "https://www.twitter.com",
+    url: "https://twitter.com/john_smilga?lang=en",
     icon: <FaTwitter />,
   },
   {
     id: 3,
-    url: "https://www.linkedin.com",
+    url: "https://www.linkedin.com/in/john-smilga-659100177",
     icon: <FaLinkedin />,
   },
   {
     id: 4,
-    url: "https://www.behance.net/",
-    icon: <FaBehance />,
+    url: "https://github.com/john-smilga",
+    icon: <FaGithub />,
   },
 ];
