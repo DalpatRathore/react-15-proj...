@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useGlobalContext } from "../modal-and-sidebar/context";
+import { useGlobalContext } from "../../context";
 
 const Submenu = () => {
   const {

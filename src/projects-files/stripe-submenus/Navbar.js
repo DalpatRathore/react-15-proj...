@@ -1,6 +1,6 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
-import { useGlobalContext } from "../modal-and-sidebar/context";
+import { useGlobalContext } from "../../context";
 import logo from "./images/logo.svg";
 
 const Navbar = () => {

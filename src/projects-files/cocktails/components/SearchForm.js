@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { useGlobalContext } from "../../modal-and-sidebar/context";
+import { useGlobalContext } from "../../../context";
 
 const SearchForm = () => {
   const { setSearchTerm } = useGlobalContext();

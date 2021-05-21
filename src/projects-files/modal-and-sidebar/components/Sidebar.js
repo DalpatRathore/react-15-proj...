@@ -1,8 +1,10 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
-import { useGlobalContext } from "./context";
-import { links, social } from "./data";
-import logo from "./logo.svg";
+import { useGlobalContext } from "../../../context";
+import { links } from "../data";
+import logo from "../logo.svg";
+import { Link } from "react-router-dom";
+
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
   return (
@@ -18,20 +20,10 @@ const Sidebar = () => {
           const { id, url, text, icon } = link;
           return (
             <li key={id}>
-              <a href={url}>
+              <Link to={url} onClick={closeSidebar}>
                 {icon}
                 {text}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-      <ul className="social-icons">
-        {social.map(link => {
-          const { id, url, icon } = link;
-          return (
-            <li key={id}>
-              <a href={url}>{icon}</a>
+              </Link>
             </li>
           );
         })}

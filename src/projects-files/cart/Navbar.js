@@ -1,5 +1,5 @@
 import React from "react";
-import { useGlobalContext } from "../modal-and-sidebar/context";
+import { useGlobalContext } from "../../context";
 const Navbar = () => {
   const { amount } = useGlobalContext();
   return (

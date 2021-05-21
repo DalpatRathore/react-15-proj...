@@ -1,47 +1,7 @@
 .modalSidebarApp {
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
-  /* primary/main color */
-  --clr-primary-5: hsl(205, 78%, 60%);
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
-  --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
-  min-height: 100vh;
-  padding: 2rem;
-  /*  global classes */
+  background: #f1f5f8;
+  color: #102a42;
+  min-height: calc(100vh - 75px);
   /* section */
   /*
   =============== 
@@ -61,73 +21,10 @@
   */
 }
 
-.modalSidebarApp ul {
-  list-style-type: none;
-}
-
-.modalSidebarApp a {
-  text-decoration: none;
-}
-
-.modalSidebarApp h1,
-.modalSidebarApp h2,
-.modalSidebarApp h3,
-.modalSidebarApp h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
-}
-
-.modalSidebarApp h1 {
-  font-size: 3rem;
-}
-
-.modalSidebarApp h2 {
-  font-size: 2rem;
-}
-
-.modalSidebarApp h3 {
-  font-size: 1.25rem;
-}
-
-.modalSidebarApp h4 {
-  font-size: 0.875rem;
-}
-
-.modalSidebarApp p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
-}
-
-@media screen and (min-width: 800px) {
-  .modalSidebarApp h1 {
-    font-size: 4rem;
-  }
-  .modalSidebarApp h2 {
-    font-size: 2.5rem;
-  }
-  .modalSidebarApp h3 {
-    font-size: 1.75rem;
-  }
-  .modalSidebarApp h4 {
-    font-size: 1rem;
-  }
-  .modalSidebarApp body {
-    font-size: 1rem;
-  }
-  .modalSidebarApp h1,
-  .modalSidebarApp h2,
-  .modalSidebarApp h3,
-  .modalSidebarApp h4 {
-    line-height: 1;
-  }
-}
-
 .modalSidebarApp .section {
   width: 90vw;
   margin: 0 auto;
-  max-width: var(--max-width);
+  max-width: 1170px;
 }
 
 @media screen and (min-width: 992px) {
@@ -136,29 +33,15 @@
   }
 }
 
-.modalSidebarApp main {
-  min-height: calc(100vh - 75px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .modalSidebarApp .sidebar-toggle {
-  position: fixed;
-  top: 6rem;
-  left: 3rem;
-  font-size: 2rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  font-size: 2.5rem;
   background: transparent;
-  border-color: transparent;
-  color: var(--clr-primary-5);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  border: none;
+  outline: none;
+  color: #09293e;
   cursor: pointer;
   -webkit-animation: bounce 2s ease-in-out infinite;
           animation: bounce 2s ease-in-out infinite;
@@ -170,8 +53,8 @@
             transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   100% {
     -webkit-transform: scale(1);
@@ -185,8 +68,8 @@
             transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   100% {
     -webkit-transform: scale(1);
@@ -196,25 +79,25 @@
 
 .modalSidebarApp .btn {
   text-transform: uppercase;
-  background: var(--clr-black);
-  color: var(--clr-white);
+  color: #222;
+  background: transparent;
   padding: 0.375rem 0.75rem;
-  letter-spacing: var(--spacing);
+  letter-spacing: 0.1rem;
   display: inline-block;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-transition: color 0.3s ease, background 0.3s ease-in;
+  transition: color 0.3s ease, background 0.3s ease-in;
   font-size: 0.875rem;
-  border: 2px solid var(--clr-black);
+  border: 2px solid #222;
   cursor: pointer;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius);
+  border-radius: 0.25rem;
   margin: 0.5rem;
 }
 
 .modalSidebarApp .btn:hover {
-  color: var(--clr-black);
-  background: transparent;
+  background: #222;
+  color: #fff;
 }
 
 .modalSidebarApp .modal-overlay {
@@ -227,24 +110,31 @@
   display: -ms-grid;
   display: grid;
   place-items: center;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  visibility: hidden;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   z-index: -1;
 }
 
 .modalSidebarApp .show-modal {
-  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
   z-index: 10;
 }
 
 .modalSidebarApp .modal-container {
-  background: var(--clr-white);
-  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 0.25rem;
   width: 90vw;
-  height: 30vh;
-  max-width: var(--fixed-width);
-  text-align: center;
+  height: 50vh;
+  max-width: 620px;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -258,7 +148,7 @@
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
-  color: var(--clr-red-dark);
+  color: #6b0c0c;
   cursor: pointer;
 }
 
@@ -276,19 +166,33 @@
 }
 
 .modalSidebarApp .close-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.75rem;
   background: transparent;
-  border-color: transparent;
-  color: var(--clr-primary-5);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  width: 40px;
+  height: 40px;
+  padding: 0.2rem 0.5rem;
+  background: transparent;
+  border: 0.15rem solid #8d0404;
+  border-radius: 50%;
+  outline: none;
   cursor: pointer;
-  color: var(--clr-red-dark);
-  margin-top: 0.2rem;
+  color: maroon;
+  -webkit-transition: color 0.3s ease-in, background 0.3s ease-out;
+  transition: color 0.3s ease-in, background 0.3s ease-out;
 }
 
 .modalSidebarApp .close-btn:hover {
-  color: var(--clr-red-light);
+  color: #fff;
+  background: maroon;
 }
 
 .modalSidebarApp .logo {
@@ -306,73 +210,259 @@
           align-items: center;
   font-size: 1.25rem;
   text-transform: capitalize;
-  padding: 1rem 1.5rem;
-  color: var(--clr-grey-3);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  letter-spacing: var(--spacing);
+  padding: 0.5rem 1rem;
+  background: #c4c4c4;
+  margin: 0.1rem 0;
+  letter-spacing: 0.1rem;
+  color: #152d47;
+  -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, padding-left 0.3s ease-in;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, padding-left 0.3s ease-in;
 }
 
 .modalSidebarApp .links a:hover {
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-2);
+  background: #0f3552;
+  color: #fff;
+  padding-left: 2rem;
 }
 
 .modalSidebarApp .links a svg {
   font-size: 1.5rem;
-  color: var(--clr-grey-5);
+  color: #1a3e61;
   margin-right: 1rem;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .modalSidebarApp .links a:hover svg {
-  color: var(--clr-grey-4);
-}
-
-.modalSidebarApp .social-icons {
-  justify-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 2rem;
-}
-
-.modalSidebarApp .social-icons a {
-  font-size: 1.5rem;
-  margin: 0 0.5rem;
-  color: var(--clr-primary-5);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
-
-.modalSidebarApp .social-icons a:hover {
-  color: var(--clr-primary-1);
+  color: #fff;
 }
 
 .modalSidebarApp .sidebar {
   position: fixed;
-  top: 5rem;
+  top: 75px;
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--clr-white);
+  background: #fff;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#fff));
+  background: linear-gradient(0deg, transparent, #fff);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 1fr auto;
       grid-template-rows: auto 1fr auto;
   row-gap: 1rem;
-  -webkit-box-shadow: var(--clr-red-dark);
-          box-shadow: var(--clr-red-dark);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-box-shadow: #bb2525;
+          box-shadow: #bb2525;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   -webkit-transform: translate(-100%);
           transform: translate(-100%);
+  z-index: 100;
 }
 
 .modalSidebarApp .show-sidebar {
   -webkit-transform: translate(0);
           transform: translate(0);
+}
+
+.modalSidebarApp .home {
+  min-height: calc(100vh - 150px);
+  background: #791a3e;
+  background: linear-gradient(-45deg, transparent, #0e3a72 50%, #f7cf4b 50%, #791c81 70%, #0e3a72 70%, transparent);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.modalSidebarApp .content-container {
+  width: 90vw;
+  max-width: 500px;
+  height: 300px;
+  border-radius: 0.25rem;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(orange), to(transparent));
+  background: linear-gradient(90deg, transparent, orange, transparent);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  z-index: 1;
+}
+
+.modalSidebarApp .content-container h1,
+.modalSidebarApp .content-container h3 {
+  color: #ddd;
+  text-shadow: 0 0 3px #111;
+}
+
+.modalSidebarApp .content-container .links-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalSidebarApp .content-container a {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 102, 153, 0.6);
+  color: #ddd;
+  letter-spacing: 0.1rem;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  -webkit-transition: color 0.5s, background 0.5s;
+  transition: color 0.5s, background 0.5s;
+}
+
+.modalSidebarApp .content-container a:hover {
+  background: rgba(13, 54, 75, 0.9);
+  color: #fff;
+}
+
+.modalSidebarApp .content-container::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 5%;
+  width: 200px;
+  height: 150px;
+  border-radius: 32% 68% 30% 70% / 74% 7% 93% 26%;
+  background: linear-gradient(-45deg, rgba(98, 0, 255, 0.5), transparent);
+  z-index: -1;
+}
+
+.modalSidebarApp .content-container::after {
+  position: absolute;
+  content: "";
+  top: 1rem;
+  left: 5%;
+  width: 300px;
+  height: 250px;
+  border-radius: 40% 60% 6% 94% / 51% 42% 58% 49%;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(15, 92, 31, 0.2)), to(rgba(185, 43, 24, 0.5)));
+  background: linear-gradient(-90deg, rgba(15, 92, 31, 0.2), rgba(185, 43, 24, 0.5));
+  z-index: -1;
+}
+
+.modalSidebarApp .videos {
+  min-height: calc(100vh - 150px);
+  background: #791a3e;
+  background: linear-gradient(-45deg, transparent, #0e3a72 50%, #f7cf4b 50%, #791c81 70%, #0e3a72 70%, transparent);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.modalSidebarApp .projects {
+  min-height: calc(100vh - 150px);
+  background: #791a3e;
+  background: linear-gradient(-45deg, transparent, #0e3a72 50%, #f7cf4b 50%, #791c81 70%, #0e3a72 70%, transparent);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.modalSidebarApp .footer {
+  background: #cecece;
+  background: linear-gradient(45deg, transparent, #0e3a72 20%, #f7cf4b 20%, #791c81 80%, #0e3a72 80%, transparent);
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modalSidebarApp .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modalSidebarApp .social-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0.5rem;
+  background: #184f77;
+  -webkit-box-shadow: 0 0 3px #111;
+          box-shadow: 0 0 3px #111;
+  -webkit-transition: background 0.3s ease, -webkit-box-shadow 0.3s ease-out;
+  transition: background 0.3s ease, -webkit-box-shadow 0.3s ease-out;
+  transition: background 0.3s ease, box-shadow 0.3s ease-out;
+  transition: background 0.3s ease, box-shadow 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
+}
+
+.modalSidebarApp .social-icon a {
+  font-size: 1.2rem;
+  color: #ddd;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+.modalSidebarApp .social-icon:hover {
+  background: maroon;
+  -webkit-box-shadow: 1px 1px 5px #111;
+          box-shadow: 1px 1px 5px #111;
+}
+
+.modalSidebarApp .social-icon:hover a {
+  color: #fff;
 }
 
 @media screen and (min-width: 676px) {

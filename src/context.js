@@ -5,9 +5,9 @@ import React, {
   useEffect,
   useCallback,
 } from "react";
-import sublinks from "../stripe-submenus/data";
+import sublinks from "./projects-files/stripe-submenus/data";
 // import cartItems from "../cart/data";
-import reducer from "../cart/reducer";
+import reducer from "./projects-files/cart/reducer";
 const AppContext = React.createContext();
 const url = "https://course-api.com/react-useReducer-cart-project";
 const urlCocktail = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
@@ -33,13 +33,8 @@ const AppProvider = ({ children }) => {
       const { drinks } = data;
       if (drinks) {
         const newCocktails = drinks.map(item => {
-          const {
-            idDrink,
-            strDrink,
-            strDrinkThumb,
-            strAlcoholic,
-            strGlass,
-          } = item;
+          const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } =
+            item;
           return {
             id: idDrink,
             name: strDrink,
