@@ -8,6 +8,7 @@ import React, {
 import sublinks from "./projects-files/stripe-submenus/data";
 // import cartItems from "../cart/data";
 import reducer from "./projects-files/cart/reducer";
+
 const AppContext = React.createContext();
 const url = "https://course-api.com/react-useReducer-cart-project";
 const urlCocktail = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
@@ -103,13 +104,9 @@ const AppProvider = ({ children }) => {
     return () => {};
   }, []);
 
-  const [page, setPage] = useState({ page: "", links: [] });
-  const [location, setLocation] = useState({});
+  /* --- Modal & Sidebar and Stripe Submenu Context Section --- */
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const openSidebar = () => {
     setIsSidebarOpen(true);
   };
@@ -122,6 +119,10 @@ const AppProvider = ({ children }) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+  /* --- Submenu Context Section --- */
+  const [page, setPage] = useState({ page: "", links: [] });
+  const [location, setLocation] = useState({});
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const openSubmenu = (text, coordinates) => {
     const page = sublinks.find(link => link.page === text);
     setPage(page);

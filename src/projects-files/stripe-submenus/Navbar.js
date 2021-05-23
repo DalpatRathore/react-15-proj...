@@ -1,7 +1,7 @@
 import React from "react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaArrowRight, FaChevronRight } from "react-icons/fa";
 import { useGlobalContext } from "../../context";
-import logo from "./images/logo.svg";
+// import logo from "./images/logo.svg";
 
 const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
@@ -24,7 +24,8 @@ const Navbar = () => {
     <nav className="nav" onMouseOver={handleSubmenu}>
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} alt="stripe" className="nav-logo" />
+          {/* <img src={logo} alt="stripe" className="nav-logo" /> */}
+          <h1 className="nav-logo">stripe</h1>
           <button className="btn toggle-btn" onClick={openSidebar}>
             <FaBars></FaBars>
           </button>
@@ -37,6 +38,11 @@ const Navbar = () => {
           </li>
           <li>
             <button className="link-btn" onMouseOver={displaySubmenu}>
+              use cases
+            </button>
+          </li>
+          <li>
+            <button className="link-btn" onMouseOver={displaySubmenu}>
               developers
             </button>
           </li>
@@ -45,8 +51,14 @@ const Navbar = () => {
               company
             </button>
           </li>
+          <li>
+            <button className="link-btn">pricing</button>
+          </li>
         </ul>
-        <button className="btn btn-signin-btn">Sign In</button>
+        <button className="btn btn-signin">
+          Sign in <FaChevronRight className="chevronRight"></FaChevronRight>
+          <FaArrowRight className="arrowRight"></FaArrowRight>
+        </button>
       </div>
     </nav>
   );

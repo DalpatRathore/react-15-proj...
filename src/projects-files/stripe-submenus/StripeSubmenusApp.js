@@ -9,10 +9,12 @@ import Sidebar from "./Sidebar";
 const StripeSubmenusApp = () => {
   return (
     <div className="stripeSubmenusApp">
-      <Navbar></Navbar>
-      <Sidebar></Sidebar>
-      <Hero></Hero>
-      <Submenu></Submenu>
+      <div className="gradient-bg">
+        <Navbar></Navbar>
+        <Submenu></Submenu>
+        <Hero></Hero>
+        <Sidebar></Sidebar>
+      </div>
     </div>
   );
 };

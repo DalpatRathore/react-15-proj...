@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useGlobalContext } from "../../context";
-
+import { FaArrowRight } from "react-icons/fa";
 const Submenu = () => {
   const {
     isSubmenuOpen,
@@ -10,35 +10,56 @@ const Submenu = () => {
 
   const containerRef = useRef(null);
 
-  const [columns, setColumns] = useState("col-2");
+  // const [columns, setColumns] = useState("col-1");
 
   useEffect(() => {
-    setColumns("col-2");
+    // setColumns("col-1");
     const submenu = containerRef.current;
     const { center, bottom } = location;
     submenu.style.left = `${center}px`;
     submenu.style.top = `${bottom}px`;
-    if (links.lenght === 3) {
-      setColumns("col-3");
-    }
-    if (links.lenght > 4) {
-      setColumns("col-4");
-    }
+    // if (links.length === 2) {
+    //   setColumns("col-2");
+    // }
+    // if (links.length >= 3) {
+    //   setColumns("col-3");
+    // }
   }, [location, links]);
   return (
     <aside
       ref={containerRef}
       className={`${isSubmenuOpen ? "submenu show" : "submenu"}`}
     >
-      <h4>{page}</h4>
-      <div className={`submenu-center ${columns}`}>
+      <div className="submenu-center">
         {links.map((link, index) => {
-          const { label, icon, url } = link;
+          const { header, moreLinks } = link;
           return (
-            <a key={index} href={url}>
-              {icon}
-              {label}
-            </a>
+            <div className="links-container" key={index}>
+              <h3>{header}</h3>
+              {moreLinks.map((moreLink, index) => {
+                const { label, icon, url, desc } = moreLink;
+                return (
+                  <a href={url} key={index} className="link-wrapper">
+                    <span
+                      className={`${
+                        page === "products"
+                          ? "icon-container icon-size"
+                          : "icon-container"
+                      }`}
+                    >
+                      <img src={icon} alt="" />
+                    </span>
+                    <span className="label-container">
+                      <h5>
+                        {label}{" "}
+                        <FaArrowRight className="arrowRight"></FaArrowRight>
+                      </h5>
+                      <p>{desc}</p>
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
           );
         })}
       </div>

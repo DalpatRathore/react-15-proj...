@@ -1,15 +1,20 @@
 import React from "react";
-import phoneImg from "./images/phone.svg";
+import heroImg from "./images/hero-image.svg";
 import { useGlobalContext } from "../../context";
+import { FaArrowRight, FaChevronRight } from "react-icons/fa";
+import { companiesLogo } from "./data";
 
 const Hero = () => {
   const { closeSubmenu } = useGlobalContext();
   return (
     <section className="hero" onMouseOver={closeSubmenu}>
+      <article className="hero-images">
+        <img src={heroImg} alt="" className="phone-img" />
+      </article>
       <div className="hero-center">
         <article className="hero-info">
           <h1>
-            Payments infrastructure <br />
+            Payments <br /> infrastructure <br />
             for the internet
           </h1>
           <p>
@@ -17,11 +22,29 @@ const Hero = () => {
             Stripe’s software and APIs to accept payments, send payouts, and
             manage their businesses online.
           </p>
-          <button className="btn">Start now</button>
+          <div className="btn-container">
+            <button className="btn btn-startNow">
+              Start now
+              <FaChevronRight className="chevronRight"></FaChevronRight>
+              <FaArrowRight className="arrowRight"></FaArrowRight>
+            </button>
+            <button className="btn btn-contactSales">
+              Contact sales
+              <FaChevronRight className="chevronRight"></FaChevronRight>
+              <FaArrowRight className="arrowRight"></FaArrowRight>
+            </button>
+          </div>
         </article>
 
-        <article className="hero-images">
-          <img src={phoneImg} alt="" className="phone-img" />
+        <article className="companies-logo">
+          {companiesLogo.map(companyLogo => {
+            const { id, logoUrl } = companyLogo;
+            return (
+              <div className="logo-wrapper" key={id}>
+                <img src={logoUrl} alt="" />
+              </div>
+            );
+          })}
         </article>
       </div>
     </section>

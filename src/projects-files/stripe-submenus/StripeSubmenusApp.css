@@ -1,133 +1,33 @@
+body {
+  background: white 100%;
+}
+
 .stripeSubmenusApp {
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
-  /* primary/main color */
-  --clr-primary-5: hsl(205, 78%, 60%);
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
-  --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-  color: var(--clr-grey-1);
-  min-height: 100vh;
-  /*  global classes */
-  /* section */
+  width: 100%;
+  min-height: calc(100vh - 75px);
+  background: #dfcdcd;
   /*
   =============== 
   Stripe Styles
   ===============
   */
+  /* companies media query */
   /* nav media query */
   /* hero media query */
   /* sidebar */
   /* links */
 }
 
-.stripeSubmenusApp ul {
-  list-style-type: none;
-}
-
-.stripeSubmenusApp a {
-  text-decoration: none;
-}
-
-.stripeSubmenusApp h1,
-.stripeSubmenusApp h2,
-.stripeSubmenusApp h3,
-.stripeSubmenusApp h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
-}
-
-.stripeSubmenusApp h1 {
-  font-size: 3rem;
-}
-
-.stripeSubmenusApp h2 {
-  font-size: 2rem;
-}
-
-.stripeSubmenusApp h3 {
-  font-size: 1.25rem;
-}
-
-.stripeSubmenusApp h4 {
-  font-size: 0.875rem;
-}
-
-.stripeSubmenusApp p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
-}
-
-@media screen and (min-width: 800px) {
-  .stripeSubmenusApp h1 {
-    font-size: 4rem;
-  }
-  .stripeSubmenusApp h2 {
-    font-size: 2.5rem;
-  }
-  .stripeSubmenusApp h3 {
-    font-size: 1.75rem;
-  }
-  .stripeSubmenusApp h4 {
-    font-size: 1rem;
-  }
-  .stripeSubmenusApp body {
-    font-size: 1rem;
-  }
-  .stripeSubmenusApp h1,
-  .stripeSubmenusApp h2,
-  .stripeSubmenusApp h3,
-  .stripeSubmenusApp h4 {
-    line-height: 1;
-  }
-}
-
-.stripeSubmenusApp .section {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: var(--max-width);
-}
-
-@media screen and (min-width: 992px) {
-  .stripeSubmenusApp .section {
-    width: 95vw;
-  }
+.stripeSubmenusApp .gradient-bg {
+  height: 110vh;
+  color: #102a42;
+  background: linear-gradient(165deg, #ff333d 0%, #ff333d 3%, #a960ee 8%, #a960ee 15%, #90e0ff 20%, rgba(255, 165, 0, 0.8) 35%, rgba(255, 165, 0, 0.8) 45%, rgba(91, 195, 236, 0.8) 50%, white 50%);
 }
 
 .stripeSubmenusApp .nav {
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 1080px;
   height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,8 +44,7 @@
 }
 
 .stripeSubmenusApp .nav-center {
-  width: 90vw;
-  max-width: var(--max-width);
+  width: 100%;
 }
 
 .stripeSubmenusApp .nav-header {
@@ -160,72 +59,140 @@
           align-items: center;
 }
 
-.stripeSubmenusApp .btn {
-  font-size: 1rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius);
-  border-color: transparent;
-  color: white;
-  background: var(--clr-black);
+.stripeSubmenusApp .nav-logo {
+  font-size: 2rem;
+  text-transform: initial;
+  color: #fff;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  letter-spacing: initial;
   cursor: pointer;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+}
+
+.stripeSubmenusApp .nav-logo:hover {
+  color: #ddd;
+}
+
+.stripeSubmenusApp .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 1.2rem;
+  height: 2.3rem;
+  font-size: 1rem;
+  border-radius: 2.5rem;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.stripeSubmenusApp .chevronRight {
+  font-size: 0.7rem;
+}
+
+.stripeSubmenusApp .arrowRight {
+  font-size: 0.75rem;
+  display: none;
 }
 
 .stripeSubmenusApp .btn:hover {
-  background: var(--clr-grey-5);
+  background: #617d98;
+}
+
+.stripeSubmenusApp .btn:hover .chevronRight {
+  display: none;
+}
+
+.stripeSubmenusApp .btn:hover .arrowRight {
+  display: inline-block;
 }
 
 .stripeSubmenusApp .nav-links {
   display: none;
 }
 
-.stripeSubmenusApp .signin-btn {
+.stripeSubmenusApp .btn-signin {
   display: none;
 }
 
-.stripeSubmenusApp .hero {
-  position: relative;
-  min-height: 100vh;
-  margin-top: -5rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  justify-items: center;
+.stripeSubmenusApp .toggle-btn {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.stripeSubmenusApp .hero::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 65%;
-  top: 0;
-  left: 0;
-  background-image: url(./images/hero.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
+.stripeSubmenusApp .toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.stripeSubmenusApp .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.stripeSubmenusApp .btn-startNow {
+  width: 8rem;
+  background: #083f5a;
+}
+
+.stripeSubmenusApp .btn-contactSales {
+  width: 10rem;
+  background: transparent;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  color: #083f5a;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.stripeSubmenusApp .btn-contactSales:hover {
+  background: transparent;
+  color: #617d98;
+}
+
+.stripeSubmenusApp .hero {
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 1080px;
+  margin-top: 10rem;
 }
 
 .stripeSubmenusApp .hero-center {
-  width: 90vw;
-  max-width: var(--max-width);
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
 .stripeSubmenusApp .hero-info h1 {
   text-transform: none;
-  max-width: 500px;
-  margin-bottom: 2rem;
+  color: #0c5775;
+  mix-blend-mode: darken;
 }
 
 .stripeSubmenusApp .hero-info p {
-  max-width: 35em;
+  margin: 2rem 0;
+  width: 80vw;
+  font-size: 1.2rem;
   line-height: 1.8;
 }
 
@@ -233,7 +200,38 @@
   display: none;
 }
 
-@media screen and (min-width: 800px) {
+.stripeSubmenusApp .companies-logo {
+  margin: 8rem 0 2rem 0;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding: 0.5rem;
+  gap: 5rem 3rem;
+}
+
+.stripeSubmenusApp .logo-wrapper {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (min-width: 700px) {
+  .stripeSubmenusApp .companies-logo {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .stripeSubmenusApp .companies-logo {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
   .stripeSubmenusApp .nav-center {
     display: -ms-grid;
     display: grid;
@@ -246,109 +244,105 @@
   .stripeSubmenusApp .toggle-btn {
     display: none;
   }
-  .stripeSubmenusApp .signin-btn {
-    display: inline-block;
+  .stripeSubmenusApp .btn-signin {
+    width: 6.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .stripeSubmenusApp .btn-signin:hover {
+    background: rgba(255, 255, 255, 0.4);
   }
   .stripeSubmenusApp .nav-links {
-    display: block;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
     height: 100%;
-    display: grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .stripeSubmenusApp .nav-links li {
     height: 100%;
+    margin: 0 0.1rem;
   }
   .stripeSubmenusApp .link-btn {
+    padding: 1rem;
     height: 100%;
     background: transparent;
     border-color: transparent;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 510;
     color: white;
     text-transform: capitalize;
     letter-spacing: 1px;
-    width: 10rem;
+    cursor: pointer;
+  }
+  .stripeSubmenusApp .link-btn:hover {
+    color: #eaeaea;
   }
 }
 
-@media screen and (min-width: 800px) {
-  .stripeSubmenusApp .hero::before {
-    background-size: contain;
-    height: 100%;
-  }
-  .stripeSubmenusApp .hero-center {
-    -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
+@media screen and (min-width: 900px) {
+  .stripeSubmenusApp .hero {
+    width: 95vw;
   }
   .stripeSubmenusApp .hero-info h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .stripeSubmenusApp .hero-info p {
     font-size: 1.25rem;
+    width: 25rem;
   }
   .stripeSubmenusApp .hero-images {
     display: block;
-    -ms-grid-column-align: center;
-        justify-self: center;
+    position: absolute;
+    top: 30%;
+    right: 0rem;
   }
   .stripeSubmenusApp .phone-img {
-    width: 12rem;
+    width: 25rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .stripeSubmenusApp .hero-center {
-    -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
-    padding-bottom: 12vh;
-  }
   .stripeSubmenusApp .hero-info h1 {
-    max-width: 100%;
-    font-size: 5.5rem;
+    font-size: 5rem;
   }
-  .stripeSubmenusApp .hero-images {
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
-        align-self: end;
+  .stripeSubmenusApp .hero-info p {
+    width: 30rem;
   }
   .stripeSubmenusApp .phone-img {
-    width: 15rem;
+    width: 32rem;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .stripeSubmenusApp .hero-center {
-    padding-bottom: 20vh;
-  }
   .stripeSubmenusApp .phone-img {
-    width: 17rem;
+    width: 32rem;
   }
 }
 
 .stripeSubmenusApp .sidebar-wrapper {
-  position: fixed;
-  top: 4rem;
+  position: absolute;
+  top: 75px;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  padding: 1rem 0;
   display: -ms-grid;
   display: grid;
   place-items: center;
   visibility: hidden;
   z-index: -1;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
   -webkit-transform: scale(0);
           transform: scale(0);
   background: rgba(0, 0, 0, 0.5);
@@ -363,21 +357,21 @@
 
 .stripeSubmenusApp .sidebar {
   width: 90vw;
-  height: 95vh;
-  max-width: var(--fixed-width);
-  background: var(--clr-white);
-  border-radius: var(--radius);
-  -webkit-box-shadow: var(--dark-shadow);
-          box-shadow: var(--dark-shadow);
+  min-height: 90vh;
+  max-width: 620px;
+  background: #fff;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   position: relative;
-  padding: 4rem 2rem;
+  padding: 0.3rem;
 }
 
 .stripeSubmenusApp .close-btn {
-  font-size: 2rem;
+  font-size: 1.6rem;
   background: transparent;
   border-color: transparent;
-  color: var(--clr-grey-5);
+  color: #617d98;
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -385,7 +379,17 @@
 }
 
 .stripeSubmenusApp .sidebar article {
-  margin-bottom: 2rem;
+  padding: 3rem 2rem 1rem 2rem;
+  border-bottom: 1px dashed #ccc;
+}
+
+.stripeSubmenusApp .sidebar article h1 {
+  font-size: 13px;
+  color: #999;
+}
+
+.stripeSubmenusApp .sidebar article:last-child {
+  border-bottom: none;
 }
 
 .stripeSubmenusApp .sidebar-sublinks {
@@ -393,36 +397,98 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  row-gap: 0.25rem;
+  gap: 1rem;
+  padding-bottom: 1rem;
 }
 
-.stripeSubmenusApp .sidebar-sublinks a {
-  display: block;
-  color: var(--clr-grey-1);
-  text-transform: capitalize;
+.stripeSubmenusApp .sidebar-link-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  outline: none;
+  font-size: 14px;
 }
 
-.stripeSubmenusApp .sidebar-sublinks svg {
-  color: var(--clr-grey-5);
-  margin-right: 1rem;
+.stripeSubmenusApp .sidebar-link-wrapper .sidebar-icon-container {
+  width: 20px;
+  margin: 0 0.7rem;
 }
 
-@media screen and (min-width: 800px) {
+.stripeSubmenusApp .sidebar-link-wrapper .sidebar-icon-container img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.stripeSubmenusApp .sidebar-link-wrapper .sidebar-label-container h5 {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0 0.2rem;
+  text-transform: capitalize;
+  color: #0a2540;
+}
+
+.stripeSubmenusApp .sidebar-link-wrapper .sidebar-label-container .arrowRight {
+  visibility: hidden;
+  display: inline-block;
+}
+
+.stripeSubmenusApp .sidebar-link-wrapper:hover .arrowRight {
+  visibility: visible;
+}
+
+.stripeSubmenusApp .btn-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 4rem;
+  background: #eee;
+  border-radius: 0.5rem;
+}
+
+.stripeSubmenusApp .sidebar-btn-signin {
+  width: 6.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #4615bb;
+}
+
+.stripeSubmenusApp .sidebar-btn-signin:hover {
+  background: #061233;
+}
+
+@media screen and (min-width: 900px) {
   .stripeSubmenusApp .sidebar-wrapper {
     display: none;
   }
 }
 
 .stripeSubmenusApp .submenu {
-  background: var(--clr-white);
-  -webkit-box-shadow: var(--dark-shadow);
-          box-shadow: var(--dark-shadow);
+  background: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 8rem;
   left: 50%;
@@ -431,9 +497,9 @@
   z-index: 3;
   display: none;
   padding: 2rem;
-  border-radius: var(--radius);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .stripeSubmenusApp .submenu::before {
@@ -441,11 +507,11 @@
   display: block;
   width: 0;
   height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid var(--clr-white);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
   position: absolute;
-  top: -5px;
+  top: -8px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -453,48 +519,101 @@
 
 .stripeSubmenusApp .submenu.show {
   display: block;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .stripeSubmenusApp .submenu-center {
-  display: -ms-grid;
-  display: grid;
-  gap: 0.25rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1rem;
 }
 
-.stripeSubmenusApp .col-2 {
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+.stripeSubmenusApp .links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.2rem;
 }
 
-.stripeSubmenusApp .col-3 {
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+.stripeSubmenusApp .links-container h3 {
+  color: #888;
+  font-size: 1.2rem;
 }
 
-.stripeSubmenusApp .col-4 {
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-}
-
-.stripeSubmenusApp .submenu h4 {
-  margin-bottom: 1.5rem;
-}
-
-.stripeSubmenusApp .submenu-center a {
-  width: 10rem;
-  display: block;
-  color: var(--clr-grey-1);
-  text-transform: capitalize;
+.stripeSubmenusApp .link-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  outline: none;
+  font-size: 14px;
+  margin: 0.8rem 0;
 }
 
-.stripeSubmenusApp .submenu-center svg {
-  color: var(--clr-grey-5);
-  margin-right: 1rem;
+.stripeSubmenusApp .link-wrapper .icon-container {
+  width: 20px;
+  margin: 0 0.7rem;
+}
+
+.stripeSubmenusApp .link-wrapper .icon-container img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.stripeSubmenusApp .link-wrapper .icon-size {
+  width: 40px;
+}
+
+.stripeSubmenusApp .link-wrapper .label-container h5 {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0 0.2rem;
+  text-transform: capitalize;
+  color: #0a2540;
+}
+
+.stripeSubmenusApp .link-wrapper .label-container p {
+  font-size: 0.8rem;
+  color: #5d7c9b;
+  font-weight: 620;
+}
+
+.stripeSubmenusApp .link-wrapper .label-container .arrowRight {
+  visibility: hidden;
+  display: inline-block;
+}
+
+.stripeSubmenusApp .link-wrapper:hover .label-container p {
+  color: #0a2540;
+}
+
+.stripeSubmenusApp .link-wrapper:hover .label-container .arrowRight {
+  visibility: visible;
 }
 /*# sourceMappingURL=StripeSubmenusApp.css.map */
