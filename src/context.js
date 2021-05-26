@@ -14,7 +14,8 @@ const url = "https://course-api.com/react-useReducer-cart-project";
 const urlCocktail = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
 const initialState = {
-  loading: false,
+  isLoading: false,
+  isError: false,
   // cart: cartItems,
   cart: [],
   total: 0,
@@ -54,6 +55,7 @@ const AppProvider = ({ children }) => {
       setLoading(false);
     }
   }, [searchTerm]);
+
   useEffect(() => {
     fetchDrinks();
     return () => {};
@@ -72,6 +74,7 @@ const AppProvider = ({ children }) => {
       type: "CLEAR_CART",
     });
   };
+
   const remove = id => {
     dispatch({ type: "REMOVE", payload: id });
   };
@@ -90,19 +93,27 @@ const AppProvider = ({ children }) => {
   };
 
   const fetchData = async () => {
-    dispatch({ type: "LOADING" });
-    const response = await fetch(url);
-    const cart = await response.json();
-    dispatch({
-      type: "DISPLAY_ITEMS",
-      payload: cart,
-    });
+    try {
+      dispatch({ type: "LOADING" });
+      const response = await fetch(url);
+      const cart = await response.json();
+      dispatch({
+        type: "DISPLAY_ITEMS",
+        payload: cart,
+      });
+    } catch (error) {
+      console.log("error :>> ", error);
+      dispatch({ type: "ERROR" });
+    }
   };
 
   useEffect(() => {
     fetchData();
     return () => {};
   }, []);
+  const reloadCart = () => {
+    fetchData();
+  };
 
   /* --- Modal & Sidebar and Stripe Submenu Context Section --- */
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -148,6 +159,7 @@ const AppProvider = ({ children }) => {
         page,
         ...state,
         clearCart,
+        reloadCart,
         remove,
         increase,
         decrease,

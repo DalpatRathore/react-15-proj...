@@ -61,13 +61,16 @@ const reducer = (state, action) => {
     };
   }
   if (action.type === "LOADING") {
-    return { ...state, loading: true };
+    return { ...state, isLoading: true };
+  }
+  if (action.type === "ERROR") {
+    return { ...state, isError: true, isLoading: false };
   }
   if (action.type === "DISPLAY_ITEMS") {
     return {
       ...state,
       cart: action.payload,
-      loading: false,
+      isLoading: false,
     };
   }
   if (action.type === "TOGGLE_AMOUNT") {

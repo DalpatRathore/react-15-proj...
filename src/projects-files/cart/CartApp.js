@@ -5,11 +5,27 @@ import CartContainer from "./CartContainer";
 import Navbar from "./Navbar";
 
 const CartApp = () => {
-  const { loading } = useGlobalContext();
-  if (loading) {
+  const { isLoading, isError } = useGlobalContext();
+
+  if (isLoading) {
     return (
-      <div className="loading">
-        <h1>Loading...</h1>
+      <div className="cartApp">
+        <div className="loader-container">
+          <div className="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  if (isError) {
+    return (
+      <div className="cartApp">
+        <div className="loader-container">
+          <h3 className="error">Sorry! somethings went wrong.</h3>
+        </div>
       </div>
     );
   }

@@ -1,17 +1,30 @@
 import React from "react";
 import { useGlobalContext } from "../../context";
 import CartItem from "./CartItem";
+import { AnimatePresence } from "framer-motion";
 
 const CartContainer = () => {
-  const { cart, total, clearCart } = useGlobalContext();
+  const { cart, total, clearCart, reloadCart } = useGlobalContext();
+
+  const confirmClear = () => {
+    const confirmMsg = window.confirm("Are you sure?");
+    if (confirmMsg) {
+      clearCart();
+    }
+  };
 
   if (cart.length === 0) {
     return (
       <section className="cart">
         {/* cart header */}
         <header>
-          <h2>your bag</h2>
+          <h2>
+            your <span>bag</span>
+          </h2>
           <h4 className="empty-cart">is currently empty</h4>
+          <button className="btn clear-btn" onClick={reloadCart}>
+            Reload Cart
+          </button>
         </header>
       </section>
     );
@@ -20,13 +33,18 @@ const CartContainer = () => {
     <section className="cart">
       {/* cart header */}
       <header>
-        <h2>your bag</h2>
+        <h2>
+          your <span>bag</span>
+        </h2>
       </header>
       {/* cart items */}
+
       <div>
-        {cart.map(item => {
-          return <CartItem key={item.id} {...item} />;
-        })}
+        <AnimatePresence>
+          {cart.map(item => {
+            return <CartItem key={item.id} {...item} />;
+          })}
+        </AnimatePresence>
       </div>
       {/* cart footer */}
       <footer>
@@ -36,7 +54,7 @@ const CartContainer = () => {
             total <span>${total}</span>
           </h4>
         </div>
-        <button className="btn clear-btn" onClick={clearCart}>
+        <button className="btn clear-btn" onClick={confirmClear}>
           clear cart
         </button>
       </footer>
