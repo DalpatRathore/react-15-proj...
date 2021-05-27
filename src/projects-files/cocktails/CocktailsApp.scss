@@ -1,48 +1,18 @@
 .cocktailsApp {
-  --primaryLightColor: #d4e6a5;
-  --primaryColor: #476a2e;
-  --primaryDarkColor: #c02c03;
-  --mainWhite: #fff;
-  --offWhite: #f7f7f7;
-  --mainBackground: #f1f5f8;
-  --mainOverlay: rgba(35, 10, 36, 0.4);
-  --mainBlack: #222;
-  --mainGrey: #ececec;
-  --darkGrey: #afafaf;
-  --mainRed: #bd0303;
-  --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.3rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-  --mainBorderRadius: 0.25rem;
-  --smallWidth: 85vw;
-  --maxWidth: 40rem;
-  --fullWidth: 1170px;
-  color: var(--mainBlack);
-  background: var(--mainBackground);
+  color: #222;
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
-  min-height: 100vh;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--slantedFont);
-    margin-bottom: 1.25rem;
-    letter-spacing: var(--mainSpacing);
-  }
-  p {
-    margin-bottom: 1.25rem;
-  }
-  ul {
-    list-style-type: none;
-  }
+  min-height: calc(100vh - 75px);
+  background: #f1f5f8;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 178, 78, 1) 0%,
+    rgba(28, 84, 124, 1) 100%
+  );
   a {
     text-decoration: none;
-    color: var(--mainBlack);
+    color: #222;
   }
   img {
     width: 100%;
@@ -51,99 +21,55 @@
 
   /* 
 ====== 
-Buttons 
-======
-*/
-  .btn,
-  .btn-white,
-  .btn-primary {
-    text-transform: uppercase;
-    letter-spacing: var(--mainSpacing);
-    color: var(--primaryColor);
-    border: 2px solid var(--primaryColor);
-    padding: 0.45rem 0.8rem;
-    display: inline-block;
-    transition: var(--mainTransition);
-    cursor: pointer;
-    font-size: 0.8rem;
-    background: transparent;
-    border-radius: var(--mainBorderRadius);
-    display: inline-block;
-  }
-  .btn:hover {
-    background: var(--primaryColor);
-    color: var(--mainWhite);
-  }
-  .btn-white {
-    background: transparent;
-    color: var(--mainWhite);
-    border-color: var(--mainWhite);
-  }
-  .btn-white:hover {
-    background: var(--mainWhite);
-    color: var(--primaryColor);
-  }
-  .btn-primary {
-    background: var(--primaryColor);
-    color: var(--mainWhite);
-    border-color: transparent;
-  }
-  .btn-primary:hover {
-    background: var(--primaryLightColor);
-    color: var(--primaryColor);
-  }
-  .btn-block {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    box-shadow: var(--lightShadow);
-    text-align: center;
-  }
-  .btn-details {
-    padding: 0.25rem 0.4rem;
-  }
-  .btn-details:hover {
-    background: var(--primaryLightColor);
-    border-color: var(--primaryLightColor);
-  }
-  /* 
-====== 
 Navbar
 ======
 */
   .navbar {
-    background: var(--mainWhite);
+    position: sticky;
+    top: 75px;
+    left: 0;
     height: 5rem;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid var(--primaryColor);
-    box-shadow: var(--lightShadow);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    background: linear-gradient(
+      90deg,
+      rgba(249, 178, 78, 0.91) 0%,
+      rgba(28, 84, 124, 0.91) 100%
+    );
+    backdrop-filter: blur(1.5px);
+    z-index: 500;
   }
   .nav-center {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: var(--smallWidth);
+    width: 90vw;
     margin: 0 auto;
-    max-width: var(--fullWidth);
+    max-width: 1170px;
   }
   .nav-links {
     display: flex;
     align-items: center;
   }
   .nav-links a {
-    text-transform: capitalize;
+    text-transform: uppercase;
     display: inline-block;
-    font-weight: bold;
-    margin-right: 0.5rem;
-    font-weight: 400;
+    font-weight: 500;
+    margin-left: 1rem;
     letter-spacing: 2px;
-    font-size: 1.2rem;
-    padding: 0.25rem 0.5rem;
-    transition: var(--mainTransition);
+    font-size: 1rem;
+    padding: 0.25rem 0.8rem;
+    border-radius: 0.25rem;
+    color: rgb(26, 6, 75);
+    border: 0.15rem solid rgb(26, 6, 75);
+    background: transparent;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in;
   }
   .nav-links a:hover {
-    color: var(--primaryColor);
+    color: #fff;
+    background: rgb(26, 6, 75);
   }
   .logo {
     width: 12rem;
@@ -154,15 +80,43 @@ About
 ======
 */
   .about-section {
-    width: var(--smallWidth);
-    max-width: var(--maxWidth);
-    margin: 0 auto;
+    width: 85vw;
+    max-width: 45rem;
+    min-height: calc(100vh - 155px);
+    margin: 0rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .about-section p {
-    line-height: 2rem;
-    font-weight: 400;
-    letter-spacing: 2px;
+  .content-wrapper {
+    padding: 2rem 1rem;
+
+    & h1 {
+      margin-bottom: 1rem;
+      text-align: left;
+      transition: color 0.5s ease-in-out;
+      color: #445;
+    }
+    & p {
+      line-height: 2rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      transition: color 0.5s ease-in-out;
+      color: #335;
+    }
+    border-radius: 0.5rem;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s ease-in;
+
+    &:hover {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+      & h1,
+      P {
+        color: rgb(26, 6, 75);
+      }
+    }
   }
+
   /* 
 ====== 
 Error
@@ -182,29 +136,64 @@ Cocktails List
 ======
 */
 
-  .section {
-    padding: 5rem 0;
+  .search-section {
+    min-height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cocktail-title {
+    display: inline-block;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: rgb(156, 156, 156);
+    text-shadow: 0 0 2px rgb(26, 6, 75);
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -0.35rem;
+      left: 50%;
+      transform: translatex(-50%);
+      width: 40%;
+      height: 0.2rem;
+      background: rgb(26, 6, 75);
+    }
   }
   .section-title {
     font-size: 2rem;
     text-transform: capitalize;
-    letter-spacing: var(--mainSpacing);
+    letter-spacing: 0.3rem;
     text-align: center;
     margin-bottom: 3.5rem;
-    margin-top: 1rem;
+    // margin-top: 1rem;
   }
+
+  .cocktail-section {
+    min-height: 25vh;
+    text-align: center;
+  }
+
   .cocktails-center {
-    width: var(--smallWidth);
+    width: 95vw;
     margin: 0 auto;
-    max-width: var(--fullWidth);
+    padding: 2rem 0 8rem 0;
+    max-width: 1170px;
     display: grid;
-    row-gap: 2rem;
-    column-gap: 2rem;
+    gap: 8rem 2rem;
+
     /* align-items: start; */
   }
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: 800px) {
     .cocktails-center {
-      grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (min-width: 1150px) {
+    .cocktails-center {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   /* 
@@ -214,74 +203,240 @@ Cocktail
 */
 
   .cocktail {
-    background: var(--mainWhite);
-    margin-bottom: 2rem;
-    box-shadow: var(--lightShadow);
-    transition: var(--mainTransition);
-    display: grid;
-    grid-template-rows: auto 1fr;
-    border-radius: var(--mainBorderRadius);
+    margin: 0 auto;
+    width: 300px;
+    height: 230px;
+    background: #cfc994;
+    background: linear-gradient(0deg, #888035, #9e9756, #bbb477);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 54% 46% 50% 50% / 0% 2% 98% 100%;
+
+    position: relative;
+    z-index: 10;
+    &::before {
+      position: absolute;
+      content: "";
+      top: -9%;
+      right: -9%;
+      width: 50px;
+      height: 50px;
+      border: 8px solid rgb(19, 83, 19);
+      border-left-color: transparent;
+      border-radius: 50%;
+      background: rgba(6, 156, 6, 0.5);
+      transform: rotate(-40deg);
+      z-index: -1;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: -10%;
+      left: -8%;
+      width: 80px;
+      height: 80px;
+      border-radius: 40% 60% 6% 94% / 51% 42% 58% 49%;
+      background: linear-gradient(-45deg, transparent, orange);
+      z-index: -1;
+    }
   }
-  .cocktail:hover {
-    box-shadow: var(--darkShadow);
+
+  .cocktail-stand {
+    display: inline-block;
+    position: absolute;
+    bottom: -35.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2rem;
+    height: 5rem;
+    background: #888035;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      top: -5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2rem;
+      height: 1rem;
+      background: #888035;
+      z-index: -5;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 5rem;
+      height: 1rem;
+      background: #888035;
+      border-radius: 1rem 1rem 0 0;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3),
+        -1px 0px 2px rgba(0, 0, 0, 0.3);
+      z-index: -5;
+    }
   }
-  .cocktail img {
-    height: 20rem;
-    object-fit: cover;
-    border-top-left-radius: var(--mainBorderRadius);
-    border-top-right-radius: var(--mainBorderRadius);
+
+  .img-container {
+    top: -2rem;
+    left: -0.5rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: maroon;
+    position: absolute;
+    & img {
+      width: 95%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
   }
+
   .cocktail-footer {
-    padding: 1.5rem;
+    position: absolute;
+    top: 12%;
+    right: 0;
+    padding: 1rem 2rem 2rem 1rem;
+    background: rgba(255, 165, 0, 0.7);
+    border-radius: 54% 46% 73% 27% / 31% 0% 100% 69%;
+    z-index: 50;
+
+    & h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: rgb(26, 6, 75);
+    }
+    & h4 {
+      font-size: 0.8rem;
+      margin-bottom: 0.3rem;
+      color: #445;
+    }
+    & p {
+      font-size: 0.8rem;
+      color: rgb(26, 6, 75);
+    }
   }
-  .cocktail-footer h3,
-  .cocktail-footer h4,
-  .cocktail-footer p {
-    margin-bottom: 0.3rem;
+  .btn-details {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #476a2e;
+    color: #ddd;
+    border-radius: 0.25rem;
+    z-index: 50;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 400;
+    transition: background 0.3s ease-in, color 0.3s ease-in-out;
+    &:hover {
+      background: rgb(16, 58, 105);
+      color: #fff;
+    }
   }
-  .cocktail-footer h3 {
-    font-size: 2rem;
-  }
-  .cocktail-footer p {
-    color: var(--darkGrey);
-    margin-bottom: 0.5rem;
-  }
+
   /* 
 ====== 
 Form
 ======
 */
   .search {
-    margin-top: 1rem;
     padding-bottom: 0;
   }
 
   .search-form {
-    width: var(--smallWidth);
+    width: 90vw;
     margin: 0 auto;
-    max-width: var(--maxWidth);
-    background: var(--mainWhite);
+    max-width: 40rem;
+    background: rgba(255, 255, 255, 0.5);
     padding: 2rem 2.5rem;
     text-transform: capitalize;
-    border-radius: var(--mainBorderRadius);
-    box-shadow: var(--lightShadow);
+    border-radius: 0.25rem;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in;
+    &:hover {
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6),
+        -2px 0px 5px rgba(0, 0, 0, 0.6);
+    }
+    position: relative;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      top: -10%;
+      right: -3%;
+      width: 200px;
+      height: 150px;
+      border-radius: 32% 68% 30% 70% / 74% 7% 93% 26%;
+      background: linear-gradient(-45deg, rgba(112, 13, 79, 0.5), transparent);
+      z-index: -1;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: -25%;
+      left: -10%;
+      width: 300px;
+      height: 300px;
+      border-radius: 40% 60% 6% 94% / 51% 42% 58% 49%;
+      background: linear-gradient(
+        -90deg,
+        rgba(6, 59, 158, 0.5),
+        rgb(255, 165, 0)
+      );
+      z-index: -1;
+    }
   }
 
   .form-control label {
     display: block;
+    text-align: center;
     margin-bottom: 1.25rem;
-    font-weight: bold;
-    letter-spacing: 0.25rem;
-    color: var(--primaryColor);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    color: rgb(26, 6, 75);
+    font-family: "bauhaus 93", sans-serif;
+    text-transform: uppercase;
+    background: linear-gradient(0deg, rgb(6, 39, 100), rgb(99, 3, 86));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
-  .form-control input {
+  .input-container {
+    margin: 0 auto;
     width: 100%;
-    border: none;
-    border-color: transparent;
-    background: var(--mainBackground);
-    border-radius: var(--mainBorderRadius);
-    padding: 0.5rem;
-    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f8;
+    border-radius: 0.25rem;
+    z-index: 100;
+
+    & input {
+      flex: 0.8;
+      padding: 0.5rem 1rem;
+      border: none;
+      outline: none;
+
+      background: transparent;
+      color: rgb(26, 6, 75);
+      border-radius: 0.25rem;
+      font-size: 1.2rem;
+    }
+    .cocktail-icon {
+      flex: 0.2;
+      font-size: 2rem;
+      border-left: 1px solid #ddd;
+      color: rgb(26, 6, 75);
+    }
   }
   /* 
 ====== 
@@ -289,101 +444,146 @@ Cocktail
 ======
 */
 
-  .cocktail-section {
-    text-align: center;
+  .drink-section {
+    min-height: 75vh;
+    padding: 2rem 0;
   }
+
   .drink {
-    width: var(--smallWidth);
-    max-width: var(--fullWidth);
-    margin: 0 auto;
-    text-align: left;
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(32, 19, 102, 0.5);
+
+    border-radius: 0.25rem;
   }
-  .drink img {
-    border-radius: var(--mainBorderRadius);
+
+  .drink-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
   }
-  .drink p {
-    font-weight: bold;
-    text-transform: capitalize;
-    line-height: 1.8;
-  }
-  .drink span {
-    margin-right: 0.5rem;
-  }
-  .drink-data {
-    background: var(--primaryLightColor);
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--mainBorderRadius);
-    color: var(--primaryColor);
-  }
+
   .drink-info {
-    padding-top: 2rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 2px #111;
+    transition: box-shadow 0.5s ease-in-out;
+    background: linear-gradient(45deg, rgb(56, 87, 145), rgb(29, 133, 116));
+    &:hover {
+      box-shadow: 0 0 2px #fff;
+      & .label-container {
+        box-shadow: 0 0 3px #ccc;
+      }
+      & p {
+        color: rgb(26, 6, 75);
+        background: rgba(249, 178, 78, 0.9);
+      }
+    }
+  }
+  .label-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-shadow: 0 0 3px #222;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0;
+    padding: 0.1rem;
+    transition: box-shadow 0.5s ease-in-out;
+    font-size: 0.8rem;
+    & p {
+      font-weight: bold;
+      text-transform: capitalize;
+      background: rgba(249, 178, 78, 0.7);
+      padding: 0.25rem 0.5rem;
+      border-radius: 0 0.25rem 0.25rem 0;
+      color: #445;
+      transition: color 0.3s ease-in-out, background 0.3s ease-in;
+    }
+    .drink-data {
+      text-transform: capitalize;
+      font-weight: 500;
+      background: #d4e6a5;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem 0 0 0.25rem;
+      color: #476a2e;
+    }
+  }
+
+  .btn-back {
+    margin: 0 auto;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 1rem;
+    display: inline-block;
+    border-radius: 0.25rem;
+    background: #476a2e;
+    color: #ddd;
+    border: none;
+    box-shadow: 0 0 2px #333;
+    transition: background 0.3s ease-in, color 0.3s ease-in-out;
+    &:hover {
+      background: rgb(16, 58, 105);
+      color: #fff;
+    }
+  }
+
+  .drink-img {
+    background: linear-gradient(
+      0deg,
+      transparent,
+      rgba(249, 178, 78, 1),
+      rgba(28, 84, 124, 1),
+      transparent
+    );
+    border-radius: 0.5rem;
+    & img {
+      margin: 0rem auto;
+      width: 95%;
+      object-fit: contain;
+      border-radius: 0.5rem;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .label-container {
+      font-size: 1rem;
+    }
   }
   @media screen and (min-width: 992px) {
-    .drink {
-      display: grid;
-      grid-template-columns: 2fr 3fr;
-      gap: 3rem;
-      align-items: center;
+    .logo {
+      width: 15rem;
     }
-    .drink-info {
-      padding-top: 0;
+    .label-container {
+      font-size: 1.2rem;
     }
   }
-  .loader,
-  .loader:before,
-  .loader:after {
-    background: transparent;
-    animation: load1 1s infinite ease-in-out;
-    width: 1em;
-    height: 4em;
-  }
-  .loader {
-    color: var(--primaryColor);
-    text-indent: -9999em;
-    margin: 88px auto;
-    margin-top: 10rem;
-    // margin-top: 20rem;
-    position: relative;
-    font-size: 3rem;
-    transform: translateZ(0);
-    animation-delay: -0.16s;
-  }
-  .loader:before,
-  .loader:after {
-    position: absolute;
-    top: 0;
-    content: "";
-  }
-  .loader:before {
-    left: -1.5em;
-    -webkit-animation-delay: -0.32s;
-    animation-delay: -0.32s;
-  }
-  .loader:after {
-    left: 1.5em;
-  }
-  @-webkit-keyframes load1 {
-    0%,
-    80%,
-    100% {
-      box-shadow: 0 0;
-      height: 4em;
-    }
-    40% {
-      box-shadow: 0 -2em;
-      height: 5em;
-    }
-  }
-  @keyframes load1 {
-    0%,
-    80%,
-    100% {
-      box-shadow: 0 0;
-      height: 4em;
-    }
-    40% {
-      box-shadow: 0 -2em;
-      height: 5em;
+
+  /*--- Loader - Seciton ---*/
+
+  .loader-container {
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background: rgb(99, 3, 86);
+    border: 2px solid #fff;
+
+    img {
+      width: 90%;
+      border-radius: 50%;
+      object-fit: contain;
     }
   }
 }

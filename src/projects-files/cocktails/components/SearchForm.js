@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useGlobalContext } from "../../../context";
+import { FaCocktail } from "react-icons/fa";
 
 const SearchForm = () => {
   const { setSearchTerm } = useGlobalContext();
@@ -14,16 +15,21 @@ const SearchForm = () => {
     e.preventDefault();
   };
   return (
-    <section className="section search">
+    <section className="search-section">
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="name">Search your favorite cocktail</label>
-          <input
-            type="text"
-            id="name"
-            ref={searchValueRef}
-            onChange={searchCocktail}
-          />
+          <div className="input-container">
+            <input
+              type="text"
+              id="name"
+              placeholder="search"
+              autoComplete="off"
+              ref={searchValueRef}
+              onChange={searchCocktail}
+            />
+            <FaCocktail className="cocktail-icon"></FaCocktail>
+          </div>
         </div>
       </form>
     </section>

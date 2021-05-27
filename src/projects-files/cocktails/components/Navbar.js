@@ -10,15 +10,15 @@ const Navbar = () => {
         <Link to="/cocktails">
           <img src={logo} alt="cocktail db logo" className="logo" />
         </Link>
+        <ul className="nav-links">
+          <li>
+            <Link to="/cocktails">Home</Link>
+          </li>
+          <li>
+            <Link to="/cocktails/about">About</Link>
+          </li>
+        </ul>
       </div>
-      <ul className="nav-links">
-        <li>
-          <Link to="/cocktails">Home</Link>
-        </li>
-        <li>
-          <Link to="/cocktails/about">About</Link>
-        </li>
-      </ul>
     </div>
   );
 };

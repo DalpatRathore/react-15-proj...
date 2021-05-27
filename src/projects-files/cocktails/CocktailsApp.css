@@ -1,34 +1,12 @@
 .cocktailsApp {
-  --primaryLightColor: #d4e6a5;
-  --primaryColor: #476a2e;
-  --primaryDarkColor: #c02c03;
-  --mainWhite: #fff;
-  --offWhite: #f7f7f7;
-  --mainBackground: #f1f5f8;
-  --mainOverlay: rgba(35, 10, 36, 0.4);
-  --mainBlack: #222;
-  --mainGrey: #ececec;
-  --darkGrey: #afafaf;
-  --mainRed: #bd0303;
-  --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.3rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-  --mainBorderRadius: 0.25rem;
-  --smallWidth: 85vw;
-  --maxWidth: 40rem;
-  --fullWidth: 1170px;
-  color: var(--mainBlack);
-  background: var(--mainBackground);
+  color: #222;
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
-  min-height: 100vh;
-  /* 
-====== 
-Buttons 
-======
-*/
+  min-height: calc(100vh - 75px);
+  background: #f1f5f8;
+  background: -webkit-gradient(linear, left top, right top, from(#f9b24e), to(#1c547c));
+  background: linear-gradient(90deg, #f9b24e 0%, #1c547c 100%);
   /* 
 ====== 
 Navbar
@@ -64,30 +42,12 @@ Form
 Cocktail
 ======
 */
-}
-
-.cocktailsApp h1,
-.cocktailsApp h2,
-.cocktailsApp h3,
-.cocktailsApp h4,
-.cocktailsApp h5,
-.cocktailsApp h6 {
-  font-family: var(--slantedFont);
-  margin-bottom: 1.25rem;
-  letter-spacing: var(--mainSpacing);
-}
-
-.cocktailsApp p {
-  margin-bottom: 1.25rem;
-}
-
-.cocktailsApp ul {
-  list-style-type: none;
+  /*--- Loader - Seciton ---*/
 }
 
 .cocktailsApp a {
   text-decoration: none;
-  color: var(--mainBlack);
+  color: #222;
 }
 
 .cocktailsApp img {
@@ -95,71 +55,11 @@ Cocktail
   display: block;
 }
 
-.cocktailsApp .btn,
-.cocktailsApp .btn-white,
-.cocktailsApp .btn-primary {
-  text-transform: uppercase;
-  letter-spacing: var(--mainSpacing);
-  color: var(--primaryColor);
-  border: 2px solid var(--primaryColor);
-  padding: 0.45rem 0.8rem;
-  display: inline-block;
-  -webkit-transition: var(--mainTransition);
-  transition: var(--mainTransition);
-  cursor: pointer;
-  font-size: 0.8rem;
-  background: transparent;
-  border-radius: var(--mainBorderRadius);
-  display: inline-block;
-}
-
-.cocktailsApp .btn:hover {
-  background: var(--primaryColor);
-  color: var(--mainWhite);
-}
-
-.cocktailsApp .btn-white {
-  background: transparent;
-  color: var(--mainWhite);
-  border-color: var(--mainWhite);
-}
-
-.cocktailsApp .btn-white:hover {
-  background: var(--mainWhite);
-  color: var(--primaryColor);
-}
-
-.cocktailsApp .btn-primary {
-  background: var(--primaryColor);
-  color: var(--mainWhite);
-  border-color: transparent;
-}
-
-.cocktailsApp .btn-primary:hover {
-  background: var(--primaryLightColor);
-  color: var(--primaryColor);
-}
-
-.cocktailsApp .btn-block {
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  -webkit-box-shadow: var(--lightShadow);
-          box-shadow: var(--lightShadow);
-  text-align: center;
-}
-
-.cocktailsApp .btn-details {
-  padding: 0.25rem 0.4rem;
-}
-
-.cocktailsApp .btn-details:hover {
-  background: var(--primaryLightColor);
-  border-color: var(--primaryLightColor);
-}
-
 .cocktailsApp .navbar {
-  background: var(--mainWhite);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 75px;
+  left: 0;
   height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,9 +67,14 @@ Cocktail
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 2px solid var(--primaryColor);
-  -webkit-box-shadow: var(--lightShadow);
-          box-shadow: var(--lightShadow);
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(249, 178, 78, 0.91)), to(rgba(28, 84, 124, 0.91)));
+  background: linear-gradient(90deg, rgba(249, 178, 78, 0.91) 0%, rgba(28, 84, 124, 0.91) 100%);
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
+  z-index: 500;
 }
 
 .cocktailsApp .nav-center {
@@ -182,9 +87,9 @@ Cocktail
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: var(--smallWidth);
+  width: 90vw;
   margin: 0 auto;
-  max-width: var(--fullWidth);
+  max-width: 1170px;
 }
 
 .cocktailsApp .nav-links {
@@ -197,20 +102,24 @@ Cocktail
 }
 
 .cocktailsApp .nav-links a {
-  text-transform: capitalize;
+  text-transform: uppercase;
   display: inline-block;
-  font-weight: bold;
-  margin-right: 0.5rem;
-  font-weight: 400;
+  font-weight: 500;
+  margin-left: 1rem;
   letter-spacing: 2px;
-  font-size: 1.2rem;
-  padding: 0.25rem 0.5rem;
-  -webkit-transition: var(--mainTransition);
-  transition: var(--mainTransition);
+  font-size: 1rem;
+  padding: 0.25rem 0.8rem;
+  border-radius: 0.25rem;
+  color: #1a064b;
+  border: 0.15rem solid #1a064b;
+  background: transparent;
+  -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in;
 }
 
 .cocktailsApp .nav-links a:hover {
-  color: var(--primaryColor);
+  color: #fff;
+  background: #1a064b;
 }
 
 .cocktailsApp .logo {
@@ -218,15 +127,57 @@ Cocktail
 }
 
 .cocktailsApp .about-section {
-  width: var(--smallWidth);
-  max-width: var(--maxWidth);
-  margin: 0 auto;
+  width: 85vw;
+  max-width: 45rem;
+  min-height: calc(100vh - 155px);
+  margin: 0rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.cocktailsApp .about-section p {
+.cocktailsApp .content-wrapper {
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in;
+  transition: -webkit-box-shadow 0.5s ease-in;
+  transition: box-shadow 0.5s ease-in;
+  transition: box-shadow 0.5s ease-in, -webkit-box-shadow 0.5s ease-in;
+}
+
+.cocktailsApp .content-wrapper h1 {
+  margin-bottom: 1rem;
+  text-align: left;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+  color: #445;
+}
+
+.cocktailsApp .content-wrapper p {
   line-height: 2rem;
   font-weight: 400;
   letter-spacing: 2px;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+  color: #335;
+}
+
+.cocktailsApp .content-wrapper:hover {
+  -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.cocktailsApp .content-wrapper:hover h1,
+.cocktailsApp .content-wrapper:hover P {
+  color: #1a064b;
 }
 
 .cocktailsApp .error-page {
@@ -243,238 +194,527 @@ Cocktail
   text-transform: capitalize;
 }
 
-.cocktailsApp .section {
-  padding: 5rem 0;
+.cocktailsApp .search-section {
+  min-height: 45vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cocktailsApp .cocktail-title {
+  display: inline-block;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  color: #9c9c9c;
+  text-shadow: 0 0 2px #1a064b;
+  position: relative;
+}
+
+.cocktailsApp .cocktail-title::before {
+  position: absolute;
+  content: "";
+  bottom: -0.35rem;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+  width: 40%;
+  height: 0.2rem;
+  background: #1a064b;
 }
 
 .cocktailsApp .section-title {
   font-size: 2rem;
   text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
+  letter-spacing: 0.3rem;
   text-align: center;
   margin-bottom: 3.5rem;
-  margin-top: 1rem;
+}
+
+.cocktailsApp .cocktail-section {
+  min-height: 25vh;
+  text-align: center;
 }
 
 .cocktailsApp .cocktails-center {
-  width: var(--smallWidth);
+  width: 95vw;
   margin: 0 auto;
-  max-width: var(--fullWidth);
+  padding: 2rem 0 8rem 0;
+  max-width: 1170px;
   display: -ms-grid;
   display: grid;
-  row-gap: 2rem;
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
+  gap: 8rem 2rem;
   /* align-items: start; */
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 800px) {
   .cocktailsApp .cocktails-center {
-    -ms-grid-columns: (minmax(338.8px, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .cocktailsApp .cocktails-center {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .cocktailsApp .cocktail {
-  background: var(--mainWhite);
-  margin-bottom: 2rem;
-  -webkit-box-shadow: var(--lightShadow);
-          box-shadow: var(--lightShadow);
-  -webkit-transition: var(--mainTransition);
-  transition: var(--mainTransition);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto 1fr;
-      grid-template-rows: auto 1fr;
-  border-radius: var(--mainBorderRadius);
+  margin: 0 auto;
+  width: 300px;
+  height: 230px;
+  background: #cfc994;
+  background: -webkit-gradient(linear, left bottom, left top, from(#888035), color-stop(#9e9756), to(#bbb477));
+  background: linear-gradient(0deg, #888035, #9e9756, #bbb477);
+  -webkit-box-shadow: 0px 0px 3px black;
+          box-shadow: 0px 0px 3px black;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  border-radius: 54% 46% 50% 50% / 0% 2% 98% 100%;
+  position: relative;
+  z-index: 10;
 }
 
-.cocktailsApp .cocktail:hover {
-  -webkit-box-shadow: var(--darkShadow);
-          box-shadow: var(--darkShadow);
+.cocktailsApp .cocktail::before {
+  position: absolute;
+  content: "";
+  top: -9%;
+  right: -9%;
+  width: 50px;
+  height: 50px;
+  border: 8px solid #135313;
+  border-left-color: transparent;
+  border-radius: 50%;
+  background: rgba(6, 156, 6, 0.5);
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  z-index: -1;
 }
 
-.cocktailsApp .cocktail img {
-  height: 20rem;
+.cocktailsApp .cocktail::after {
+  position: absolute;
+  content: "";
+  top: -10%;
+  left: -8%;
+  width: 80px;
+  height: 80px;
+  border-radius: 40% 60% 6% 94% / 51% 42% 58% 49%;
+  background: linear-gradient(-45deg, transparent, orange);
+  z-index: -1;
+}
+
+.cocktailsApp .cocktail-stand {
+  display: inline-block;
+  position: absolute;
+  bottom: -35.5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 2rem;
+  height: 5rem;
+  background: #888035;
+  -webkit-box-shadow: 0px 0px 1px black;
+          box-shadow: 0px 0px 1px black;
+  z-index: 1;
+}
+
+.cocktailsApp .cocktail-stand::before {
+  position: absolute;
+  content: "";
+  top: -5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 2rem;
+  height: 1rem;
+  background: #888035;
+  z-index: -5;
+}
+
+.cocktailsApp .cocktail-stand::after {
+  position: absolute;
+  content: "";
+  bottom: -5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 5rem;
+  height: 1rem;
+  background: #888035;
+  border-radius: 1rem 1rem 0 0;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px 0px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px 0px 2px rgba(0, 0, 0, 0.3);
+  z-index: -5;
+}
+
+.cocktailsApp .img-container {
+  top: -2rem;
+  left: -0.5rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: maroon;
+  position: absolute;
+}
+
+.cocktailsApp .img-container img {
+  width: 95%;
+  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-top-left-radius: var(--mainBorderRadius);
-  border-top-right-radius: var(--mainBorderRadius);
 }
 
 .cocktailsApp .cocktail-footer {
-  padding: 1.5rem;
-}
-
-.cocktailsApp .cocktail-footer h3,
-.cocktailsApp .cocktail-footer h4,
-.cocktailsApp .cocktail-footer p {
-  margin-bottom: 0.3rem;
+  position: absolute;
+  top: 12%;
+  right: 0;
+  padding: 1rem 2rem 2rem 1rem;
+  background: rgba(255, 165, 0, 0.7);
+  border-radius: 54% 46% 73% 27% / 31% 0% 100% 69%;
+  z-index: 50;
 }
 
 .cocktailsApp .cocktail-footer h3 {
-  font-size: 2rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #1a064b;
+}
+
+.cocktailsApp .cocktail-footer h4 {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  color: #445;
 }
 
 .cocktailsApp .cocktail-footer p {
-  color: var(--darkGrey);
-  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  color: #1a064b;
+}
+
+.cocktailsApp .btn-details {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #476a2e;
+  color: #ddd;
+  border-radius: 0.25rem;
+  z-index: 50;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 400;
+  -webkit-transition: background 0.3s ease-in, color 0.3s ease-in-out;
+  transition: background 0.3s ease-in, color 0.3s ease-in-out;
+}
+
+.cocktailsApp .btn-details:hover {
+  background: #103a69;
+  color: #fff;
 }
 
 .cocktailsApp .search {
-  margin-top: 1rem;
   padding-bottom: 0;
 }
 
 .cocktailsApp .search-form {
-  width: var(--smallWidth);
+  width: 90vw;
   margin: 0 auto;
-  max-width: var(--maxWidth);
-  background: var(--mainWhite);
+  max-width: 40rem;
+  background: rgba(255, 255, 255, 0.5);
   padding: 2rem 2.5rem;
   text-transform: capitalize;
-  border-radius: var(--mainBorderRadius);
-  -webkit-box-shadow: var(--lightShadow);
-          box-shadow: var(--lightShadow);
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0px 0px 2px black;
+          box-shadow: 0px 0px 2px black;
+  -webkit-transition: background 0.5s ease-in-out, -webkit-box-shadow 0.3s ease-in;
+  transition: background 0.5s ease-in-out, -webkit-box-shadow 0.3s ease-in;
+  transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in;
+  transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
+  position: relative;
+  z-index: 1;
+}
+
+.cocktailsApp .search-form:hover {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6), -2px 0px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6), -2px 0px 5px rgba(0, 0, 0, 0.6);
+}
+
+.cocktailsApp .search-form::before {
+  position: absolute;
+  content: "";
+  top: -10%;
+  right: -3%;
+  width: 200px;
+  height: 150px;
+  border-radius: 32% 68% 30% 70% / 74% 7% 93% 26%;
+  background: linear-gradient(-45deg, rgba(112, 13, 79, 0.5), transparent);
+  z-index: -1;
+}
+
+.cocktailsApp .search-form::after {
+  position: absolute;
+  content: "";
+  top: -25%;
+  left: -10%;
+  width: 300px;
+  height: 300px;
+  border-radius: 40% 60% 6% 94% / 51% 42% 58% 49%;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(6, 59, 158, 0.5)), to(orange));
+  background: linear-gradient(-90deg, rgba(6, 59, 158, 0.5), orange);
+  z-index: -1;
 }
 
 .cocktailsApp .form-control label {
   display: block;
+  text-align: center;
   margin-bottom: 1.25rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
-  color: var(--primaryColor);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  color: #1a064b;
+  font-family: "bauhaus 93", sans-serif;
+  text-transform: uppercase;
+  background: -webkit-gradient(linear, left bottom, left top, from(#062764), to(#630356));
+  background: linear-gradient(0deg, #062764, #630356);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.cocktailsApp .form-control input {
+.cocktailsApp .input-container {
+  margin: 0 auto;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #f1f5f8;
+  border-radius: 0.25rem;
+  z-index: 100;
+}
+
+.cocktailsApp .input-container input {
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+  padding: 0.5rem 1rem;
   border: none;
-  border-color: transparent;
-  background: var(--mainBackground);
-  border-radius: var(--mainBorderRadius);
-  padding: 0.5rem;
+  outline: none;
+  background: transparent;
+  color: #1a064b;
+  border-radius: 0.25rem;
   font-size: 1.2rem;
 }
 
-.cocktailsApp .cocktail-section {
-  text-align: center;
+.cocktailsApp .input-container .cocktail-icon {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  font-size: 2rem;
+  border-left: 1px solid #ddd;
+  color: #1a064b;
+}
+
+.cocktailsApp .drink-section {
+  min-height: 75vh;
+  padding: 2rem 0;
 }
 
 .cocktailsApp .drink {
-  width: var(--smallWidth);
-  max-width: var(--fullWidth);
-  margin: 0 auto;
-  text-align: left;
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0rem auto;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  background: rgba(32, 19, 102, 0.5);
+  border-radius: 0.25rem;
 }
 
-.cocktailsApp .drink img {
-  border-radius: var(--mainBorderRadius);
-}
-
-.cocktailsApp .drink p {
-  font-weight: bold;
-  text-transform: capitalize;
-  line-height: 1.8;
-}
-
-.cocktailsApp .drink span {
-  margin-right: 0.5rem;
-}
-
-.cocktailsApp .drink-data {
-  background: var(--primaryLightColor);
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--mainBorderRadius);
-  color: var(--primaryColor);
+.cocktailsApp .drink-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
 }
 
 .cocktailsApp .drink-info {
-  padding-top: 2rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0 2px #111;
+          box-shadow: 0 0 2px #111;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
+  background: linear-gradient(45deg, #385791, #1d8574);
+}
+
+.cocktailsApp .drink-info:hover {
+  -webkit-box-shadow: 0 0 2px #fff;
+          box-shadow: 0 0 2px #fff;
+}
+
+.cocktailsApp .drink-info:hover .label-container {
+  -webkit-box-shadow: 0 0 3px #ccc;
+          box-shadow: 0 0 3px #ccc;
+}
+
+.cocktailsApp .drink-info:hover p {
+  color: #1a064b;
+  background: rgba(249, 178, 78, 0.9);
+}
+
+.cocktailsApp .label-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-shadow: 0 0 3px #222;
+          box-shadow: 0 0 3px #222;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+  padding: 0.1rem;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
+  font-size: 0.8rem;
+}
+
+.cocktailsApp .label-container p {
+  font-weight: bold;
+  text-transform: capitalize;
+  background: rgba(249, 178, 78, 0.7);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+  color: #445;
+  -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in;
+}
+
+.cocktailsApp .label-container .drink-data {
+  text-transform: capitalize;
+  font-weight: 500;
+  background: #d4e6a5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+  color: #476a2e;
+}
+
+.cocktailsApp .btn-back {
+  margin: 0 auto;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-size: 1rem;
+  display: inline-block;
+  border-radius: 0.25rem;
+  background: #476a2e;
+  color: #ddd;
+  border: none;
+  -webkit-box-shadow: 0 0 2px #333;
+          box-shadow: 0 0 2px #333;
+  -webkit-transition: background 0.3s ease-in, color 0.3s ease-in-out;
+  transition: background 0.3s ease-in, color 0.3s ease-in-out;
+}
+
+.cocktailsApp .btn-back:hover {
+  background: #103a69;
+  color: #fff;
+}
+
+.cocktailsApp .drink-img {
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(#f9b24e), color-stop(#1c547c), to(transparent));
+  background: linear-gradient(0deg, transparent, #f9b24e, #1c547c, transparent);
+  border-radius: 0.5rem;
+}
+
+.cocktailsApp .drink-img img {
+  margin: 0rem auto;
+  width: 95%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .cocktailsApp .label-container {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
-  .cocktailsApp .drink {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 2fr 3fr;
-        grid-template-columns: 2fr 3fr;
-    gap: 3rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .cocktailsApp .logo {
+    width: 15rem;
   }
-  .cocktailsApp .drink-info {
-    padding-top: 0;
+  .cocktailsApp .label-container {
+    font-size: 1.2rem;
   }
 }
 
-.cocktailsApp .loader,
-.cocktailsApp .loader:before,
-.cocktailsApp .loader:after {
-  background: transparent;
-  -webkit-animation: load1 1s infinite ease-in-out;
-          animation: load1 1s infinite ease-in-out;
-  width: 1em;
-  height: 4em;
+.cocktailsApp .loader-container {
+  margin: 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background: #630356;
+  border: 2px solid #fff;
 }
 
-.cocktailsApp .loader {
-  color: var(--primaryColor);
-  text-indent: -9999em;
-  margin: 88px auto;
-  margin-top: 10rem;
-  position: relative;
-  font-size: 3rem;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  -webkit-animation-delay: -0.16s;
-          animation-delay: -0.16s;
-}
-
-.cocktailsApp .loader:before,
-.cocktailsApp .loader:after {
-  position: absolute;
-  top: 0;
-  content: "";
-}
-
-.cocktailsApp .loader:before {
-  left: -1.5em;
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.cocktailsApp .loader:after {
-  left: 1.5em;
-}
-
-@-webkit-keyframes load1 {
-  0%,
-  80%,
-  100% {
-    -webkit-box-shadow: 0 0;
-            box-shadow: 0 0;
-    height: 4em;
-  }
-  40% {
-    -webkit-box-shadow: 0 -2em;
-            box-shadow: 0 -2em;
-    height: 5em;
-  }
-}
-
-@keyframes load1 {
-  0%,
-  80%,
-  100% {
-    -webkit-box-shadow: 0 0;
-            box-shadow: 0 0;
-    height: 4em;
-  }
-  40% {
-    -webkit-box-shadow: 0 -2em;
-            box-shadow: 0 -2em;
-    height: 5em;
-  }
+.cocktailsApp .loader-container img {
+  width: 90%;
+  border-radius: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 /*# sourceMappingURL=CocktailsApp.css.map */

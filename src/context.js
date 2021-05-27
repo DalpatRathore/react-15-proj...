@@ -24,11 +24,13 @@ const initialState = {
 const AppProvider = ({ children }) => {
   // cocktails
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [searchTerm, setSearchTerm] = useState("a");
   const [cocktails, setCocktails] = useState([]);
 
   const fetchDrinks = useCallback(async () => {
     setLoading(true);
+    setError(false);
     try {
       const response = await fetch(`${urlCocktail}${searchTerm}`);
       const data = await response.json();
@@ -53,6 +55,7 @@ const AppProvider = ({ children }) => {
     } catch (error) {
       console.log("error :>> ", error);
       setLoading(false);
+      setError(true);
     }
   }, [searchTerm]);
 
@@ -166,6 +169,7 @@ const AppProvider = ({ children }) => {
         toggleAmount,
 
         loading,
+        error,
         cocktails,
         setSearchTerm,
       }}

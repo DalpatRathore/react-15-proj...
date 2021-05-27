@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Cocktail = props => {
   const { id, name, image, info, glass } = props;
+
   return (
     <article className="cocktail">
       <div className="img-container">
@@ -12,10 +13,11 @@ const Cocktail = props => {
         <h3>{name}</h3>
         <h4>{glass}</h4>
         <p>{info}</p>
-        <Link to={`/cocktails/${id}`} className="btn btn-primary">
-          Detials
-        </Link>
       </div>
+      <Link to={`/cocktails/${id}`} className="btn-details">
+        Detials
+      </Link>
+      <span className="cocktail-stand"></span>
     </article>
   );
 };

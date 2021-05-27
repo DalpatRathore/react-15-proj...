@@ -1,5 +1,5 @@
 import React from "react";
-import Loading from "../components/Loading";
+import Loader from "../components/Loader";
 import { useParams, Link } from "react-router-dom";
 const urlCocktail = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 const SingleCocktail = () => {
@@ -12,6 +12,7 @@ const SingleCocktail = () => {
       try {
         const response = await fetch(`${urlCocktail}${id}`);
         const data = await response.json();
+        console.log(data.drinks);
         if (data.drinks) {
           const {
             strDrink: name,
@@ -19,7 +20,7 @@ const SingleCocktail = () => {
             strAlcoholic: info,
             strCategory: category,
             strGlass: glass,
-            strInstruction: instruction,
+            strInstructions: instruction,
             strIngredient1,
             strIngredient2,
             strIngredient3,
@@ -53,52 +54,69 @@ const SingleCocktail = () => {
     }
     getCocktails();
   }, [id]);
+
   if (loading) {
-    return <Loading />;
+    return (
+      <div className="cocktail-section">
+        <Loader></Loader>
+      </div>
+    );
   }
   if (!cocktail) {
-    return <h2 className="section-title">no cocktail to display</h2>;
+    return (
+      <div className="cocktail-section">
+        <h2 className="section-title">no cocktail to display</h2>
+        <Link to="/cocktails" className="btn-back">
+          Back
+        </Link>
+      </div>
+    );
   } else {
-    const {
-      name,
-      image,
-      category,
-      info,
-      glass,
-      instructions,
-      ingredients,
-    } = cocktail;
+    const { name, image, category, info, glass, instruction, ingredients } =
+      cocktail;
+    console.log(cocktail);
 
     return (
-      <section className="section cocktail-section">
-        <Link to="/cocktails" className="btn btn-primary">
-          back home
-        </Link>
-        <h2 className="section-title">{name}</h2>
+      <section className="drink-section">
         <div className="drink">
-          <img src={image} alt={name}></img>
-          <div className="drink-info">
-            <p>
-              <span className="drink-data">name :</span> {name}
-            </p>
-            <p>
-              <span className="drink-data">category :</span> {category}
-            </p>
-            <p>
-              <span className="drink-data">info :</span> {info}
-            </p>
-            <p>
-              <span className="drink-data">glass :</span> {glass}
-            </p>
-            <p>
-              <span className="drink-data">instructons :</span> {instructions}
-            </p>
-            <p>
-              <span className="drink-data">ingredients :</span>
-              {ingredients.map((item, index) => {
-                return item ? <span key={index}> {item}</span> : null;
-              })}
-            </p>
+          <div className="drink-wrapper">
+            <div className="drink-info">
+              <div className="label-container">
+                <span className="drink-data">name </span>
+                <p>{name}</p>
+              </div>
+
+              <div className="label-container">
+                <span className="drink-data">category </span>
+                <p>{category}</p>
+              </div>
+              <div className="label-container">
+                <span className="drink-data">info </span>
+                <p>{info}</p>
+              </div>
+              <div className="label-container">
+                <span className="drink-data">glass </span>
+                <p>{glass}</p>
+              </div>
+              <div className="label-container">
+                <span className="drink-data">instructons </span>
+                <p>{instruction}</p>
+              </div>
+              <div className="label-container">
+                <span className="drink-data">ingredients </span>
+                <p>
+                  {ingredients.map((item, index) => {
+                    return item ? <span key={index}> {item}</span> : null;
+                  })}
+                </p>
+              </div>
+            </div>
+            <Link to="/cocktails" className="btn-back">
+              Back
+            </Link>
+          </div>
+          <div className="drink-img">
+            <img src={image} alt={name}></img>
           </div>
         </div>
       </section>
