@@ -41,7 +41,7 @@ const SingleCocktail = () => {
       try {
         const response = await fetch(`${urlCocktail}${id}`);
         const data = await response.json();
-        console.log(data.drinks);
+
         if (data.drinks) {
           const {
             strDrink: name,
@@ -110,7 +110,6 @@ const SingleCocktail = () => {
   } else {
     const { name, image, category, info, glass, instruction, ingredients } =
       cocktail;
-    console.log(cocktail);
 
     return (
       <section className="drink-section">
