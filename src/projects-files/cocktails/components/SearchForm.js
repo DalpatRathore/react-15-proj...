@@ -1,6 +1,22 @@
 import React, { useRef } from "react";
 import { useGlobalContext } from "../../../context";
 import { FaCocktail } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+const inputVariants = {
+  enter: {
+    x: "-100%",
+    opacity: 0,
+  },
+  center: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      x: { type: "spring", stiffness: 500, duration: 0.5 },
+      opacity: { duration: 0.5 },
+    },
+  },
+};
 
 const SearchForm = () => {
   const { setSearchTerm } = useGlobalContext();
@@ -19,7 +35,12 @@ const SearchForm = () => {
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="name">Search your favorite cocktail</label>
-          <div className="input-container">
+          <motion.div
+            className="input-container"
+            variants={inputVariants}
+            initial="enter"
+            animate="center"
+          >
             <input
               type="text"
               id="name"
@@ -29,7 +50,7 @@ const SearchForm = () => {
               onChange={searchCocktail}
             />
             <FaCocktail className="cocktail-icon"></FaCocktail>
-          </div>
+          </motion.div>
         </div>
       </form>
     </section>

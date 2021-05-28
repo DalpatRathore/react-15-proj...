@@ -1,7 +1,36 @@
 import React from "react";
 import Loader from "../components/Loader";
 import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 const urlCocktail = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
+
+const drinkVariants = {
+  enter: {
+    scale: 0,
+    y: "-100%",
+    opacity: 0,
+  },
+  center: {
+    scale: 1,
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const textVariants = {
+  enter: {
+    scale: 0,
+    opacity: 0,
+  },
+  center: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 0.3 },
+  },
+};
 const SingleCocktail = () => {
   const { id } = useParams();
   const [loading, setloading] = React.useState(false);
@@ -65,7 +94,14 @@ const SingleCocktail = () => {
   if (!cocktail) {
     return (
       <div className="cocktail-section">
-        <h2 className="section-title">no cocktail to display</h2>
+        <motion.h2
+          className="section-title"
+          variants={textVariants}
+          initial="enter"
+          animate="center"
+        >
+          no cocktail to display
+        </motion.h2>
         <Link to="/cocktails" className="btn-back">
           Back
         </Link>
@@ -78,7 +114,12 @@ const SingleCocktail = () => {
 
     return (
       <section className="drink-section">
-        <div className="drink">
+        <motion.div
+          className="drink"
+          variants={drinkVariants}
+          initial="enter"
+          animate="center"
+        >
           <div className="drink-wrapper">
             <div className="drink-info">
               <div className="label-container">
@@ -103,10 +144,10 @@ const SingleCocktail = () => {
                 <p>{instruction}</p>
               </div>
               <div className="label-container">
-                <span className="drink-data">ingredients </span>
+                <span className="drink-data ">ingredients </span>
                 <p>
                   {ingredients.map((item, index) => {
-                    return item ? <span key={index}> {item}</span> : null;
+                    return item ? <span key={index}> {item},</span> : null;
                   })}
                 </p>
               </div>
@@ -118,7 +159,7 @@ const SingleCocktail = () => {
           <div className="drink-img">
             <img src={image} alt={name}></img>
           </div>
-        </div>
+        </motion.div>
       </section>
     );
   }

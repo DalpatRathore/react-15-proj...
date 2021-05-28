@@ -2,6 +2,19 @@ import React from "react";
 import Loader from "./Loader";
 import Cocktail from "./Cocktail";
 import { useGlobalContext } from "../../../context";
+import { motion } from "framer-motion";
+
+const textVariants = {
+  enter: {
+    scale: 0,
+    opacity: 0,
+  },
+  center: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 0.3 },
+  },
+};
 
 const CocktailList = () => {
   const { cocktails, loading, error } = useGlobalContext();
@@ -17,7 +30,14 @@ const CocktailList = () => {
   if (error) {
     return (
       <div className="cocktail-section">
-        <h3 className="error">Sorry! somethings went wrong</h3>
+        <motion.h3
+          className="error"
+          variants={textVariants}
+          initial="enter"
+          animate="center"
+        >
+          Sorry! somethings went wrong
+        </motion.h3>
       </div>
     );
   }
@@ -25,9 +45,14 @@ const CocktailList = () => {
   if (cocktails.length < 1) {
     return (
       <div className="cocktail-section">
-        <h2 className="section-title">
+        <motion.h2
+          className="section-title"
+          variants={textVariants}
+          initial="enter"
+          animate="center"
+        >
           no cocktails matched your search criteria.
-        </h2>
+        </motion.h2>
       </div>
     );
   }
