@@ -122,28 +122,27 @@ const SingleCocktail = () => {
           <div className="drink-wrapper">
             <div className="drink-info">
               <div className="label-container">
-                <span className="drink-data">name </span>
+                <span className="drink-data">name</span>
                 <p>{name}</p>
               </div>
-
               <div className="label-container">
-                <span className="drink-data">category </span>
+                <span className="drink-data">category</span>
                 <p>{category}</p>
               </div>
               <div className="label-container">
-                <span className="drink-data">info </span>
+                <span className="drink-data">info</span>
                 <p>{info}</p>
               </div>
               <div className="label-container">
-                <span className="drink-data">glass </span>
+                <span className="drink-data">glass</span>
                 <p>{glass}</p>
               </div>
               <div className="label-container">
-                <span className="drink-data">instructons </span>
-                <p>{instruction}</p>
+                <span className="drink-data">instructons</span>
+                <p className="instruction-info">{instruction}</p>
               </div>
               <div className="label-container">
-                <span className="drink-data ">ingredients </span>
+                <span className="drink-data ">ingredients</span>
                 <p>
                   {ingredients.map((item, index) => {
                     return item ? <span key={index}> {item},</span> : null;

@@ -1,10 +1,10 @@
 .cocktailsApp {
-  color: #222;
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
   min-height: calc(100vh - 75px);
-  background: #f1f5f8;
+  background: #f1f5f7;
+  color: #222;
   background: -webkit-gradient(linear, left top, right top, from(#f9b24e), to(#1c547c));
   background: linear-gradient(90deg, #f9b24e 0%, #1c547c 100%);
   /* 
@@ -70,8 +70,8 @@ Cocktail
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   background: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(249, 178, 78, 0.91)), to(rgba(28, 84, 124, 0.91)));
-  background: linear-gradient(90deg, rgba(249, 178, 78, 0.91) 0%, rgba(28, 84, 124, 0.91) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(249, 178, 78, 0.9)), to(rgba(28, 84, 124, 0.9)));
+  background: linear-gradient(90deg, rgba(249, 178, 78, 0.9) 0%, rgba(28, 84, 124, 0.9) 100%);
   -webkit-backdrop-filter: blur(1.5px);
           backdrop-filter: blur(1.5px);
   z-index: 500;
@@ -106,12 +106,12 @@ Cocktail
   display: inline-block;
   font-weight: 500;
   margin-left: 1rem;
-  letter-spacing: 2px;
+  letter-spacing: 0.15rem;
   font-size: 1rem;
   padding: 0.25rem 0.8rem;
-  border-radius: 0.25rem;
+  border-radius: 0.35rem;
   color: #1a064b;
-  border: 0.15rem solid #1a064b;
+  border: 0.12rem solid #1a064b;
   background: transparent;
   -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in;
   transition: color 0.3s ease-in-out, background 0.3s ease-in;
@@ -123,7 +123,7 @@ Cocktail
 }
 
 .cocktailsApp .logo {
-  width: 12rem;
+  width: 13rem;
 }
 
 .cocktailsApp .about-section {
@@ -151,6 +151,8 @@ Cocktail
   transition: -webkit-box-shadow 0.5s ease-in;
   transition: box-shadow 0.5s ease-in;
   transition: box-shadow 0.5s ease-in, -webkit-box-shadow 0.5s ease-in;
+  position: relative;
+  z-index: 1;
 }
 
 .cocktailsApp .content-wrapper h1 {
@@ -178,6 +180,32 @@ Cocktail
 .cocktailsApp .content-wrapper:hover h1,
 .cocktailsApp .content-wrapper:hover P {
   color: #1a064b;
+}
+
+.cocktailsApp .content-wrapper::before {
+  position: absolute;
+  content: "";
+  top: 2%;
+  left: 0%;
+  width: 200px;
+  height: 150px;
+  border-radius: 32% 70% 30% 70% / 74% 10% 93% 20%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 81, 255, 0.5)), to(transparent));
+  background: linear-gradient(0deg, rgba(0, 81, 255, 0.5), transparent);
+  z-index: -1;
+}
+
+.cocktailsApp .content-wrapper::after {
+  position: absolute;
+  content: "";
+  top: 10%;
+  right: 2%;
+  width: 300px;
+  height: 250px;
+  border-radius: 40% 60% 6% 94% / 51% 42% 58% 49%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 227, 51, 0.2)), color-stop(rgba(185, 24, 78, 0.5)), to(transparent));
+  background: linear-gradient(180deg, rgba(240, 227, 51, 0.2), rgba(185, 24, 78, 0.5), transparent);
+  z-index: -1;
 }
 
 .cocktailsApp .error-page {
@@ -212,8 +240,11 @@ Cocktail
   letter-spacing: 0.3rem;
   text-align: center;
   margin-bottom: 3.5rem;
-  color: #9c9c9c;
-  text-shadow: 0 0 2px #1a064b;
+  color: #c5c4c4;
+  background: linear-gradient(45deg, #cc2d11 0%, #d13008 10%, #ccbf0f 15%, #ddd013 30%, #095322 31%, #075a23 50%, #750a79 53%, #750a79 65%, #083655 67%, #044a79 80%, maroon 85%, maroon 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   position: relative;
 }
 
@@ -630,6 +661,10 @@ Cocktail
   color: #445;
   -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in;
   transition: color 0.3s ease-in-out, background 0.3s ease-in;
+}
+
+.cocktailsApp .label-container .instruction-info {
+  text-transform: initial;
 }
 
 .cocktailsApp .label-container .drink-data {

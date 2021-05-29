@@ -1,11 +1,11 @@
 import React from "react";
-import "./CocktailsApp.css";
-import Navbar from "./components/Navbar";
 import { Switch, Route } from "react-router-dom";
+import "./CocktailsApp.css";
 import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
 import About from "./pages/About";
-import Error from "./pages/Error";
 import SingleCocktail from "./pages/SingleCocktail";
+import Error from "./pages/Error";
 
 const CocktailsApp = () => {
   return (

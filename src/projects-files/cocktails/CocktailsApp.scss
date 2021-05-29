@@ -1,10 +1,10 @@
 .cocktailsApp {
-  color: #222;
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
   min-height: calc(100vh - 75px);
-  background: #f1f5f8;
+  background: #f1f5f7;
+  color: #222;
   background: linear-gradient(
     90deg,
     rgba(249, 178, 78, 1) 0%,
@@ -35,8 +35,8 @@ Navbar
     background: #fff;
     background: linear-gradient(
       90deg,
-      rgba(249, 178, 78, 0.91) 0%,
-      rgba(28, 84, 124, 0.91) 100%
+      rgba(249, 178, 78, 0.9) 0%,
+      rgba(28, 84, 124, 0.9) 100%
     );
     backdrop-filter: blur(1.5px);
     z-index: 500;
@@ -58,12 +58,12 @@ Navbar
     display: inline-block;
     font-weight: 500;
     margin-left: 1rem;
-    letter-spacing: 2px;
+    letter-spacing: 0.15rem;
     font-size: 1rem;
     padding: 0.25rem 0.8rem;
-    border-radius: 0.25rem;
+    border-radius: 0.35rem;
     color: rgb(26, 6, 75);
-    border: 0.15rem solid rgb(26, 6, 75);
+    border: 0.12rem solid rgb(26, 6, 75);
     background: transparent;
     transition: color 0.3s ease-in-out, background 0.3s ease-in;
   }
@@ -72,7 +72,7 @@ Navbar
     background: rgb(26, 6, 75);
   }
   .logo {
-    width: 12rem;
+    width: 13rem;
   }
   /* 
 ====== 
@@ -115,6 +115,35 @@ About
         color: rgb(26, 6, 75);
       }
     }
+    position: relative;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 2%;
+      left: 0%;
+      width: 200px;
+      height: 150px;
+      border-radius: 32% 70% 30% 70% / 74% 10% 93% 20%;
+      background: linear-gradient(0deg, rgba(0, 81, 255, 0.5), transparent);
+      z-index: -1;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 10%;
+      right: 2%;
+      width: 300px;
+      height: 250px;
+      border-radius: 40% 60% 6% 94% / 51% 42% 58% 49%;
+      background: linear-gradient(
+        180deg,
+        rgba(240, 227, 51, 0.2),
+        rgba(185, 24, 78, 0.5),
+        transparent
+      );
+      z-index: -1;
+    }
   }
 
   /* 
@@ -148,8 +177,25 @@ Cocktails List
     letter-spacing: 0.3rem;
     text-align: center;
     margin-bottom: 3.5rem;
-    color: rgb(156, 156, 156);
-    text-shadow: 0 0 2px rgb(26, 6, 75);
+    color: rgb(197, 196, 196);
+    background: linear-gradient(
+      45deg,
+      rgb(204, 45, 17) 0%,
+      rgb(209, 48, 8) 10%,
+      rgb(204, 191, 15) 15%,
+      rgb(221, 208, 19) 30%,
+      rgb(9, 83, 34) 31%,
+      rgb(7, 90, 35) 50%,
+      rgb(117, 10, 121) 53%,
+      rgb(117, 10, 121) 65%,
+      rgb(8, 54, 85) 67%,
+      rgb(4, 74, 121) 80%,
+      rgb(128, 0, 0) 85%,
+      rgb(128, 0, 0) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     position: relative;
     &::before {
       position: absolute;
@@ -506,7 +552,10 @@ Cocktail
       color: #445;
       transition: color 0.3s ease-in-out, background 0.3s ease-in;
     }
-    .drink-data {
+    .instruction-info {
+      text-transform: initial;
+    }
+    & .drink-data {
       text-transform: capitalize;
       font-weight: 500;
       background: #d4e6a5;
