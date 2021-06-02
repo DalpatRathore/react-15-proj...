@@ -1,13 +1,13 @@
 .home {
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 120px);
   padding: 2rem;
+ 
 }
 
 .home__projectInfoCard {
   margin: 1.5rem auto;
   width: 300px;
   height: 200px;
-  box-shadow: 0 0 10px #111;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -18,8 +18,12 @@
     rgba(255, 165, 0, 0.8),
     rgba(0, 102, 153, 0.8)
   );
-
   position: relative;
+  box-shadow: 0 0 3px #111;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.home__projectInfoCard:hover {
+  box-shadow: 0 0 10px #111;
 }
 
 .home__badge {

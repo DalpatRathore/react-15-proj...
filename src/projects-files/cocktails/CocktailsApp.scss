@@ -2,7 +2,7 @@
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 120px);
   background: #f1f5f7;
   color: #222;
   background: linear-gradient(
@@ -26,7 +26,7 @@ Navbar
 */
   .navbar {
     position: sticky;
-    top: 75px;
+    top: 120px;
     left: 0;
     height: 5rem;
     display: flex;
@@ -82,7 +82,7 @@ About
   .about-section {
     width: 85vw;
     max-width: 45rem;
-    min-height: calc(100vh - 155px);
+    min-height: calc(100vh - 200px);
     margin: 0rem auto;
     display: flex;
     align-items: center;

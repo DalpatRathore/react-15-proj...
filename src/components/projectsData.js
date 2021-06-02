@@ -1,4 +1,4 @@
-export default [
+const projectsData = [
   {
     id: 1,
     projectName: "Birthday Remindar",
@@ -16,8 +16,8 @@ export default [
   },
   {
     id: 4,
-    projectName: "Questions",
-    projectPageName: "questions",
+    projectName: "Accordian",
+    projectPageName: "accordian",
   },
   {
     id: 5,
@@ -76,3 +76,5 @@ export default [
     projectPageName: "cocktails",
   },
 ];
+
+export default projectsData;

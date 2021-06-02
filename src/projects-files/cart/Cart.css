@@ -2,7 +2,7 @@
   background: #f1f5f8;
   background: linear-gradient(120deg, maroon 25%, #f69e0f 25%, #f69e0f 55%, #0b3769 55%, #0b3769 77%, maroon 77%);
   color: #102a42;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 120px);
   padding: 1rem 0;
   /*
   =============== 
@@ -49,7 +49,7 @@
 }
 
 .cartApp .loader-container {
-  min-height: calc(100vh - 107px);
+  min-height: calc(100vh - 152px);
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -156,7 +156,7 @@
 .cartApp nav {
   position: -webkit-sticky;
   position: sticky;
-  top: 75px;
+  top: 120px;
   background: maroon;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 165, 0, 0.8)), to(rgba(8, 52, 75, 0.8)));
   background: linear-gradient(0deg, rgba(255, 165, 0, 0.8), rgba(8, 52, 75, 0.8));

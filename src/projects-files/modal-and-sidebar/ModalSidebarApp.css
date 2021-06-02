@@ -1,7 +1,7 @@
 .modalSidebarApp {
   background: #f1f5f8;
   color: #102a42;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 120px);
   /* section */
   /*
   =============== 
@@ -239,7 +239,7 @@
 
 .modalSidebarApp .sidebar {
   position: fixed;
-  top: 75px;
+  top: 120px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -270,7 +270,7 @@
 }
 
 .modalSidebarApp .home {
-  min-height: calc(100vh - 150px);
+  min-height: calc(100vh - 195px);
   background: #791a3e;
   background: linear-gradient(-45deg, transparent, #0e3a72 50%, #f7cf4b 50%, #791c81 70%, #0e3a72 70%, transparent);
   display: -webkit-box;
@@ -371,7 +371,7 @@
 }
 
 .modalSidebarApp .videos {
-  min-height: calc(100vh - 150px);
+  min-height: calc(100vh - 195px);
   background: #791a3e;
   background: linear-gradient(-45deg, transparent, #0e3a72 50%, #f7cf4b 50%, #791c81 70%, #0e3a72 70%, transparent);
   display: -webkit-box;
@@ -388,7 +388,7 @@
 }
 
 .modalSidebarApp .projects {
-  min-height: calc(100vh - 150px);
+  min-height: calc(100vh - 195px);
   background: #791a3e;
   background: linear-gradient(-45deg, transparent, #0e3a72 50%, #f7cf4b 50%, #791c81 70%, #0e3a72 70%, transparent);
   display: -webkit-box;

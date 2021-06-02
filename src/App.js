@@ -1,11 +1,9 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
-
 import BirthdayRemindarApp from "./projects-files/birthday-remindar/BirthdayRemindarApp";
 import ReviewsApp from "./projects-files/reviews/ReviewsApp";
 import ToursApp from "./projects-files/tours/ToursApp";
-
 import AccordianApp from "./projects-files/accordian/AccordianApp";
 import MenuApp from "./projects-files/menu/MenuApp";
 import TabsApp from "./projects-files/tabs/TabsApp";
@@ -37,7 +35,7 @@ function App() {
           <Route path="/reviews">
             <ReviewsApp></ReviewsApp>
           </Route>
-          <Route path="/questions">
+          <Route path="/accordian">
             <AccordianApp></AccordianApp>
           </Route>
           <Route path="/menu">

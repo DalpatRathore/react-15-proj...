@@ -1,7 +1,7 @@
 .modalSidebarApp {
   background: hsl(210, 36%, 96%);
   color: hsl(209, 61%, 16%);
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 120px);
 
   /* section */
   .section {
@@ -183,7 +183,7 @@
 
   .sidebar {
     position: fixed;
-    top: 75px;
+    top: 120px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -204,7 +204,7 @@
   }
 
   .home {
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 195px);
     background: rgb(121, 26, 62);
     background: linear-gradient(
       -45deg,
@@ -288,7 +288,7 @@
   }
 
   .videos {
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 195px);
     background: rgb(121, 26, 62);
 
     background: linear-gradient(
@@ -308,7 +308,7 @@
     position: relative;
   }
   .projects {
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 195px);
     background: rgb(121, 26, 62);
     background: linear-gradient(
       -45deg,

@@ -1,7 +1,7 @@
 .navbarApp {
   background: rgba(255, 165, 0, 0.5);
   color: #102a42;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 120px);
   /* section */
   /*
   =============== 
@@ -96,7 +96,7 @@
   position: absolute;
   top: 80px;
   left: 0;
-  min-height: calc(100vh - 230px);
+  min-height: calc(100vh - 275px);
   width: 100%;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -145,7 +145,7 @@
 }
 
 .navbarApp .home {
-  min-height: calc(100vh - 230px);
+  min-height: calc(100vh - 275px);
   background: #791a3e;
   background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#791a3e));
   background: linear-gradient(0deg, transparent, #791a3e);
@@ -247,7 +247,7 @@
 }
 
 .navbarApp .videos {
-  min-height: calc(100vh - 230px);
+  min-height: calc(100vh - 275px);
   background: #311369;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -264,7 +264,7 @@
 }
 
 .navbarApp .projects {
-  min-height: calc(100vh - 230px);
+  min-height: calc(100vh - 275px);
   background: #791a3e;
   background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#791a3e));
   background: linear-gradient(0deg, transparent, #791a3e);

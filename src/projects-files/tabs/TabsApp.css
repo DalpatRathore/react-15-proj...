@@ -22,7 +22,14 @@
   max-width: 1170px;
   border-radius: 0.2rem;
   background: white;
-  background: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(48%, #f69e0f), to(#0c7385));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(transparent),
+    color-stop(48%, #f69e0f),
+    to(#0c7385)
+  );
   background: linear-gradient(0deg, transparent, #f69e0f 48%, #0c7385 100%);
   overflow: hidden;
 }
@@ -39,11 +46,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .tabsApp .loading .spinner-1 {
@@ -52,16 +59,16 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   -webkit-animation: spinner-1 3s linear infinite;
-          animation: spinner-1 3s linear infinite;
+  animation: spinner-1 3s linear infinite;
   position: relative;
 }
 
@@ -98,30 +105,30 @@
 @-webkit-keyframes spinner-1 {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   50% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 
 @keyframes spinner-1 {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   50% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 
@@ -144,7 +151,14 @@
   margin: 0 auto;
   max-width: 1170px;
   background: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(48%, #f69e0f), to(#0c7385));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(transparent),
+    color-stop(48%, #f69e0f),
+    to(#0c7385)
+  );
   background: linear-gradient(180deg, transparent, #f69e0f 48%, #0c7385 100%);
   padding: 2rem;
   position: relative;
@@ -180,11 +194,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 3rem;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   background: transparent;
 }
 
@@ -213,7 +227,7 @@
   color: #ccc;
   background: rgba(114, 9, 79, 0.8);
   -webkit-box-shadow: 0 2px #eee;
-          box-shadow: 0 2px #eee;
+  box-shadow: 0 2px #eee;
 }
 
 .tabsApp .job-info {
@@ -224,7 +238,7 @@
   transition: box-shadow 0.5s linear;
   transition: box-shadow 0.5s linear, -webkit-box-shadow 0.5s linear;
   -webkit-box-shadow: 0 0 2px #6b0644;
-          box-shadow: 0 0 2px #6b0644;
+  box-shadow: 0 0 2px #6b0644;
   position: relative;
   overflow: hidden;
   z-index: 10;
@@ -232,7 +246,7 @@
 
 .tabsApp .job-info:hover {
   -webkit-box-shadow: 0 0 8px #fff;
-          box-shadow: 0 0 8px #fff;
+  box-shadow: 0 0 8px #fff;
 }
 
 .tabsApp .job-info::before {
@@ -268,7 +282,7 @@
   color: #113c64;
   background: transparent;
   -webkit-box-shadow: 0 0 3px #fff;
-          box-shadow: 0 0 3px #fff;
+  box-shadow: 0 0 3px #fff;
   display: inline-block;
   padding: 0.375rem 0.75rem;
   border-radius: 0.25rem;
@@ -283,12 +297,12 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr;
-      grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr;
   -webkit-column-gap: 2rem;
-          column-gap: 2rem;
+  column-gap: 2rem;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 1.25rem;
 }
 
@@ -307,18 +321,18 @@
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 200px 1fr;
-        grid-template-columns: 200px 1fr;
+    grid-template-columns: 200px 1fr;
     -webkit-column-gap: 4rem;
-            column-gap: 4rem;
+    column-gap: 4rem;
   }
   .tabsApp .btn-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
   .tabsApp .job-btn {
     margin-bottom: 1rem;
@@ -326,7 +340,7 @@
   }
   .tabsApp .active-btn {
     -webkit-box-shadow: -2px 0 #eee;
-            box-shadow: -2px 0 #eee;
+    box-shadow: -2px 0 #eee;
   }
 }
 /*# sourceMappingURL=TabsApp.css.map */

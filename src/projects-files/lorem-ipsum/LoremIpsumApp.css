@@ -3,7 +3,7 @@
   background: -webkit-gradient(linear, left bottom, left top, from(#006699), to(rgba(255, 165, 0, 0.5)));
   background: linear-gradient(0deg, #006699, rgba(255, 165, 0, 0.5));
   color: #102a42;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 120px);
   padding: 3rem 0;
   overflow: hidden;
   /*

@@ -1,7 +1,7 @@
 .navbarApp {
   background: rgba(255, 165, 0, 0.5);
   color: hsl(209, 61%, 16%);
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 120px);
 
   /* section */
   .section {
@@ -71,7 +71,7 @@
     position: absolute;
     top: 80px;
     left: 0;
-    min-height: calc(100vh - 230px);
+    min-height: calc(100vh - 275px);
     width: 100%;
     transform: scale(0);
     overflow: hidden;
@@ -110,7 +110,7 @@
   }
 
   .home {
-    min-height: calc(100vh - 230px);
+    min-height: calc(100vh - 275px);
     background: rgb(121, 26, 62);
     background: linear-gradient(0deg, transparent, rgb(121, 26, 62));
     display: flex;
@@ -186,7 +186,7 @@
   }
 
   .videos {
-    min-height: calc(100vh - 230px);
+    min-height: calc(100vh - 275px);
     background: rgb(49, 19, 105);
     display: flex;
     align-items: center;
@@ -195,7 +195,7 @@
     overflow: hidden;
   }
   .projects {
-    min-height: calc(100vh - 230px);
+    min-height: calc(100vh - 275px);
     background: rgb(121, 26, 62);
     background: linear-gradient(0deg, transparent, rgb(121, 26, 62));
     display: flex;
