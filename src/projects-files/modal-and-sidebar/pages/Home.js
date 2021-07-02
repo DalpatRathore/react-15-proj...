@@ -34,7 +34,7 @@ const Home = () => {
         exit="exit"
       >
         <h1>Coding Addict</h1>
-        <h3>John Smilga</h3>
+        <h4>John Smilga</h4>
         <a
           href="https://www.johnsmilga.com/"
           target="_blank"

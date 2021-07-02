@@ -1,18 +1,18 @@
 .colorGeneratorApp {
   background: hsl(210, 36%, 96%);
-
   color: hsl(209, 61%, 16%);
   min-height: 100vh;
 
   /* section */
-  .section {
+  section {
     width: 90vw;
     margin: 0 auto;
-    max-width: 1170px;
+    max-width: 1920px;
+    overflow: hidden;
   }
 
   @media screen and (min-width: 992px) {
-    .section {
+    section {
       width: 95vw;
     }
   }

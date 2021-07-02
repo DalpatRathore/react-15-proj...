@@ -3,6 +3,8 @@
   font-size: 1rem;
   font-weight: 300;
   min-height: calc(100vh - 120px);
+  margin: 0 auto;
+  max-width: 1920px;
   background: #f1f5f7;
   color: #222;
   background: -webkit-gradient(linear, left top, right top, from(#f9b24e), to(#1c547c));
@@ -87,9 +89,13 @@ Cocktail
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 90vw;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1750px;
 }
 
 .cocktailsApp .nav-links {
@@ -99,6 +105,7 @@ Cocktail
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 0.9rem;
 }
 
 .cocktailsApp .nav-links a {
@@ -106,12 +113,12 @@ Cocktail
   display: inline-block;
   font-weight: 500;
   margin-left: 1rem;
-  letter-spacing: 0.15rem;
-  font-size: 1rem;
-  padding: 0.25rem 0.8rem;
-  border-radius: 0.35rem;
+  letter-spacing: 0.1rem;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.8rem;
+  border-radius: 0.25rem;
   color: #1a064b;
-  border: 0.12rem solid #1a064b;
+  border: 0.1rem solid #1a064b;
   background: transparent;
   -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in;
   transition: color 0.3s ease-in-out, background 0.3s ease-in;
@@ -277,10 +284,10 @@ Cocktail
   width: 95vw;
   margin: 0 auto;
   padding: 2rem 0 8rem 0;
-  max-width: 1170px;
+  max-width: 1750px;
   display: -ms-grid;
   display: grid;
-  gap: 8rem 2rem;
+  gap: 12rem 2rem;
   /* align-items: start; */
 }
 
@@ -319,11 +326,11 @@ Cocktail
 .cocktailsApp .cocktail::before {
   position: absolute;
   content: "";
-  top: -9%;
-  right: -9%;
-  width: 50px;
-  height: 50px;
-  border: 8px solid #135313;
+  top: -5%;
+  right: -5%;
+  width: 30px;
+  height: 30px;
+  border: 5px solid #135313;
   border-left-color: transparent;
   border-radius: 50%;
   background: rgba(6, 156, 6, 0.5);
@@ -463,11 +470,11 @@ Cocktail
 }
 
 .cocktailsApp .search-form {
-  width: 90vw;
+  width: 95vw;
   margin: 0 auto;
   max-width: 40rem;
   background: rgba(255, 255, 255, 0.5);
-  padding: 2rem 2.5rem;
+  padding: 1rem 0.5rem;
   text-transform: capitalize;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0px 0px 2px black;
@@ -531,6 +538,7 @@ Cocktail
 .cocktailsApp .input-container {
   margin: 0 auto;
   width: 100%;
+  max-width: 30rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -549,20 +557,20 @@ Cocktail
   -webkit-box-flex: 0.8;
       -ms-flex: 0.8;
           flex: 0.8;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   border: none;
   outline: none;
   background: transparent;
   color: #1a064b;
   border-radius: 0.25rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .cocktailsApp .input-container .cocktail-icon {
   -webkit-box-flex: 0.2;
       -ms-flex: 0.2;
           flex: 0.2;
-  font-size: 2rem;
+  font-size: 1.2rem;
   border-left: 1px solid #ddd;
   color: #1a064b;
 }
@@ -574,7 +582,7 @@ Cocktail
 
 .cocktailsApp .drink {
   width: 90vw;
-  max-width: 1170px;
+  max-width: 1900px;
   margin: 0rem auto;
   padding: 1rem;
   display: -webkit-box;
@@ -717,6 +725,21 @@ Cocktail
   .cocktailsApp .label-container {
     font-size: 1rem;
   }
+  .cocktailsApp .nav-center {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .cocktailsApp .nav-links {
+    margin-top: 0;
+  }
+  .cocktailsApp .nav-links a {
+    font-weight: 500;
+    margin-left: 1rem;
+    font-size: 1rem;
+    padding: 0.25rem 0.8rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -725,6 +748,19 @@ Cocktail
   }
   .cocktailsApp .label-container {
     font-size: 1.2rem;
+  }
+  .cocktailsApp .input-container input {
+    -webkit-box-flex: 0.8;
+        -ms-flex: 0.8;
+            flex: 0.8;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+  }
+  .cocktailsApp .input-container .cocktail-icon {
+    -webkit-box-flex: 0.2;
+        -ms-flex: 0.2;
+            flex: 0.2;
+    font-size: 2rem;
   }
 }
 

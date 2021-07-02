@@ -18,7 +18,7 @@
 .menuApp .section {
   width: 90vw;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1920px;
 }
 
 @media screen and (min-width: 992px) {
@@ -74,12 +74,12 @@
 
 .menuApp .filter-btn {
   background: transparent;
-  border: 2px solid orange;
-  font-size: 1rem;
+  border: 1px solid orange;
+  font-size: 0.9rem;
   text-transform: capitalize;
-  margin: 0 0.5rem;
-  letter-spacing: 1px;
-  padding: 0.375rem 0.75rem;
+  margin: 0 0.3rem;
+  letter-spacing: 0.5px;
+  padding: 0.375rem 0.5rem;
   color: orange;
   cursor: pointer;
   -webkit-transition: background color 0.5s linear;
@@ -101,10 +101,10 @@
 .menuApp .section-center {
   width: 85vw;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1750px;
   display: -ms-grid;
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
   justify-items: center;
   background: #069;
   -webkit-box-shadow: 0 0 2px #111;
@@ -115,7 +115,7 @@
 
 .menuApp .menu-item {
   border-radius: 0.3rem;
-  padding: 1rem;
+  padding: 0.8rem;
   display: -ms-grid;
   display: grid;
   gap: 1rem 2rem;
@@ -128,17 +128,6 @@
           box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
   -webkit-transition: background 0.5s linear;
   transition: background 0.5s linear;
-}
-
-.menuApp .menu-item::before {
-  content: "";
-  position: absolute;
-  top: -15px;
-  left: -15px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.8);
 }
 
 .menuApp .menu-item:hover {
@@ -194,6 +183,18 @@
   }
   .menuApp .photo {
     height: 175px;
+  }
+  .menuApp .btn-container {
+    margin-bottom: 2rem;
+    padding: 0.3rem 0;
+  }
+  .menuApp .filter-btn {
+    border: 2px solid orange;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    letter-spacing: 1px;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
   }
 }
 

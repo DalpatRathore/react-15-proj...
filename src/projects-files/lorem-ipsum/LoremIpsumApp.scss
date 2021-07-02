@@ -8,14 +8,14 @@
 
   .btn {
     text-transform: uppercase;
-    padding: 0.5rem 0.75rem;
-    letter-spacing: 0.15rem;
+    padding: 0.5rem;
+    letter-spacing: 0.08rem;
     display: inline-block;
-    font-size: 0.875rem;
+    font-size: 0.7rem;
     cursor: pointer;
     border-radius: 0.25rem;
     border: none;
-    outline: none;
+
     background: hsl(205, 86%, 17%);
     color: #ddd;
     box-shadow: -2px 0px 0px #ddd, 2px 0px 0px #ddd;
@@ -89,11 +89,6 @@
     font-size: 1.2rem;
     letter-spacing: 0.2rem;
   }
-  @media screen and (min-width: 750px) {
-    h2 {
-      font-size: 2rem;
-    }
-  }
 
   .lorem-form {
     text-transform: capitalize;
@@ -107,16 +102,16 @@
     padding: 0.8rem 1rem;
   }
   label {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: hsl(205, 86%, 17%);
   }
   input {
     padding: 0.25rem 0.5rem;
-    width: 4rem;
+    width: 2.8rem;
     border-radius: 0.25rem;
     border: none;
-    margin: 0 1rem 0 0.2rem;
-    font-size: 1.25rem;
+    margin: 0 0.5rem 0 0.2rem;
+    font-size: 1rem;
     border: 1.5px solid transparent;
     box-shadow: 0 0 5px transparent;
     outline: none;
@@ -132,6 +127,26 @@
   }
   .result {
     margin-bottom: 2rem;
+  }
+  @media screen and (min-width: 750px) {
+    h2 {
+      font-size: 2rem;
+    }
+    .btn {
+      padding: 0.5rem 0.75rem;
+      letter-spacing: 0.15rem;
+      font-size: 0.875rem;
+      border-radius: 0.25rem;
+    }
+    label {
+      font-size: 1.25rem;
+    }
+    input {
+      padding: 0.25rem 0.5rem;
+      width: 4rem;
+      margin: 0 1rem 0 0.2rem;
+      font-size: 1.25rem;
+    }
   }
 }
 

@@ -1,24 +1,6 @@
 .reviewsApp {
   background: #f1f5f8;
   color: #102a42;
-  /* section */
-  /*
-  =============== 
-  Reviews
-  ===============
-  */
-}
-
-.reviewsApp .section {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-
-@media screen and (min-width: 992px) {
-  .reviewsApp .section {
-    width: 95vw;
-  }
 }
 
 .reviewsApp main {
@@ -30,7 +12,7 @@
 
 .reviewsApp .title {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .reviewsApp .underline {
@@ -43,13 +25,13 @@
 
 .reviewsApp .container {
   width: 80vw;
-  max-width: 620px;
+  max-width: 650px;
 }
 
 .reviewsApp .review {
   background: #fff;
   background: linear-gradient(45deg, rgba(165, 18, 86, 0.5), rgba(212, 212, 69, 0.5), rgba(37, 177, 123, 0.5));
-  padding: 1rem 1.5rem;
+  padding: 1rem 0.5rem;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -70,24 +52,30 @@
 .reviewsApp .review::before {
   content: "";
   position: absolute;
-  top: -45px;
-  left: -45px;
-  width: 100px;
-  height: 100px;
+  top: -15px;
+  left: -15px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: #069;
+  background: #0a3144;
+  background: -webkit-gradient(linear, left bottom, left top, from(#aa5a0f), to(#0a3144));
+  background: linear-gradient(0deg, #aa5a0f, #0a3144);
+  border: 5px solid #4b073a;
   z-index: -10;
 }
 
 .reviewsApp .review::after {
   content: "";
   position: absolute;
-  bottom: -45px;
-  right: -45px;
-  width: 100px;
-  height: 100px;
+  bottom: -15px;
+  right: -15px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: #069;
+  background: #0a3144;
+  background: -webkit-gradient(linear, left bottom, left top, from(#aa5a0f), to(#0a3144));
+  background: linear-gradient(0deg, #aa5a0f, #0a3144);
+  border: 5px solid #4b073a;
   z-index: -10;
 }
 
@@ -226,5 +214,79 @@
 .reviewsApp .random-btn:hover {
   background: #49a6e9;
   color: #063251;
+}
+
+@media screen and (min-width: 768px) {
+  .reviewsApp .underline {
+    height: 0.25rem;
+    width: 5rem;
+  }
+  .reviewsApp .container {
+    width: 80vw;
+  }
+  .reviewsApp .review {
+    padding: 1rem 1.5rem;
+    border-radius: 0.25rem;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  .reviewsApp .review::before {
+    top: -35px;
+    left: -35px;
+    width: 100px;
+    height: 100px;
+  }
+  .reviewsApp .review::after {
+    bottom: -35px;
+    right: -35px;
+    width: 100px;
+    height: 100px;
+  }
+  .reviewsApp .wrapper {
+    padding: 1rem 1.5rem;
+  }
+  .reviewsApp .wrapper::before {
+    top: -20px;
+    right: -20px;
+    width: 40%;
+    height: 30%;
+    border-radius: 0 0 30px 100px;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  .reviewsApp .wrapper::after {
+    top: -10px;
+    right: -10px;
+    width: 30%;
+    height: 20%;
+    border-radius: 0 0 20px 100px;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  .reviewsApp .img-container {
+    width: 150px;
+    height: 150px;
+  }
+  .reviewsApp .quote-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .reviewsApp .author {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .reviewsApp .job {
+    font-size: 0.85rem;
+  }
+  .reviewsApp .prev-btn,
+  .reviewsApp .next-btn {
+    font-size: 1.25rem;
+    margin: 0 0.5rem;
+  }
+  .reviewsApp .random-btn {
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
 }
 /*# sourceMappingURL=ReviewsApp.css.map */

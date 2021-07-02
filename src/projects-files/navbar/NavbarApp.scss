@@ -2,25 +2,9 @@
   background: rgba(255, 165, 0, 0.5);
   color: hsl(209, 61%, 16%);
   min-height: calc(100vh - 120px);
+  margin: 0 auto;
+  max-width: 1920px;
 
-  /* section */
-  .section {
-    width: 90vw;
-    margin: 0 auto;
-    max-width: 1170px;
-  }
-
-  @media screen and (min-width: 992px) {
-    .section {
-      width: 95vw;
-    }
-  }
-
-  /*
-  =============== 
-  Navbar
-  ===============
-  */
   nav {
     background: #fff;
     height: 80px;

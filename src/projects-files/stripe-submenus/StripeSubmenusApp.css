@@ -6,6 +6,8 @@ body {
   width: 100%;
   min-height: calc(100vh - 120px);
   background: #dfcdcd;
+  margin: 0 auto;
+  max-width: 1920px;
   /*
   =============== 
   Stripe Styles
@@ -27,7 +29,7 @@ body {
 .stripeSubmenusApp .nav {
   margin: 0 auto;
   width: 90vw;
-  max-width: 1080px;
+  max-width: 1920px;
   height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -161,7 +163,8 @@ body {
 .stripeSubmenusApp .hero {
   margin: 0 auto;
   width: 90vw;
-  max-width: 1080px;
+  position: relative;
+  max-width: 1750px;
   margin-top: 10rem;
 }
 
@@ -288,9 +291,6 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-  .stripeSubmenusApp .hero {
-    width: 95vw;
-  }
   .stripeSubmenusApp .hero-info h1 {
     font-size: 4rem;
   }
@@ -301,8 +301,8 @@ body {
   .stripeSubmenusApp .hero-images {
     display: block;
     position: absolute;
-    top: 30%;
-    right: 0rem;
+    top: -2%;
+    right: -4.8%;
   }
   .stripeSubmenusApp .phone-img {
     width: 25rem;
@@ -329,7 +329,7 @@ body {
 
 .stripeSubmenusApp .sidebar-wrapper {
   position: absolute;
-  top: 75px;
+  top: 120px;
   left: 0;
   width: 100%;
   min-height: 100vh;
@@ -356,7 +356,8 @@ body {
 }
 
 .stripeSubmenusApp .sidebar {
-  width: 90vw;
+  width: 95vw;
+  margin: 0 auto;
   min-height: 90vh;
   max-width: 620px;
   background: #fff;
@@ -364,7 +365,7 @@ body {
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   position: relative;
-  padding: 0.3rem;
+  padding: 0.2rem;
 }
 
 .stripeSubmenusApp .close-btn {
@@ -397,7 +398,7 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 1rem 0;
   padding-bottom: 1rem;
 }
 
@@ -412,7 +413,7 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   outline: none;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .stripeSubmenusApp .sidebar-link-wrapper .sidebar-icon-container {

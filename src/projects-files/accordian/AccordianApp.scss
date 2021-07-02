@@ -5,42 +5,21 @@
     margin-bottom: 1.25rem;
     color: hsl(210, 22%, 49%);
   }
-
-  /* section */
-  .section {
-    width: 90vw;
-    margin: 0 auto;
-    max-width: 1170px;
-  }
-
-  @media screen and (min-width: 992px) {
-    .section {
-      width: 95vw;
-    }
-  }
-
-  /*
-  =============== 
-  Questions
-  ===============
-  */
-
   main {
-    min-height: 100vh;
-    /* using flex because of better browser support */
+    min-height: 75vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 3rem 0;
   }
 
   .container {
-    width: 90vw;
-    margin: 5rem auto;
+    width: 95vw;
     background: #fff;
     background: linear-gradient(45deg, #069, #ccc, maroon);
     border-radius: 0.25rem;
-    padding: 2.5rem 2rem;
-    max-width: 920px;
+    padding: 3rem 0.3rem;
+    max-width: 1200px;
     display: grid;
     gap: 1rem 2rem;
     box-shadow: 0 0 3px rgba(0, 0, 0, 1);
@@ -56,17 +35,12 @@
     height: 3rem;
   }
   .container h3 {
-    line-height: 1.2;
+    line-height: 1;
     font-weight: 500;
   }
-  @media screen and (min-width: 992px) {
-    .container {
-      display: grid;
-      grid-template-columns: 250px 1fr;
-    }
-  }
+
   .question {
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 0.8rem;
     border: 2px solid #eae6eb;
     margin-bottom: 1rem;
     border-radius: 0.25rem;
@@ -79,7 +53,7 @@
       box-shadow: 0 0 5px rgba(255, 255, 255, 1);
     }
     &.open {
-      height: 150px;
+      height: 180px;
     }
   }
 
@@ -123,6 +97,41 @@
     outline: none;
     &:hover {
       transform: scale(1.1) rotate(180deg);
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .accordianApp {
+    .container {
+      padding: 2.5rem 2rem;
+      gap: 1rem 2rem;
+      grid-template-columns: 250px 1fr;
+    }
+
+    .pushpin-icon {
+      top: 0.5%;
+      left: 1%;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+    .container h3 {
+      line-height: 1.2;
+    }
+
+    .question {
+      padding: 1rem 1.5rem;
+      border: 2px solid #eae6eb;
+      margin-bottom: 1rem;
+      height: 70px;
+      &.open {
+        height: 150px;
+      }
+    }
+
+    .btn {
+      width: 2.2rem;
+      height: 2.2rem;
     }
   }
 }

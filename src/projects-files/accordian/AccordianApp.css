@@ -1,12 +1,6 @@
 .accordianApp {
   background: #ddd;
   color: #102a42;
-  /* section */
-  /*
-  =============== 
-  Questions
-  ===============
-  */
 }
 
 .accordianApp p {
@@ -14,40 +8,27 @@
   color: #617d98;
 }
 
-.accordianApp .section {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-
-@media screen and (min-width: 992px) {
-  .accordianApp .section {
-    width: 95vw;
-  }
-}
-
 .accordianApp main {
-  min-height: 100vh;
-  /* using flex because of better browser support */
+  min-height: 75vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 3rem 0;
 }
 
 .accordianApp .container {
-  width: 90vw;
-  margin: 5rem auto;
+  width: 95vw;
   background: #fff;
   background: linear-gradient(45deg, #069, #ccc, maroon);
   border-radius: 0.25rem;
-  padding: 2.5rem 2rem;
-  max-width: 920px;
+  padding: 3rem 0.3rem;
+  max-width: 1200px;
   display: -ms-grid;
   display: grid;
   gap: 1rem 2rem;
@@ -66,21 +47,12 @@
 }
 
 .accordianApp .container h3 {
-  line-height: 1.2;
+  line-height: 1;
   font-weight: 500;
 }
 
-@media screen and (min-width: 992px) {
-  .accordianApp .container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 250px 1fr;
-        grid-template-columns: 250px 1fr;
-  }
-}
-
 .accordianApp .question {
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 0.8rem;
   border: 2px solid #eae6eb;
   margin-bottom: 1rem;
   border-radius: 0.25rem;
@@ -100,7 +72,7 @@
 }
 
 .accordianApp .question.open {
-  height: 150px;
+  height: 180px;
 }
 
 .accordianApp .question h4 {
@@ -166,5 +138,36 @@
 .accordianApp .btn:hover {
   -webkit-transform: scale(1.1) rotate(180deg);
           transform: scale(1.1) rotate(180deg);
+}
+
+@media screen and (min-width: 992px) {
+  .accordianApp .container {
+    padding: 2.5rem 2rem;
+    gap: 1rem 2rem;
+    -ms-grid-columns: 250px 1fr;
+        grid-template-columns: 250px 1fr;
+  }
+  .accordianApp .pushpin-icon {
+    top: 0.5%;
+    left: 1%;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .accordianApp .container h3 {
+    line-height: 1.2;
+  }
+  .accordianApp .question {
+    padding: 1rem 1.5rem;
+    border: 2px solid #eae6eb;
+    margin-bottom: 1rem;
+    height: 70px;
+  }
+  .accordianApp .question.open {
+    height: 150px;
+  }
+  .accordianApp .btn {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
 }
 /*# sourceMappingURL=AccordianApp.css.map */

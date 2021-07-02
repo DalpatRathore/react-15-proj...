@@ -2,12 +2,9 @@
   background: #f1f5f8;
   color: #102a42;
   min-height: calc(100vh - 120px);
-  /* section */
-  /*
-  =============== 
-  Home
-  ===============
-  */
+  margin: 0 auto;
+  max-width: 1920px;
+  position: relative;
   /*
   =============== 
   Modal
@@ -21,23 +18,15 @@
   */
 }
 
-.modalSidebarApp .section {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-
-@media screen and (min-width: 992px) {
-  .modalSidebarApp .section {
-    width: 95vw;
-  }
+.modalSidebarApp h1 {
+  font-size: 2rem;
 }
 
 .modalSidebarApp .sidebar-toggle {
   position: absolute;
   top: 1.5rem;
   left: 2rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   background: transparent;
   border: none;
   outline: none;
@@ -237,9 +226,23 @@
   color: #fff;
 }
 
+.modalSidebarApp .links-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modalSidebarApp .links-wrapper a {
+  margin: 0.2rem;
+}
+
 .modalSidebarApp .sidebar {
-  position: fixed;
-  top: 120px;
+  position: absolute;
+  top: 0px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -259,8 +262,8 @@
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  -webkit-transform: translate(-100%);
-          transform: translate(-100%);
+  -webkit-transform: translate(-100vw);
+          transform: translate(-100vw);
   z-index: 100;
 }
 

@@ -1,9 +1,11 @@
 .groceryBudApp {
   min-height: calc(100vh - 120px);
   padding: 2rem 0;
-  background: #069;
+  margin: 0 auto;
+  max-width: 1920px;
   background: linear-gradient(0deg, rgba(255, 165, 0, 0.5), #069);
   position: relative;
+  overflow: hidden;
 
   z-index: 1;
   &::before {
@@ -46,7 +48,7 @@
     max-width: 40rem;
     border-radius: 0.25rem;
     transition: box-shadow 0.3s linear;
-    padding: 1rem 2rem;
+    padding: 1rem 0.8rem;
     background: rgb(201, 145, 68);
     background: linear-gradient(
       0deg,
@@ -54,7 +56,7 @@
       rgba(249, 178, 78, 0.8),
       rgba(12, 56, 88, 0.9)
     );
-    overflow: hidden;
+
     position: relative;
     z-index: 1;
     &::before {
@@ -173,7 +175,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
   }
   .overlay {
     position: absolute;

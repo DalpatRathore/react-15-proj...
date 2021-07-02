@@ -10,14 +10,15 @@
   */
 }
 
-.colorGeneratorApp .section {
+.colorGeneratorApp section {
   width: 90vw;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1920px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 992px) {
-  .colorGeneratorApp .section {
+  .colorGeneratorApp section {
     width: 95vw;
   }
 }

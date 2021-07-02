@@ -83,8 +83,11 @@ const GroceryBudApp = () => {
     setAlert({ show, type, msg });
   };
   const clearList = () => {
-    showAlert(true, "danger", "list cleared!");
-    setList([]);
+    const confirmMsg = window.confirm("Are you sure?");
+    if (confirmMsg) {
+      showAlert(true, "danger", "list cleared!");
+      setList([]);
+    }
   };
 
   const removeItem = id => {

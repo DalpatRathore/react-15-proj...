@@ -14,8 +14,7 @@ const logoVariants = {
 const Logo = () => {
   return (
     <motion.svg
-      width="320"
-      height="44"
+      
       viewBox="0 0 320 44"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
