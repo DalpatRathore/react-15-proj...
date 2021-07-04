@@ -4,18 +4,19 @@ import { motion } from "framer-motion";
 
 const iconsVariants = {
   enter: {
-    x: "-100vw",
+    // x: "-100vw",
+    scale: 0,
     opacity: 0,
-    rotate: 0,
   },
   center: {
-    x: 0,
+    scale: 1,
     opacity: 1,
-    rotate: 360,
+
     transition: {
-      x: { duration: 1 },
-      opacity: { duration: 1 },
-      rotate: { duration: 1.5 },
+      type: "spring",
+      stiffness: 300,
+      delay: 0.5,
+      duration: 1,
     },
   },
 };

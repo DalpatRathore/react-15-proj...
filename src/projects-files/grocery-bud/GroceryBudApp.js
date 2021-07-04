@@ -119,7 +119,7 @@ const GroceryBudApp = () => {
               onChange={e => setName(e.target.value)}
             />
             <button className="submit-btn" type="submit">
-              {isEditing ? "Save" : "Add Item"}
+              {isEditing ? "Save" : "Add"}
             </button>
             {alert.show && (
               <Alert {...alert} removeAlert={showAlert} list={list}></Alert>

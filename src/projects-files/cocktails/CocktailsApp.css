@@ -230,7 +230,7 @@ Cocktail
 }
 
 .cocktailsApp .search-section {
-  min-height: 45vh;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -582,7 +582,7 @@ Cocktail
 
 .cocktailsApp .drink {
   width: 90vw;
-  max-width: 1900px;
+  max-width: 1750px;
   margin: 0rem auto;
   padding: 1rem;
   display: -webkit-box;

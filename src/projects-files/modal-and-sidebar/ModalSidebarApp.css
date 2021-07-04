@@ -438,8 +438,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   margin: 0.5rem;
   background: #184f77;
@@ -452,7 +452,16 @@
 }
 
 .modalSidebarApp .social-icon a {
-  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.3rem;
   color: #ddd;
   -webkit-transition: color 0.3s linear;
   transition: color 0.3s linear;

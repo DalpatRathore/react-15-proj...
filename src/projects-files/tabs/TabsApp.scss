@@ -2,33 +2,21 @@
   background: hsl(210, 36%, 96%);
   color: hsl(209, 77%, 22%);
   min-height: 100vh;
-  padding: 2rem 0;
-
-  p {
-    margin-bottom: 1.25rem;
-  }
-
   /* section */
   .section {
-    width: 90vw;
+    width: 100%;
     margin: 0rem auto;
-    padding: 2rem 2rem 0 2rem;
-    max-width: 1170px;
-    border-radius: 0.2rem;
+    padding: 2rem 0.5rem;
+    max-width: 1900px;
+    border-radius: 0.5rem;
     background: rgb(255, 255, 255);
     background: linear-gradient(
       0deg,
-      transparent,
+      rgba(246, 158, 15, 0.1) 0,
       rgba(246, 158, 15, 1) 48%,
       rgb(12, 115, 133) 100%
     );
     overflow: hidden;
-  }
-
-  @media screen and (min-width: 992px) {
-    .section {
-      width: 95vw;
-    }
   }
 
   .loading {
@@ -109,7 +97,7 @@
   */
 
   .jobs-center {
-    width: 80vw;
+    width: 95vw;
     margin: 0 auto;
     max-width: 1170px;
     background: rgb(255, 255, 255);
@@ -119,7 +107,7 @@
       rgba(246, 158, 15, 1) 48%,
       rgb(12, 115, 133) 100%
     );
-    padding: 2rem;
+    padding: 2rem 1rem;
     position: relative;
     z-index: 1;
 
@@ -149,7 +137,7 @@
   .btn-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
     background: transparent;
   }
@@ -157,11 +145,11 @@
     background: transparent;
     text-transform: capitalize;
     font-size: 1rem;
-    letter-spacing: 0.18rem;
-    margin: 0 0.5rem;
+    letter-spacing: 0.1rem;
+    margin: 0 0.2rem;
     transition: color 0.3s linear;
     cursor: pointer;
-    padding: 0.25rem 0.8rem;
+    padding: 0.25rem 0.5rem;
     line-height: 1;
     border-radius: 0.2rem;
     border: 1px solid rgba(114, 9, 79, 0.8);
@@ -214,7 +202,8 @@
   }
 
   .job-info h3 {
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1.18rem;
   }
   .job-info h4 {
     text-transform: uppercase;
@@ -244,11 +233,15 @@
     color: #520c55;
   }
   @media screen and (min-width: 992px) {
+    .section {
+      padding: 2rem;
+    }
     .jobs-center {
-      width: 80vw;
+      width: 90vw;
       display: grid;
       grid-template-columns: 200px 1fr;
       column-gap: 4rem;
+      padding: 2rem;
     }
     .btn-container {
       flex-direction: column;
@@ -260,6 +253,10 @@
     }
     .active-btn {
       box-shadow: -2px 0 #eee;
+    }
+    .job-info h3 {
+      font-weight: 600;
+      font-size: 2rem;
     }
   }
 }

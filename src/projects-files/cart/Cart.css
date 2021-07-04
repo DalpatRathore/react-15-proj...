@@ -162,7 +162,7 @@
   background: linear-gradient(0deg, rgba(255, 165, 0, 0.8), rgba(8, 52, 75, 0.8));
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
-  padding: 1.25rem 2rem;
+  padding: 1.25rem 1.2rem;
   z-index: 100;
 }
 
@@ -191,7 +191,7 @@
   padding: 0.3rem;
   background: rgba(255, 255, 255, 0.7);
   position: relative;
-  width: 12rem;
+  width: 15rem;
 }
 
 .cartApp .logo-wrapper img {

@@ -29,7 +29,6 @@
     justify-content: center;
     align-items: center;
     height: 150px;
-    padding-left: 2rem;
     background: #fff;
     background: linear-gradient(0deg, transparent, #069);
     position: relative;
@@ -58,7 +57,6 @@
     }
   }
   .container h2 {
-    margin-right: 1rem;
     font-family: "bauhaus 93", sans-serif;
     background: linear-gradient(45deg, orange, rgb(11, 64, 90), maroon);
     background-clip: text;
@@ -68,8 +66,8 @@
 
   input {
     border-color: transparent;
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
+    padding: 0.5rem;
+    font-size: 0.85rem;
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
     box-shadow: -2px 0 0 hsl(207, 81%, 17%);
@@ -77,8 +75,8 @@
   }
   .btn {
     background: hsl(209, 65%, 24%);
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
     border-color: transparent;
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
@@ -98,13 +96,19 @@
     padding: 0.2rem 0.5rem;
     border-radius: 0.25rem;
   }
-  @media screen and (max-width: 576px) {
-    .container h3 {
-      font-size: 1rem;
+  @media screen and (min-width: 576px) {
+    input {
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
     }
-    input,
     .btn {
-      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+    }
+    .hint {
+      margin-top: 0.5rem;
+      padding: 0.2rem 0.5rem;
     }
   }
   input.error {

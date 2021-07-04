@@ -7,7 +7,6 @@ body {
   background: #dfcdcd;
   margin: 0 auto;
   max-width: 1920px;
-
   & .gradient-bg {
     height: 110vh;
     color: hsl(209, 61%, 16%);
@@ -33,7 +32,7 @@ body {
   .nav {
     margin: 0 auto;
     width: 90vw;
-    max-width: 1920px;
+    max-width: 1750px;
     height: 5rem;
     display: flex;
     align-items: center;
