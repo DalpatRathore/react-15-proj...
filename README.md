@@ -9,8 +9,8 @@ Beginner 15 React Projects is done following the tutorial of John Smilga of the 
 
 ## Source of learning and tutorial links:
 
-#### Coding Addict: [Youtube Tutorial Link](https://youtu.be/ly3m6mv5qvg?list=PLnHJACx3NwAe5XQDk9xLgym7FF8Q4FYW7)
-#### John Smilga: [Github Link](https://github.com/john-smilga/react-projects)
+#### Coding Addict: [Youtube Tutorial](https://youtu.be/ly3m6mv5qvg?list=PLnHJACx3NwAe5XQDk9xLgym7FF8Q4FYW7)
+#### John Smilga: [Github](https://github.com/john-smilga/react-projects)
 
 
 ## Projects' Screenshots :-
