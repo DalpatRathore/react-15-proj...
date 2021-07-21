@@ -9,7 +9,7 @@
 .navbarApp nav {
   background: #fff;
   height: 80px;
-  padding: 0 2rem;
+  padding: 0 30px;
   position: relative;
 }
 
@@ -23,7 +23,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1rem;
+  padding: 15px;
   z-index: 100;
 }
 
@@ -33,7 +33,7 @@
   place-items: center;
   font-size: 1.8rem;
   outline: none;
-  padding: 0.2rem;
+  padding: 3px;
   background: rgba(17, 17, 17, 0.1);
   border: none;
   cursor: pointer;
@@ -108,12 +108,12 @@
   display: inline-block;
   width: 100%;
   height: 100%;
-  margin: 0.1rem 0;
+  margin: 2px 0;
   background: #ddd;
   color: #0e3261;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  padding: 0.3rem 1rem;
+  padding: 5px 15px;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -194,12 +194,12 @@
 }
 
 .navbarApp .content-container a {
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   background: rgba(0, 102, 153, 0.6);
   color: #ddd;
   letter-spacing: 0.1rem;
   border-radius: 0.25rem;
-  margin-right: 0.5rem;
+  margin-right: 8px;
   -webkit-transition: color 0.5s, background 0.5s;
   transition: color 0.5s, background 0.5s;
 }
@@ -303,7 +303,7 @@
   width: 45px;
   height: 45px;
   border-radius: 20%;
-  margin: 0.5rem;
+  margin: 8px;
   background: #184f77;
   -webkit-box-shadow: 0 0 3px #111;
           box-shadow: 0 0 3px #111;
@@ -351,7 +351,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 1rem;
+    padding: 16px;
   }
   .navbarApp .nav-header {
     padding: 0;
@@ -378,10 +378,10 @@
     background: transparent;
   }
   .navbarApp .links {
-    padding: 0.5rem;
+    padding: 8px;
   }
   .navbarApp .links li {
-    margin-left: 0.8rem;
+    margin-left: 12px;
     display: inline-block;
     -webkit-box-shadow: 0 0 0px #111;
             box-shadow: 0 0 0px #111;
@@ -397,7 +397,7 @@
     margin: 0;
     display: inline-block;
     background: transparent;
-    padding: 0.3rem 1rem;
+    padding: 5px 15px;
     color: #324d67;
     font-size: 1rem;
     text-transform: uppercase;

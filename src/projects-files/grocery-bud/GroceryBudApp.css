@@ -1,6 +1,6 @@
 .groceryBudApp {
   min-height: calc(100vh - 120px);
-  padding: 2rem 0;
+  padding: 30px 0;
   margin: 0 auto;
   max-width: 1920px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 165, 0, 0.5)), to(#069));
@@ -48,13 +48,13 @@
   width: 95vw;
   min-height: 45vh;
   margin: 0 auto;
-  max-width: 40rem;
+  max-width: 700px;
   border-radius: 0.25rem;
   -webkit-transition: -webkit-box-shadow 0.3s linear;
   transition: -webkit-box-shadow 0.3s linear;
   transition: box-shadow 0.3s linear;
   transition: box-shadow 0.3s linear, -webkit-box-shadow 0.3s linear;
-  padding: 1rem 0.8rem;
+  padding: 15px 12px;
   background: #c99144;
   background: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(rgba(249, 178, 78, 0.8)), to(rgba(12, 56, 88, 0.9)));
   background: linear-gradient(0deg, transparent, rgba(249, 178, 78, 0.8), rgba(12, 56, 88, 0.9));
@@ -95,7 +95,7 @@
 
 .groceryBudApp .grocery-form h3 {
   color: #fff;
-  margin-bottom: 1.5rem;
+  margin-bottom: 25px;
   text-align: center;
   text-transform: uppercase;
   font-family: "stencil", sans-serif;
@@ -117,7 +117,7 @@
   display: inline-block;
   font-weight: bold;
   font-size: 0.8rem;
-  padding: 0.2rem 0.5rem;
+  padding: 3px 8px;
   border-radius: 0.25rem;
   letter-spacing: 0.1rem;
   position: absolute;
@@ -142,8 +142,8 @@
 }
 
 .groceryBudApp .grocery {
-  padding: 0.25rem;
-  padding-left: 1rem;
+  padding: 5px;
+  padding-left: 15px;
   background: #f1f5f8;
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -186,7 +186,7 @@
   background: #15476a;
   border: none;
   outline: none;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
   border-top-right-radius: 0.25rem;
@@ -206,7 +206,7 @@
 }
 
 .groceryBudApp .grocery-container {
-  margin-top: 2.5rem;
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,10 +241,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
   -webkit-transition: color, background 0.3s linear;
   transition: color, background 0.3s linear;
-  padding: 0.25rem 0.2rem 0.25rem 1rem;
+  padding: 5px 5px 5px 15px;
   border-radius: 0.25rem;
   text-transform: capitalize;
   background: rgba(0, 0, 0, 0.3);
@@ -281,8 +281,8 @@
   outline: none;
   cursor: pointer;
   font-size: 1rem;
-  margin: 0 0.25rem;
-  padding: 0.3rem 0.6rem;
+  margin: 0 5px;
+  padding: 5px 10px;
   -webkit-transition: color, background, -webkit-box-shadow 0.3s linear;
   transition: color, background, -webkit-box-shadow 0.3s linear;
   transition: color, background, box-shadow 0.3s linear;
@@ -322,14 +322,14 @@
   color: #ddd;
   font-size: 0.85rem;
   letter-spacing: 0.15rem;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   border-radius: 0.25rem;
   -webkit-box-shadow: 2px 0 0 #ddd, -2px 0 0 #ddd;
           box-shadow: 2px 0 0 #ddd, -2px 0 0 #ddd;
   cursor: pointer;
   -webkit-transition: color, background 0.3s linear;
   transition: color, background 0.3s linear;
-  margin-top: 1.25rem;
+  margin-top: 20px;
 }
 
 .groceryBudApp .clear-btn:hover {

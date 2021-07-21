@@ -3,12 +3,12 @@
   background: linear-gradient(0deg, rgb(0, 102, 153), rgba(255, 165, 0, 0.5));
   color: hsl(209, 61%, 16%);
   min-height: calc(100vh - 120px);
-  padding: 3rem 0;
+  padding: 50px 0;
   overflow: hidden;
 
   .btn {
     text-transform: uppercase;
-    padding: 0.5rem;
+    padding: 8px;
     letter-spacing: 0.08rem;
     display: inline-block;
     font-size: 0.7rem;
@@ -30,9 +30,9 @@
   .section-center {
     min-height: 400px;
     width: 90vw;
-    padding: 2rem;
+    padding: 30px;
     margin: 0 auto;
-    max-width: 45rem;
+    max-width: 900px;
     text-align: center;
     background: rgb(26, 107, 139);
     background: linear-gradient(
@@ -61,7 +61,7 @@
     &::after {
       position: absolute;
       content: "";
-      top: 3rem;
+      top: 50px;
       left: 0;
       width: 400px;
       height: 300px;
@@ -93,24 +93,24 @@
   .lorem-form {
     text-transform: capitalize;
     letter-spacing: 0.1rem;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-top: 30px;
+    margin-bottom: 60px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 2px #aaa, 0 3px 0 rgb(66, 8, 8);
-    padding: 0.8rem 1rem;
+    padding: 12px 16px;
   }
   label {
     font-size: 1rem;
     color: hsl(205, 86%, 17%);
   }
   input {
-    padding: 0.25rem 0.5rem;
+    padding: 5px 10px;
     width: 2.8rem;
     border-radius: 0.25rem;
     border: none;
-    margin: 0 0.5rem 0 0.2rem;
+    margin: 0 8px 0 3px;
     font-size: 1rem;
     border: 1.5px solid transparent;
     box-shadow: 0 0 5px transparent;
@@ -126,14 +126,14 @@
     background: hsl(205, 100%, 96%);
   }
   .result {
-    margin-bottom: 2rem;
+    margin-bottom: 30px;
   }
   @media screen and (min-width: 750px) {
     h2 {
       font-size: 2rem;
     }
     .btn {
-      padding: 0.5rem 0.75rem;
+      padding: 8px 12px;
       letter-spacing: 0.15rem;
       font-size: 0.875rem;
       border-radius: 0.25rem;
@@ -144,7 +144,7 @@
     input {
       padding: 0.25rem 0.5rem;
       width: 4rem;
-      margin: 0 1rem 0 0.2rem;
+      margin: 0 16px 0 4px;
       font-size: 1.25rem;
     }
   }
@@ -152,11 +152,11 @@
 
 .lorem-text {
   p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 25px;
     color: hsl(292, 58%, 13%);
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 2px #111;
-    padding: 1rem;
+    padding: 16px;
     text-align: justify;
     position: relative;
     transition: box-shadow, color, background 0.3s linear;
@@ -164,9 +164,9 @@
     & .badge {
       display: inline-block;
       position: absolute;
-      top: -5%;
-      left: -2%;
-      padding: 0.2rem 0.7rem;
+      top: -15px;
+      left: -15px;
+      padding: 5px 12px;
       border-radius: 0.5rem;
       display: flex;
       align-items: center;

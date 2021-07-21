@@ -2,11 +2,11 @@
   min-height: calc(100vh - 120px);
   margin: 0 auto;
   max-width: 1920px;
-  padding: 2rem;
+  padding: 30px;
 }
 
 .home__projectInfoCard {
-  margin: 1.5rem auto;
+  margin: 24px auto;
   width: 300px;
   height: 200px;
   border-radius: 5px;
@@ -37,12 +37,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 15px;
   background: linear-gradient(
     45deg,
     rgba(255, 165, 0, 1),
     rgba(0, 102, 153, 1)
   );
-  backdrop-filter: blur(5px);
+
   font-weight: bold;
 }
 
@@ -53,7 +54,7 @@
   letter-spacing: 2.5px;
   box-shadow: 0px 1px 5px #111, -2px -2px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 5px #111;
-  padding: 0.8rem 1.1rem;
+  padding: 12px 18px;
   border-radius: 5px;
   background: rgb(36, 141, 109);
   color: #fff;
@@ -73,7 +74,7 @@
   letter-spacing: 2px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   box-shadow: 0 0 5px #111;
   text-transform: uppercase;
   transition: 0.3s all ease-in;
@@ -88,7 +89,7 @@
   .home {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 30px;
   }
 }
 @media screen and (min-width: 992px) {

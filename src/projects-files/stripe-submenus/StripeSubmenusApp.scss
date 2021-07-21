@@ -33,7 +33,7 @@ body {
     margin: 0 auto;
     width: 90vw;
     max-width: 1750px;
-    height: 5rem;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +50,7 @@ body {
     align-items: center;
   }
   .nav-logo {
-    font-size: 2rem;
+    font-size: 30px;
     text-transform: initial;
     color: #fff;
     transition: color 0.3s ease-in-out;
@@ -65,10 +65,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1.2rem;
-    height: 2.3rem;
-    font-size: 1rem;
-    border-radius: 2.5rem;
+    padding: 8px 20px;
+    height: 36.8px;
+    font-size: 16px;
+    border-radius: 40px;
     border: none;
     outline: none;
     color: white;
@@ -76,10 +76,10 @@ body {
     transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
   }
   .chevronRight {
-    font-size: 0.7rem;
+    font-size: 11.5px;
   }
   .arrowRight {
-    font-size: 0.75rem;
+    font-size: 12px;
     display: none;
   }
 
@@ -111,16 +111,16 @@ body {
   }
 
   .btn-startNow {
-    width: 8rem;
+    width: 128px;
     background: rgb(8, 63, 90);
   }
   .btn-contactSales {
-    width: 10rem;
+    width: 160px;
     background: transparent;
     transition: color 0.3s ease-in-out;
     color: rgb(8, 63, 90);
     font-weight: 600;
-    margin-left: 0.5rem;
+    margin-left: 8px;
 
     &:hover {
       background: transparent;
@@ -133,7 +133,7 @@ body {
     width: 90vw;
     position: relative;
     max-width: 1750px;
-    margin-top: 10rem;
+    margin-top: 160px;
   }
 
   .hero-center {
@@ -151,9 +151,9 @@ body {
     mix-blend-mode: darken;
   }
   .hero-info p {
-    margin: 2rem 0;
+    margin: 32px 0;
     width: 80vw;
-    font-size: 1.2rem;
+    font-size: 19.2px;
     line-height: 1.8;
   }
   .hero-images {
@@ -161,12 +161,12 @@ body {
   }
 
   .companies-logo {
-    margin: 8rem 0 2rem 0;
+    margin: 128px 0 32px 0;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0.5rem;
-    gap: 5rem 3rem;
+    padding: 8px;
+    gap: 80px 48px;
   }
   .logo-wrapper {
     width: 100%;
@@ -196,7 +196,7 @@ body {
       display: none;
     }
     .btn-signin {
-      width: 6.5rem;
+      width: 105px;
       display: flex;
       background: rgba(255, 255, 255, 0.2);
       &:hover {
@@ -211,14 +211,14 @@ body {
     }
     .nav-links li {
       height: 100%;
-      margin: 0 0.1rem;
+      margin: 0 1.6px;
     }
     .link-btn {
-      padding: 1rem;
+      padding: 16px;
       height: 100%;
       background: transparent;
       border-color: transparent;
-      font-size: 1rem;
+      font-size: 16px;
       font-weight: 510;
       color: white;
       text-transform: capitalize;
@@ -233,11 +233,11 @@ body {
   /* hero media query */
   @media screen and (min-width: 900px) {
     .hero-info h1 {
-      font-size: 4rem;
+      font-size: 64px;
     }
     .hero-info p {
-      font-size: 1.25rem;
-      width: 25rem;
+      font-size: 20px;
+      width: 400px;
     }
     .hero-images {
       display: block;
@@ -246,24 +246,24 @@ body {
       right: -4.8%;
     }
     .phone-img {
-      width: 25rem;
+      width: 400px;
     }
   }
 
   @media screen and (min-width: 1200px) {
     .hero-info h1 {
-      font-size: 5rem;
+      font-size: 80px;
     }
     .hero-info p {
-      width: 30rem;
+      width: 480px;
     }
     .phone-img {
-      width: 32rem;
+      width: 512px;
     }
   }
   @media screen and (min-width: 1400px) {
     .phone-img {
-      width: 32rem;
+      width: 512px;
     }
   }
 
@@ -274,7 +274,7 @@ body {
     left: 0;
     width: 100%;
     min-height: 100vh;
-    padding: 1rem 0;
+    padding: 16px 0;
     display: grid;
     place-items: center;
     visibility: hidden;
@@ -295,23 +295,23 @@ body {
     min-height: 90vh;
     max-width: 620px;
     background: #fff;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     position: relative;
-    padding: 0.2rem;
+    padding: 3.2px;
   }
   .close-btn {
-    font-size: 1.6rem;
+    font-size: 25px;
     background: transparent;
     border-color: transparent;
     color: hsl(210, 22%, 49%);
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 16px;
+    right: 16px;
     cursor: pointer;
   }
   .sidebar article {
-    padding: 3rem 2rem 1rem 2rem;
+    padding: 48px 32px 16px 32px;
     border-bottom: 1px dashed #ccc;
     & h1 {
       font-size: 13px;
@@ -324,8 +324,8 @@ body {
   .sidebar-sublinks {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem 0;
-    padding-bottom: 1rem;
+    gap: 16px 0;
+    padding-bottom: 16px;
   }
 
   .sidebar-link-wrapper {
@@ -337,7 +337,7 @@ body {
 
     & .sidebar-icon-container {
       width: 20px;
-      margin: 0 0.7rem;
+      margin: 0 11.2px;
 
       & img {
         width: 100%;
@@ -351,7 +351,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 0 0.2rem;
+        gap: 0 3.2px;
         text-transform: capitalize;
         color: #0a2540;
       }
@@ -374,12 +374,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 4rem;
+    height: 65px;
     background: #eee;
-    border-radius: 0.5rem;
+    border-radius: 8px;
   }
   & .sidebar-btn-signin {
-    width: 6.5rem;
+    width: 105px;
     display: flex;
     background: rgb(70, 21, 187);
     &:hover {
@@ -398,13 +398,13 @@ body {
     background: #fff;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 8rem;
+    top: 128px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
     display: none;
-    padding: 2rem;
-    border-radius: 0.25rem;
+    padding: 30px;
+    border-radius: 5px;
     transition: all 0.5s ease-in-out;
   }
   .submenu::before {
@@ -430,15 +430,15 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 1rem;
+    gap: 16px;
   }
   .links-container {
     display: flex;
     flex-direction: column;
-    padding: 0.2rem;
+    padding: 3.2px;
     & h3 {
       color: #888;
-      font-size: 1.2rem;
+      font-size: 19.2px;
     }
   }
   .link-wrapper {
@@ -447,11 +447,11 @@ body {
     justify-content: flex-start;
     outline: none;
     font-size: 14px;
-    margin: 0.8rem 0;
+    margin: 12.8px 0;
 
     & .icon-container {
       width: 20px;
-      margin: 0 0.7rem;
+      margin: 0 11.2px;
 
       & img {
         width: 100%;
@@ -467,13 +467,13 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 0 0.2rem;
+        gap: 0 3.2px;
         text-transform: capitalize;
         color: #0a2540;
       }
 
       & p {
-        font-size: 0.8rem;
+        font-size: 12.8px;
         color: #5d7c9b;
         font-weight: 620;
       }
