@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Beginner's 15 React Projects
+#### Live Demo:  [https://react-15-proj.web.app](https://react-15-proj.web.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Beginner 15 React Projects is done following the tutorial of John Smilga of the Coding-Addict youtube channel.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Source of learning and tutorial links:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Coding Addict: [Youtube Tutorial](https://youtu.be/ly3m6mv5qvg?list=PLnHJACx3NwAe5XQDk9xLgym7FF8Q4FYW7)
+#### John Smilga: [Github](https://github.com/john-smilga/react-projects)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Projects' Screenshots :-
 
-### `npm run build`
+### `React-15-Proj...`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-0.png)
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `1.Birthday Reminder`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-1.png)
+---
 
-### `npm run eject`
+### `2.Tours`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-2.png)
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `3.Reviews`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-3.png)
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `4.Accordian`
 
-## Learn More
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-4.png)
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `5.Menu`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-5.png)
+---
 
-### Code Splitting
+### `6.Tabs`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-6.png)
+---
 
-### Analyzing the Bundle Size
+### `7.Slider`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-7.png)
+---
 
-### Making a Progressive Web App
+### `8.Lorem Ipsum Generator`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-8.png)
+---
 
-### Advanced Configuration
+### `9.Shades Generator`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-9.png)
+---
 
-### Deployment
+### `10.Grocery Bud`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-10.png)
+---
 
-### `npm run build` fails to minify
+### `11.Navbar`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-11.png)
+---
+
+### `12.Modal And Sidebar`
+
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-12.png)
+---
+
+### `13.Stripe Submenus`
+
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-13.png)
+---
+
+### `14.Cart`
+
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-14.png)
+---
+
+### `15.Cocktails`
+
+![react-15-proj](https://github.com/DalpatRathore/React-15-Proj.../blob/main/screenshots/react-15-proj-15.png)
+---
+---
+
+#### Visit: [React-15-Proj...](https://react-15-proj.web.app/)
