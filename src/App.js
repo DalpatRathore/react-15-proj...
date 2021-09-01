@@ -16,11 +16,13 @@ import ModalSidebarApp from "./projects-files/modal-and-sidebar/ModalSidebarApp"
 import StripeSubmenusApp from "./projects-files/stripe-submenus/StripeSubmenusApp";
 import CartApp from "./projects-files/cart/CartApp";
 import CocktailsApp from "./projects-files/cocktails/CocktailsApp";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <Router>
+        <ScrollToTop></ScrollToTop>
         <Header></Header>
         <Switch>
           <Route exact path="/">
