@@ -1,4 +1,4 @@
-# Beginner's 15 React Projects
+# <img align="center" alt="" width="75" src="https://github.com/DalpatRathore/react-15-proj.../blob/main/public/android-chrome-192x192.png"> Beginner's 15 React Projects
 
 #### `Live Demo:` [https://react15proj.web.app](https://react15proj.web.app/)
 
