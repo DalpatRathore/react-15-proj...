@@ -237,7 +237,6 @@
 
 .navbarApp .videos {
   min-height: calc(100vh - 275px);
-  background: #311369;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,6 +246,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: #311369;
   background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#791a3e));
   background: linear-gradient(0deg, transparent, #791a3e);
   overflow: hidden;

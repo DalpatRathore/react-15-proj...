@@ -174,10 +174,10 @@
 
   .videos {
     min-height: calc(100vh - 275px);
-    background: rgb(49, 19, 105);
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgb(49, 19, 105);
     background: linear-gradient(0deg, transparent, rgb(121, 26, 62));
     overflow: hidden;
   }
