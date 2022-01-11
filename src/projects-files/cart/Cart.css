@@ -187,7 +187,7 @@
 }
 
 .cartApp .logo-wrapper {
-  border-radius: 0 1rem 0 1rem;
+  border-radius: 0 1rem;
   padding: 0.3rem;
   background: rgba(255, 255, 255, 0.7);
   position: relative;
@@ -203,8 +203,8 @@
 .cartApp .logo-wrapper::before {
   position: absolute;
   content: "";
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 28%;
   border-radius: 0 0 0 1rem;
@@ -479,7 +479,7 @@
     padding: 1.25rem 2rem;
   }
   .cartApp .logo-wrapper {
-    border-radius: 0 1rem 0 1rem;
+    border-radius: 0 1rem;
     padding: 0.3rem;
     width: 20rem;
   }

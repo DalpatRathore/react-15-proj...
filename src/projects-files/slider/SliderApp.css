@@ -21,7 +21,7 @@
 .sliderApp .section {
   padding: 2rem;
   width: 90vw;
-  margin: 0rem auto;
+  margin: 0 auto;
   max-width: 1170px;
   background: #f1f5f8;
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(orange), to(#0e4579));
@@ -50,7 +50,9 @@
 
 .sliderApp .title {
   text-align: center;
-  margin-bottom: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+  color: #759cc2;
 }
 
 .sliderApp .title h2 {
@@ -133,12 +135,6 @@
   text-transform: uppercase;
   color: #ccdceb;
   margin-bottom: 0.25rem;
-}
-
-.sliderApp .title {
-  text-transform: capitalize;
-  margin-bottom: 0.75rem;
-  color: #759cc2;
 }
 
 .sliderApp .text {

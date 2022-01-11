@@ -5,8 +5,8 @@
   min-height: calc(100vh - 120px);
   margin: 0 auto;
   max-width: 1920px;
-  background: #f1f5f7;
   color: #222;
+  background: #f1f5f7;
   background: -webkit-gradient(linear, left top, right top, from(#f9b24e), to(#1c547c));
   background: linear-gradient(90deg, #f9b24e 0%, #1c547c 100%);
   /* 
@@ -69,8 +69,8 @@ Cocktail
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   background: #fff;
   background: -webkit-gradient(linear, left top, right top, from(rgba(249, 178, 78, 0.9)), to(rgba(28, 84, 124, 0.9)));
   background: linear-gradient(90deg, rgba(249, 178, 78, 0.9) 0%, rgba(28, 84, 124, 0.9) 100%);
@@ -137,7 +137,7 @@ Cocktail
   width: 85vw;
   max-width: 45rem;
   min-height: calc(100vh - 200px);
-  margin: 0rem auto;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,7 +247,6 @@ Cocktail
   letter-spacing: 0.3rem;
   text-align: center;
   margin-bottom: 3.5rem;
-  color: #c5c4c4;
   background: linear-gradient(45deg, #cc2d11 0%, #d13008 10%, #ccbf0f 15%, #ddd013 30%, #095322 31%, #075a23 50%, #750a79 53%, #750a79 65%, #083655 67%, #044a79 80%, maroon 85%, maroon 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -283,7 +282,7 @@ Cocktail
 .cocktailsApp .cocktails-center {
   width: 95vw;
   margin: 0 auto;
-  padding: 2rem 0 8rem 0;
+  padding: 2rem 0 8rem;
   max-width: 1750px;
   display: -ms-grid;
   display: grid;
@@ -312,8 +311,8 @@ Cocktail
   background: #cfc994;
   background: -webkit-gradient(linear, left bottom, left top, from(#888035), color-stop(#9e9756), to(#bbb477));
   background: linear-gradient(0deg, #888035, #9e9756, #bbb477);
-  -webkit-box-shadow: 0px 0px 3px black;
-          box-shadow: 0px 0px 3px black;
+  -webkit-box-shadow: 0 0 3px black;
+          box-shadow: 0 0 3px black;
   -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
   transition: -webkit-box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
@@ -361,8 +360,8 @@ Cocktail
   width: 32px;
   height: 80px;
   background: #888035;
-  -webkit-box-shadow: 0px 0px 1px black;
-          box-shadow: 0px 0px 1px black;
+  -webkit-box-shadow: 0 0 1px black;
+          box-shadow: 0 0 1px black;
   z-index: 1;
 }
 
@@ -390,8 +389,8 @@ Cocktail
   height: 16px;
   background: #888035;
   border-radius: 1rem 1rem 0 0;
-  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px 0px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px 0px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px 0 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px 0 2px rgba(0, 0, 0, 0.3);
   z-index: -5;
 }
 
@@ -477,8 +476,8 @@ Cocktail
   padding: 1rem 0.5rem;
   text-transform: capitalize;
   border-radius: 0.25rem;
-  -webkit-box-shadow: 0px 0px 2px black;
-          box-shadow: 0px 0px 2px black;
+  -webkit-box-shadow: 0 0 2px black;
+          box-shadow: 0 0 2px black;
   -webkit-transition: background 0.5s ease-in-out, -webkit-box-shadow 0.3s ease-in;
   transition: background 0.5s ease-in-out, -webkit-box-shadow 0.3s ease-in;
   transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in;
@@ -489,8 +488,8 @@ Cocktail
 
 .cocktailsApp .search-form:hover {
   background: rgba(255, 255, 255, 0.7);
-  -webkit-box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6), -2px 0px 5px rgba(0, 0, 0, 0.6);
-          box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6), -2px 0px 5px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6), -2px 0 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6), -2px 0 5px rgba(0, 0, 0, 0.6);
 }
 
 .cocktailsApp .search-form::before {
@@ -525,7 +524,6 @@ Cocktail
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.2rem;
-  color: #1a064b;
   font-family: "bauhaus 93", sans-serif;
   text-transform: uppercase;
   background: -webkit-gradient(linear, left bottom, left top, from(#062764), to(#630356));
@@ -583,7 +581,7 @@ Cocktail
 .cocktailsApp .drink {
   width: 90vw;
   max-width: 1750px;
-  margin: 0rem auto;
+  margin: 0 auto;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -611,7 +609,6 @@ Cocktail
 }
 
 .cocktailsApp .drink-info {
-  border-radius: 0.5rem 0 0 0.5rem;
   padding: 0.1rem 0.3rem;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 0 2px #111;
@@ -714,7 +711,7 @@ Cocktail
 }
 
 .cocktailsApp .drink-img img {
-  margin: 0rem auto;
+  margin: 0 auto;
   width: 95%;
   -o-object-fit: contain;
      object-fit: contain;

@@ -27,7 +27,7 @@
   */
 
   .menu {
-    padding: 2rem 0rem;
+    padding: 2rem 0;
     background: #fff;
     box-shadow: 0 0 3px rgba(0, 0, 0, 1);
     border-radius: 0.5rem;
@@ -107,9 +107,9 @@
 
     &:hover {
       background: #fff;
-      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.51);
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.51);
       & .photo {
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 1);
       }
     }
   }

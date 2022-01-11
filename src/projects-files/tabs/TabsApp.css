@@ -14,7 +14,7 @@
   width: 100%;
   min-height: 80vh;
   max-width: 1900px;
-  margin: 0rem auto;
+  margin: 0 auto;
   padding: 30px 8px;
   border-radius: 0.5rem;
   background: white;
@@ -117,8 +117,7 @@
 
 .tabsApp .underline {
   width: 4rem;
-  height: 0rem;
-  margin-bottom: 1.25rem;
+  height: 0;
   border: 0.25rem dashed orange;
   margin: 0 auto;
 }

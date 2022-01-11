@@ -37,8 +37,8 @@
   background: rgba(17, 17, 17, 0.1);
   border: none;
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 1px #111;
-          box-shadow: 0px 0px 1px #111;
+  -webkit-box-shadow: 0 0 1px #111;
+          box-shadow: 0 0 1px #111;
   -webkit-transition: -webkit-box-shadow 0.5s linear;
   transition: -webkit-box-shadow 0.5s linear;
   transition: box-shadow 0.5s linear;
@@ -62,8 +62,8 @@
 }
 
 .navbarApp .nav-toggle:hover {
-  -webkit-box-shadow: 0px 0px 3px #111;
-          box-shadow: 0px 0px 3px #111;
+  -webkit-box-shadow: 0 0 3px #111;
+          box-shadow: 0 0 3px #111;
 }
 
 .navbarApp .nav-toggle:hover .open,
@@ -383,8 +383,8 @@
   .navbarApp .links li {
     margin-left: 12px;
     display: inline-block;
-    -webkit-box-shadow: 0 0 0px #111;
-            box-shadow: 0 0 0px #111;
+    -webkit-box-shadow: 0 0 0 #111;
+            box-shadow: 0 0 0 #111;
     background: transparent;
     border-radius: 0.25rem;
     padding: 0;

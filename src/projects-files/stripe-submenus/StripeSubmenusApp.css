@@ -204,7 +204,7 @@ body {
 }
 
 .stripeSubmenusApp .companies-logo {
-  margin: 128px 0 32px 0;
+  margin: 128px 0 32px;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -380,7 +380,7 @@ body {
 }
 
 .stripeSubmenusApp .sidebar article {
-  padding: 48px 32px 16px 32px;
+  padding: 48px 32px 16px;
   border-bottom: 1px dashed #ccc;
 }
 

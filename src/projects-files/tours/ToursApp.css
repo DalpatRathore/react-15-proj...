@@ -48,7 +48,7 @@
 .toursApp main {
   width: 90vw;
   max-width: 620px;
-  margin: 0rem auto;
+  margin: 0 auto;
 }
 
 .toursApp .loading {
@@ -202,7 +202,7 @@
 .toursApp .single-tour .delete-btn {
   display: block;
   width: 200px;
-  margin: 1rem auto 0 auto;
+  margin: 1rem auto 0;
   color: #bb2525;
   letter-spacing: 0.1rem;
   background: transparent;

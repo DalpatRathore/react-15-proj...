@@ -18,13 +18,13 @@
 
     background: hsl(205, 86%, 17%);
     color: #ddd;
-    box-shadow: -2px 0px 0px #ddd, 2px 0px 0px #ddd;
+    box-shadow: -2px 0 0 #ddd, 2px 0 0 #ddd;
     transition: color, background, border-color, 0.3s linear;
   }
   .btn:hover {
     background: rgb(83, 6, 60);
     color: #fff;
-    box-shadow: -2px 0px 0px #fff, 2px 0px 0px #fff;
+    box-shadow: -2px 0 0 #fff, 2px 0 0 #fff;
   }
 
   .section-center {
@@ -109,7 +109,7 @@
     padding: 5px 10px;
     width: 2.8rem;
     border-radius: 0.25rem;
-    border: none;
+    // border: none;
     margin: 0 8px 0 3px;
     font-size: 1rem;
     border: 1.5px solid transparent;
@@ -162,7 +162,7 @@
     transition: box-shadow, color, background 0.3s linear;
     border-radius: 0.5rem;
     & .badge {
-      display: inline-block;
+      // display: inline-block;
       position: absolute;
       top: -15px;
       left: -15px;

@@ -181,8 +181,8 @@
 }
 
 .colorGeneratorApp .color:hover {
-  -webkit-box-shadow: 4px 0px 0px maroon, -4px 0px 0px maroon;
-          box-shadow: 4px 0px 0px maroon, -4px 0px 0px maroon;
+  -webkit-box-shadow: 4px 0 0 maroon, -4px 0 0 maroon;
+          box-shadow: 4px 0 0 maroon, -4px 0 0 maroon;
 }
 
 .colorGeneratorApp .percent-value {

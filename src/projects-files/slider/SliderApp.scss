@@ -18,7 +18,7 @@
   .section {
     padding: 2rem;
     width: 90vw;
-    margin: 0rem auto;
+    margin: 0 auto;
     max-width: 1170px;
     background: hsl(210, 36%, 96%);
     background: linear-gradient(
@@ -54,8 +54,12 @@
   */
   .title {
     text-align: center;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 0.75rem;
+    color: hsl(210, 39%, 61%);
   }
+
   .title h2 {
     display: flex;
     align-items: center;
@@ -126,11 +130,7 @@
     color: hsl(209, 44%, 86%);
     margin-bottom: 0.25rem;
   }
-  .title {
-    text-transform: capitalize;
-    margin-bottom: 0.75rem;
-    color: hsl(210, 39%, 61%);
-  }
+
   .text {
     max-width: 35rem;
     margin: 0 auto;

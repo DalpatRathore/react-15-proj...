@@ -139,7 +139,7 @@
     transition: box-shadow 0.5s ease;
     position: relative;
     &:hover {
-      box-shadow: 4px 0px 0px maroon, -4px 0px 0px maroon;
+      box-shadow: 4px 0 0 maroon, -4px 0 0 maroon;
     }
   }
   .percent-value {

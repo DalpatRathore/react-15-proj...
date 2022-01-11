@@ -161,7 +161,7 @@ body {
   }
 
   .companies-logo {
-    margin: 128px 0 32px 0;
+    margin: 128px 0 32px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -311,7 +311,7 @@ body {
     cursor: pointer;
   }
   .sidebar article {
-    padding: 48px 32px 16px 32px;
+    padding: 48px 32px 16px;
     border-bottom: 1px dashed #ccc;
     & h1 {
       font-size: 13px;

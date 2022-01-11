@@ -28,7 +28,7 @@
 }
 
 .menuApp .menu {
-  padding: 2rem 0rem;
+  padding: 2rem 0;
   background: #fff;
   -webkit-box-shadow: 0 0 3px black;
           box-shadow: 0 0 3px black;
@@ -132,13 +132,13 @@
 
 .menuApp .menu-item:hover {
   background: #fff;
-  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.51);
-          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.51);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.51);
 }
 
 .menuApp .menu-item:hover .photo {
-  -webkit-box-shadow: 0px 0px 5px black;
-          box-shadow: 0px 0px 5px black;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
 }
 
 .menuApp .photo {

@@ -5,8 +5,8 @@
   min-height: calc(100vh - 120px);
   margin: 0 auto;
   max-width: 1920px;
-  background: #f1f5f7;
   color: #222;
+  background: #f1f5f7;
   background: linear-gradient(
     90deg,
     rgba(249, 178, 78, 1) 0%,
@@ -33,7 +33,7 @@ Navbar
     height: 5rem;
     display: flex;
     align-items: center;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     background: #fff;
     background: linear-gradient(
       90deg,
@@ -87,7 +87,7 @@ About
     width: 85vw;
     max-width: 45rem;
     min-height: calc(100vh - 200px);
-    margin: 0rem auto;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,7 +181,7 @@ Cocktails List
     letter-spacing: 0.3rem;
     text-align: center;
     margin-bottom: 3.5rem;
-    color: rgb(197, 196, 196);
+    // color: rgb(197, 196, 196);
     background: linear-gradient(
       45deg,
       rgb(204, 45, 17) 0%,
@@ -229,7 +229,7 @@ Cocktails List
   .cocktails-center {
     width: 95vw;
     margin: 0 auto;
-    padding: 2rem 0 8rem 0;
+    padding: 2rem 0 8rem;
     max-width: 1750px;
     display: grid;
     gap: 12rem 2rem;
@@ -258,7 +258,7 @@ Cocktail
     height: 230px;
     background: #cfc994;
     background: linear-gradient(0deg, #888035, #9e9756, #bbb477);
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1);
     transition: box-shadow 0.3s ease-in-out;
     border-radius: 54% 46% 50% 50% / 0% 2% 98% 100%;
     position: relative;
@@ -299,7 +299,7 @@ Cocktail
     width: 32px;
     height: 80px;
     background: #888035;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 1);
     z-index: 1;
     &::before {
       position: absolute;
@@ -322,8 +322,7 @@ Cocktail
       height: 16px;
       background: #888035;
       border-radius: 1rem 1rem 0 0;
-      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3),
-        -1px 0px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px 0 2px rgba(0, 0, 0, 0.3);
       z-index: -5;
     }
   }
@@ -407,12 +406,11 @@ Form
     padding: 1rem 0.5rem;
     text-transform: capitalize;
     border-radius: 0.25rem;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 1);
     transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in;
     &:hover {
       background: rgba(255, 255, 255, 0.7);
-      box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6),
-        -2px 0px 5px rgba(0, 0, 0, 0.6);
+      box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6), -2px 0 5px rgba(0, 0, 0, 0.6);
     }
     position: relative;
     z-index: 1;
@@ -451,7 +449,7 @@ Form
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.2rem;
-    color: rgb(26, 6, 75);
+    // color: rgb(26, 6, 75);
     font-family: "bauhaus 93", sans-serif;
     text-transform: uppercase;
     background: linear-gradient(0deg, rgb(6, 39, 100), rgb(99, 3, 86));
@@ -501,7 +499,7 @@ Cocktail
   .drink {
     width: 90vw;
     max-width: 1750px;
-    margin: 0rem auto;
+    margin: 0 auto;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -519,7 +517,6 @@ Cocktail
   }
 
   .drink-info {
-    border-radius: 0.5rem 0 0 0.5rem;
     padding: 0.1rem 0.3rem;
     border-radius: 0.25rem;
     box-shadow: 0 0 2px #111;
@@ -598,7 +595,7 @@ Cocktail
     );
     border-radius: 0.5rem;
     & img {
-      margin: 0rem auto;
+      margin: 0 auto;
       width: 95%;
       object-fit: contain;
       border-radius: 0.5rem;

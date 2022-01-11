@@ -27,7 +27,7 @@
     background: rgba(17, 17, 17, 0.1);
     border: none;
     cursor: pointer;
-    box-shadow: 0px 0px 1px #111;
+    box-shadow: 0 0 1px #111;
     transition: box-shadow 0.5s linear;
     & .open {
       color: hsl(206, 83%, 16%);
@@ -39,7 +39,7 @@
     }
   }
   .nav-toggle:hover {
-    box-shadow: 0px 0px 3px #111;
+    box-shadow: 0 0 3px #111;
     & .open,
     & .close {
       transform: rotate(360deg);
@@ -268,7 +268,7 @@
       & li {
         margin-left: 12px;
         display: inline-block;
-        box-shadow: 0 0 0px #111;
+        box-shadow: 0 0 0 #111;
         background: transparent;
         border-radius: 0.25rem;
         padding: 0;
