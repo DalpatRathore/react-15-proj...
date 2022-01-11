@@ -1,16 +1,11 @@
 # Beginner's 15 React Projects
 
-#### Live Demo: [https://react15proj.web.app](https://react15proj.web.app/)
-
-## Description
-
-Beginner's 15 React Projects are done following the tutorial of John Smilga of the Coding-Addict youtube channel.
+#### `Live Demo:` [https://react15proj.web.app](https://react15proj.web.app/)
 
 ## Source of Learning & Tutorial Links :
-
-#### Coding Addict: [Youtube Tutorial](https://youtu.be/ly3m6mv5qvg?list=PLnHJACx3NwAe5XQDk9xLgym7FF8Q4FYW7)
-
-#### John Smilga: [Github](https://github.com/john-smilga/react-projects)
+Beginner's 15 React Projects are done following the tutorial of John Smilga of the Coding-Addict youtube channel.
+#### `Coding Addict:` [Youtube Tutorial](https://youtu.be/ly3m6mv5qvg?list=PLnHJACx3NwAe5XQDk9xLgym7FF8Q4FYW7)
+#### `John Smilga:` [Github](https://github.com/john-smilga/react-projects)
 
 ## Projects' Screenshots :
 
@@ -80,4 +75,4 @@ Beginner's 15 React Projects are done following the tutorial of John Smilga of t
 
 ---
 
-#### Visit: [React-15-Proj...](https://react15proj.web.app/)
+#### Visit Demo: [react-15-proj...](https://react15proj.web.app/)
